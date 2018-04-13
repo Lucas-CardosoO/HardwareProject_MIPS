@@ -3,19 +3,26 @@ module cpu(input clock, reset,
   output logic [1:0]ULAOp, //Mudou de 3 pra 2 bits
   output logic [31:0]PC,
   output logic [31:0]MemData,
-  output logic [31:0]Alu,
+  output logic [31:0]Alu, extensor32bits,
   output logic[5:0] Instr31_26,
   output logic[4:0] Instr25_21, EntradaULA1, EntradaULA2,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
   output logic[3:0] Estado,
   output logic [4:0] RegDestinoSaida,
-  output logic [31:0] ReadData1, ReadData2,
-  output logic [31:0] SaidaA,
-  output logic [31:0] SaidaB);
-
+  output logic [31:0] ReadData1, ReadData2, DadoASerEscrito,
+  // output logic [31:0] SaidaA,
+  // output logic [31:0] SaidaB,
+  output logic Load_ir,
+  output logic PCEsc,
+  output logic CtrMem,
+  output logic RegWrite,
+  output logic ULAFonteA,
+  output logic RegDst,
+  output logic[1:0] ULAFonteB,
+  output logic MemParaReg);
 	
-	// controlador
+	/* controlador
 	logic Load_ir;
 	logic PCEsc;
 	logic CtrMem;
@@ -24,6 +31,7 @@ module cpu(input clock, reset,
 	logic RegDst;
 	logic[1:0] ULAFonteB;
 	logic MemParaReg;
+	*/
 	
 	// lixo da ula
 	logic OverflowULA;
@@ -37,7 +45,7 @@ module cpu(input clock, reset,
 	// logic [4:0] RegDestinoSaida; // Instr20_16 ou Instr15_0[4:0]
 	// logic [4:0] EntradaULA1;
 	// logic [4:0] EntradaULA2;
-	logic [31:0] DadoASerEscrito;
+	// logic [31:0] DadoASerEscrito;
 	
 	// Saida Banco de Registradores
 	//logic [31:0] ReadData1;
@@ -48,7 +56,7 @@ module cpu(input clock, reset,
 	logic [31:0]Address;
 	
 	//Extensor
-	logic [31:0] extensor32bits;
+	// logic [31:0] extensor32bits;
 	
 	//Fios registradores A e B
 	// logic [31:0] SaidaA;
@@ -142,7 +150,7 @@ module cpu(input clock, reset,
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
 	.entrada0(Instr20_16),
-	.entrada1(Instr15_0[4:0]),
+	.entrada1(Instr15_0[15:11]),
 	.saidaMux(RegDestinoSaida));
 	
 	mux2entradas32bits_real IouDMux(.controlador(IouD), // mudar nome do modulo do registrador para mux2entradas ->5<- bits

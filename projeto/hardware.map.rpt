@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hardware
-Thu Apr 12 17:30:03 2018
+Thu Apr 12 21:27:03 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -59,18 +59,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 12 17:30:03 2018        ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 12 21:27:03 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 616                                          ;
-;     Total combinational functions  ; 392                                          ;
-;     Dedicated logic registers      ; 234                                          ;
-; Total registers                    ; 234                                          ;
-; Total pins                         ; 280                                          ;
+; Total logic elements               ; 1,478                                        ;
+;     Total combinational functions  ; 902                                          ;
+;     Dedicated logic registers      ; 598                                          ;
+; Total registers                    ; 598                                          ;
+; Total pins                         ; 289                                          ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 3,584                                        ;
+; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
 ; Total PLLs                         ; 0                                            ;
 +------------------------------------+----------------------------------------------+
@@ -172,29 +172,29 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                   ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
-; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/vlma/Desktop/projeto/instrucoes.mif                   ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/cpu.sv                           ;
-; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Banco_reg.vhd                    ;
-; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Instr_Reg.vhd                    ;
-; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Memoria.vhd                      ;
-; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Registrador.vhd                  ;
-; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/ula32.vhd                        ;
-; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/controlador.sv                   ;
-; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux2entradas32bits.sv            ;
-; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux4entradas32bits.sv            ;
-; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux2entradas32bits_real.sv       ;
-; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/AluControl.sv                    ;
-; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/extensor16to32bits.sv            ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
-; altram.tdf                       ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
-; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/vlma/Desktop/projeto/db/altsyncram_e1a1.tdf           ;
-+----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                               ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                 ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+
+; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/lab7/Desktop/projeto/instrucoes.mif                                 ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/cpu.sv                                         ;
+; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/projeto/Banco_reg.vhd                                  ;
+; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/projeto/Instr_Reg.vhd                                  ;
+; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/projeto/Memoria.vhd                                    ;
+; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/projeto/Registrador.vhd                                ;
+; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/projeto/ula32.vhd                                      ;
+; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/controlador.sv                                 ;
+; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/mux2entradas32bits.sv                          ;
+; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/mux4entradas32bits.sv                          ;
+; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/mux2entradas32bits_real.sv                     ;
+; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/AluControl.sv                                  ;
+; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/projeto/extensor16to32bits.sv                          ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/users/lab7/desktop/quartus/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
+; altram.tdf                       ; yes             ; Megafunction                     ; c:/users/lab7/desktop/quartus/quartus/libraries/megafunctions/altram.tdf     ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/users/lab7/desktop/quartus/quartus/libraries/megafunctions/altsyncram.tdf ;
+; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/lab7/Desktop/projeto/db/altsyncram_e1a1.tdf                         ;
++----------------------------------+-----------------+----------------------------------+------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -202,65 +202,67 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 616   ;
+; Estimated Total logic elements              ; 1,478 ;
 ;                                             ;       ;
-; Total combinational functions               ; 392   ;
+; Total combinational functions               ; 902   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 310   ;
-;     -- 3 input functions                    ; 76    ;
-;     -- <=2 input functions                  ; 6     ;
+;     -- 4 input functions                    ; 766   ;
+;     -- 3 input functions                    ; 101   ;
+;     -- <=2 input functions                  ; 35    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 392   ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 882   ;
+;     -- arithmetic mode                      ; 20    ;
 ;                                             ;       ;
-; Total registers                             ; 234   ;
-;     -- Dedicated logic registers            ; 234   ;
+; Total registers                             ; 598   ;
+;     -- Dedicated logic registers            ; 598   ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 280   ;
-; Total memory bits                           ; 3584  ;
+; I/O pins                                    ; 289   ;
+; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 266   ;
-; Total fan-out                               ; 2825  ;
-; Average fan-out                             ; 3.01  ;
+; Maximum fan-out                             ; 630   ;
+; Total fan-out                               ; 6364  ;
+; Average fan-out                             ; 3.49  ;
 +---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu                                              ; 392 (1)           ; 234 (0)      ; 3584        ; 0            ; 0       ; 0         ; 280  ; 0            ; |cpu                                                                                                          ; work         ;
-;    |AluControl:AluControl|                        ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
-;    |Banco_reg:BancoDeRegistradores|               ; 300 (300)         ; 192 (192)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
-;    |Instr_Reg:inst_reg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
-;    |Memoria:Memory|                               ; 20 (20)           ; 0 (0)        ; 3584        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
-;       |lpm_ram_dq:MEM_plus_One|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM_plus_Three|                 ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
-;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
-;       |lpm_ram_dq:MEM_plus_Two|                   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 1024        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM|                            ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM                                                                            ; work         ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
-;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 512         ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |Registrador:PCreg|                            ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
-;    |Ula32:ULA|                                    ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
-;    |controlador:ctrl|                             ; 28 (28)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
-;    |mux2entradas32bits:RegisterWriteSelection|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
-;    |mux2entradas32bits_real:EntradaULA1Selection| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
-;    |mux2entradas32bits_real:IouDMux|              ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
-;    |mux4entradas32bits:EntradaULA2Selection|      ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
-+---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                              ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
+; |cpu                                                  ; 902 (1)           ; 598 (0)      ; 8192        ; 0            ; 0       ; 0         ; 289  ; 0            ; |cpu                                                                                                          ; work         ;
+;    |AluControl:AluControl|                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
+;    |Banco_reg:BancoDeRegistradores|                   ; 762 (762)         ; 544 (544)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
+;    |Instr_Reg:inst_reg|                               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
+;    |Memoria:Memory|                                   ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
+;       |lpm_ram_dq:MEM_plus_One|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
+;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
+;       |lpm_ram_dq:MEM_plus_Three|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
+;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
+;       |lpm_ram_dq:MEM_plus_Two|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
+;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
+;       |lpm_ram_dq:MEM|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM                                                                            ; work         ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
+;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
+;    |Registrador:MemReg|                               ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MemReg                                                                                       ;              ;
+;    |Registrador:PCreg|                                ; 0 (0)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
+;    |Ula32:ULA|                                        ; 37 (37)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
+;    |controlador:ctrl|                                 ; 32 (32)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |mux2entradas32bits:RegisterWriteSelection|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
+;    |mux2entradas32bits_real:DadoASerEscritoSelection| ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:DadoASerEscritoSelection                                                         ; work         ;
+;    |mux2entradas32bits_real:EntradaULA1Selection|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
+;    |mux2entradas32bits_real:IouDMux|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
+;    |mux4entradas32bits:EntradaULA2Selection|          ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
++-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -314,359 +316,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Banco_reg:BancoDeRegistradores|Reg23[31] ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg15[31] ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg31[31] ; Stuck at GND due to stuck port data_in ;
-; Registrador:PCreg|Saida[6..30]           ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[6]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[6]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[7]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[7]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[8]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[8]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[9]   ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[9]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[10]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[10] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[11]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[11] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[12]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[12] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[13]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[13] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[14]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[14] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[15]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[15] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg0[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg16[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg8[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg24[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg4[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg20[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg12[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg28[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg2[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg18[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg10[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg26[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg6[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg22[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg14[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg30[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg1[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg17[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg9[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg25[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg5[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg21[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg13[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg29[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg3[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg19[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg11[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg27[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg7[16]  ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg23[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg15[16] ; Stuck at GND due to stuck port data_in ;
-; Banco_reg:BancoDeRegistradores|Reg31[16] ; Stuck at GND due to stuck port data_in ;
+; Registrador:PCreg|Saida[17..30]          ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg0[17]  ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg16[17] ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg8[17]  ; Stuck at GND due to stuck port data_in ;
@@ -1115,7 +765,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Banco_reg:BancoDeRegistradores|Reg23[30] ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg15[30] ; Stuck at GND due to stuck port data_in ;
 ; Banco_reg:BancoDeRegistradores|Reg31[30] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 858  ;                                        ;
+; Total Number of Removed Registers = 495  ;                                        ;
 +------------------------------------------+----------------------------------------+
 
 
@@ -1124,12 +774,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 234   ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 598   ;
+; Number of registers using Synchronous Clear  ; 1     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 230   ;
+; Number of registers using Asynchronous Clear ; 594   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 230   ;
+; Number of registers using Clock Enable       ; 593   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -1139,11 +789,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 17:1               ; 4 bits    ; 44 LEs        ; 36 LEs               ; 8 LEs                  ; Yes        ; |cpu|controlador:ctrl|state[3]                     ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux29 ;
-; 16:1               ; 3 bits    ; 30 LEs        ; 24 LEs               ; 6 LEs                  ; No         ; |cpu|controlador:ctrl|Mux0                         ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux16          ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux32          ;
+; 17:1               ; 3 bits    ; 33 LEs        ; 27 LEs               ; 6 LEs                  ; Yes        ; |cpu|controlador:ctrl|state[1]                     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux31 ;
+; 16:1               ; 3 bits    ; 30 LEs        ; 21 LEs               ; 9 LEs                  ; No         ; |cpu|controlador:ctrl|Mux0                         ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux19          ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux46          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -1275,14 +925,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux2entradas32bits_real:DadoASerEscritoSelection"                                                                                                      ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                                                                                            ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; entrada1 ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "entrada1[31..1]" will be connected to GND. ;
-; saidaMux ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                ;
-+----------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2entradas32bits_real:DadoASerEscritoSelection"                                                                                                     ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                            ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+; entrada1 ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "entrada1[31..1]" will be connected to GND. ;
++----------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1325,7 +974,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Port     ; Type   ; Severity         ; Details                                                                                                 ;
 +----------+--------+------------------+---------------------------------------------------------------------------------------------------------+
 ; a        ; Input  ; Critical Warning ; Can't connect array with 5 elements in array dimension 1 to port with 32 elements in the same dimension ;
-; b        ; Input  ; Critical Warning ; Can't connect array with 5 elements in array dimension 1 to port with 32 elements in the same dimension ;
 ; seletor  ; Input  ; Critical Warning ; Types are incompatible                                                                                  ;
 ; overflow ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                     ;
 ; negativo ; Output ; Info             ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                     ;
@@ -1360,7 +1008,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Apr 12 17:29:59 2018
+    Info: Processing started: Thu Apr 12 21:26:55 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hardware -c hardware
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file cpu.sv
@@ -1396,11 +1044,9 @@ Info: Found 1 design units, including 1 entities, in source file alucontrol.sv
     Info: Found entity 1: AluControl
 Info: Found 1 design units, including 1 entities, in source file extensor16to32bits.sv
     Info: Found entity 1: extensor16to32bits
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(80): created implicit net for "dadoPreMux"
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(99): created implicit net for "ULAOpSelector"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(88): created implicit net for "dadoPreMux"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(107): created implicit net for "ULAOpSelector"
 Info: Elaborating entity "cpu" for the top level hierarchy
-Warning (10034): Output port "SaidaA" at cpu.sv(14) has no driver
-Warning (10034): Output port "SaidaB" at cpu.sv(15) has no driver
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:PCreg"
 Info: Elaborating entity "AluControl" for hierarchy "AluControl:AluControl"
 Info: Elaborating entity "Ula32" for hierarchy "Ula32:ULA"
@@ -1430,31 +1076,14 @@ Info: Found 1 design units, including 1 entities, in source file db/altsyncram_e
 Info: Elaborating entity "altsyncram_e1a1" for hierarchy "Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated"
 Info: Elaborating entity "controlador" for hierarchy "controlador:ctrl"
 Info: Elaborating entity "mux2entradas32bits" for hierarchy "mux2entradas32bits:RegisterWriteSelection"
-Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits.sv(5): variable "entrada1" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits.sv(8): variable "entrada0" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info: Elaborating entity "mux2entradas32bits_real" for hierarchy "mux2entradas32bits_real:IouDMux"
 Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits_real.sv(5): variable "entrada1" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits_real.sv(8): variable "entrada0" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info: Elaborating entity "mux4entradas32bits" for hierarchy "mux4entradas32bits:EntradaULA2Selection"
-Warning (10235): Verilog HDL Always Construct warning at mux4entradas32bits.sv(6): variable "entrada0" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at mux4entradas32bits.sv(9): variable "entrada1" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at mux4entradas32bits.sv(12): variable "entrada2" is read inside the Always Construct but isn't in the Always Construct's Event Control
-Warning (10235): Verilog HDL Always Construct warning at mux4entradas32bits.sv(15): variable "entrada3" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info: Elaborating entity "extensor16to32bits" for hierarchy "extensor16to32bits:extenssor"
 Info: Elaborating entity "Banco_reg" for hierarchy "Banco_reg:BancoDeRegistradores"
 Warning: 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "PC[6]" is stuck at GND
-    Warning (13410): Pin "PC[7]" is stuck at GND
-    Warning (13410): Pin "PC[8]" is stuck at GND
-    Warning (13410): Pin "PC[9]" is stuck at GND
-    Warning (13410): Pin "PC[10]" is stuck at GND
-    Warning (13410): Pin "PC[11]" is stuck at GND
-    Warning (13410): Pin "PC[12]" is stuck at GND
-    Warning (13410): Pin "PC[13]" is stuck at GND
-    Warning (13410): Pin "PC[14]" is stuck at GND
-    Warning (13410): Pin "PC[15]" is stuck at GND
-    Warning (13410): Pin "PC[16]" is stuck at GND
     Warning (13410): Pin "PC[17]" is stuck at GND
     Warning (13410): Pin "PC[18]" is stuck at GND
     Warning (13410): Pin "PC[19]" is stuck at GND
@@ -1470,17 +1099,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "PC[29]" is stuck at GND
     Warning (13410): Pin "PC[30]" is stuck at GND
     Warning (13410): Pin "PC[31]" is stuck at GND
-    Warning (13410): Pin "Alu[6]" is stuck at GND
-    Warning (13410): Pin "Alu[7]" is stuck at GND
-    Warning (13410): Pin "Alu[8]" is stuck at GND
-    Warning (13410): Pin "Alu[9]" is stuck at GND
-    Warning (13410): Pin "Alu[10]" is stuck at GND
-    Warning (13410): Pin "Alu[11]" is stuck at GND
-    Warning (13410): Pin "Alu[12]" is stuck at GND
-    Warning (13410): Pin "Alu[13]" is stuck at GND
-    Warning (13410): Pin "Alu[14]" is stuck at GND
-    Warning (13410): Pin "Alu[15]" is stuck at GND
-    Warning (13410): Pin "Alu[16]" is stuck at GND
     Warning (13410): Pin "Alu[17]" is stuck at GND
     Warning (13410): Pin "Alu[18]" is stuck at GND
     Warning (13410): Pin "Alu[19]" is stuck at GND
@@ -1496,17 +1114,22 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "Alu[29]" is stuck at GND
     Warning (13410): Pin "Alu[30]" is stuck at GND
     Warning (13410): Pin "Alu[31]" is stuck at GND
-    Warning (13410): Pin "ReadData1[6]" is stuck at GND
-    Warning (13410): Pin "ReadData1[7]" is stuck at GND
-    Warning (13410): Pin "ReadData1[8]" is stuck at GND
-    Warning (13410): Pin "ReadData1[9]" is stuck at GND
-    Warning (13410): Pin "ReadData1[10]" is stuck at GND
-    Warning (13410): Pin "ReadData1[11]" is stuck at GND
-    Warning (13410): Pin "ReadData1[12]" is stuck at GND
-    Warning (13410): Pin "ReadData1[13]" is stuck at GND
-    Warning (13410): Pin "ReadData1[14]" is stuck at GND
-    Warning (13410): Pin "ReadData1[15]" is stuck at GND
-    Warning (13410): Pin "ReadData1[16]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[16]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[17]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[18]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[19]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[20]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[21]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[22]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[23]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[24]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[25]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[26]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[27]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[28]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[29]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[30]" is stuck at GND
+    Warning (13410): Pin "extensor32bits[31]" is stuck at GND
     Warning (13410): Pin "ReadData1[17]" is stuck at GND
     Warning (13410): Pin "ReadData1[18]" is stuck at GND
     Warning (13410): Pin "ReadData1[19]" is stuck at GND
@@ -1522,17 +1145,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ReadData1[29]" is stuck at GND
     Warning (13410): Pin "ReadData1[30]" is stuck at GND
     Warning (13410): Pin "ReadData1[31]" is stuck at GND
-    Warning (13410): Pin "ReadData2[6]" is stuck at GND
-    Warning (13410): Pin "ReadData2[7]" is stuck at GND
-    Warning (13410): Pin "ReadData2[8]" is stuck at GND
-    Warning (13410): Pin "ReadData2[9]" is stuck at GND
-    Warning (13410): Pin "ReadData2[10]" is stuck at GND
-    Warning (13410): Pin "ReadData2[11]" is stuck at GND
-    Warning (13410): Pin "ReadData2[12]" is stuck at GND
-    Warning (13410): Pin "ReadData2[13]" is stuck at GND
-    Warning (13410): Pin "ReadData2[14]" is stuck at GND
-    Warning (13410): Pin "ReadData2[15]" is stuck at GND
-    Warning (13410): Pin "ReadData2[16]" is stuck at GND
     Warning (13410): Pin "ReadData2[17]" is stuck at GND
     Warning (13410): Pin "ReadData2[18]" is stuck at GND
     Warning (13410): Pin "ReadData2[19]" is stuck at GND
@@ -1548,90 +1160,37 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ReadData2[29]" is stuck at GND
     Warning (13410): Pin "ReadData2[30]" is stuck at GND
     Warning (13410): Pin "ReadData2[31]" is stuck at GND
-    Warning (13410): Pin "SaidaA[0]" is stuck at GND
-    Warning (13410): Pin "SaidaA[1]" is stuck at GND
-    Warning (13410): Pin "SaidaA[2]" is stuck at GND
-    Warning (13410): Pin "SaidaA[3]" is stuck at GND
-    Warning (13410): Pin "SaidaA[4]" is stuck at GND
-    Warning (13410): Pin "SaidaA[5]" is stuck at GND
-    Warning (13410): Pin "SaidaA[6]" is stuck at GND
-    Warning (13410): Pin "SaidaA[7]" is stuck at GND
-    Warning (13410): Pin "SaidaA[8]" is stuck at GND
-    Warning (13410): Pin "SaidaA[9]" is stuck at GND
-    Warning (13410): Pin "SaidaA[10]" is stuck at GND
-    Warning (13410): Pin "SaidaA[11]" is stuck at GND
-    Warning (13410): Pin "SaidaA[12]" is stuck at GND
-    Warning (13410): Pin "SaidaA[13]" is stuck at GND
-    Warning (13410): Pin "SaidaA[14]" is stuck at GND
-    Warning (13410): Pin "SaidaA[15]" is stuck at GND
-    Warning (13410): Pin "SaidaA[16]" is stuck at GND
-    Warning (13410): Pin "SaidaA[17]" is stuck at GND
-    Warning (13410): Pin "SaidaA[18]" is stuck at GND
-    Warning (13410): Pin "SaidaA[19]" is stuck at GND
-    Warning (13410): Pin "SaidaA[20]" is stuck at GND
-    Warning (13410): Pin "SaidaA[21]" is stuck at GND
-    Warning (13410): Pin "SaidaA[22]" is stuck at GND
-    Warning (13410): Pin "SaidaA[23]" is stuck at GND
-    Warning (13410): Pin "SaidaA[24]" is stuck at GND
-    Warning (13410): Pin "SaidaA[25]" is stuck at GND
-    Warning (13410): Pin "SaidaA[26]" is stuck at GND
-    Warning (13410): Pin "SaidaA[27]" is stuck at GND
-    Warning (13410): Pin "SaidaA[28]" is stuck at GND
-    Warning (13410): Pin "SaidaA[29]" is stuck at GND
-    Warning (13410): Pin "SaidaA[30]" is stuck at GND
-    Warning (13410): Pin "SaidaA[31]" is stuck at GND
-    Warning (13410): Pin "SaidaB[0]" is stuck at GND
-    Warning (13410): Pin "SaidaB[1]" is stuck at GND
-    Warning (13410): Pin "SaidaB[2]" is stuck at GND
-    Warning (13410): Pin "SaidaB[3]" is stuck at GND
-    Warning (13410): Pin "SaidaB[4]" is stuck at GND
-    Warning (13410): Pin "SaidaB[5]" is stuck at GND
-    Warning (13410): Pin "SaidaB[6]" is stuck at GND
-    Warning (13410): Pin "SaidaB[7]" is stuck at GND
-    Warning (13410): Pin "SaidaB[8]" is stuck at GND
-    Warning (13410): Pin "SaidaB[9]" is stuck at GND
-    Warning (13410): Pin "SaidaB[10]" is stuck at GND
-    Warning (13410): Pin "SaidaB[11]" is stuck at GND
-    Warning (13410): Pin "SaidaB[12]" is stuck at GND
-    Warning (13410): Pin "SaidaB[13]" is stuck at GND
-    Warning (13410): Pin "SaidaB[14]" is stuck at GND
-    Warning (13410): Pin "SaidaB[15]" is stuck at GND
-    Warning (13410): Pin "SaidaB[16]" is stuck at GND
-    Warning (13410): Pin "SaidaB[17]" is stuck at GND
-    Warning (13410): Pin "SaidaB[18]" is stuck at GND
-    Warning (13410): Pin "SaidaB[19]" is stuck at GND
-    Warning (13410): Pin "SaidaB[20]" is stuck at GND
-    Warning (13410): Pin "SaidaB[21]" is stuck at GND
-    Warning (13410): Pin "SaidaB[22]" is stuck at GND
-    Warning (13410): Pin "SaidaB[23]" is stuck at GND
-    Warning (13410): Pin "SaidaB[24]" is stuck at GND
-    Warning (13410): Pin "SaidaB[25]" is stuck at GND
-    Warning (13410): Pin "SaidaB[26]" is stuck at GND
-    Warning (13410): Pin "SaidaB[27]" is stuck at GND
-    Warning (13410): Pin "SaidaB[28]" is stuck at GND
-    Warning (13410): Pin "SaidaB[29]" is stuck at GND
-    Warning (13410): Pin "SaidaB[30]" is stuck at GND
-    Warning (13410): Pin "SaidaB[31]" is stuck at GND
-Info: Removed 1 MSB VCC or GND address nodes from RAM block "Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM"
-Info: Removed 1 MSB VCC or GND address nodes from RAM block "Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM"
-Info: Removed 1 MSB VCC or GND address nodes from RAM block "Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM"
-Info: Removed 2 MSB VCC or GND address nodes from RAM block "Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated|ALTSYNCRAM"
-Info: Generated suppressed messages file C:/Users/vlma/Desktop/projeto/hardware.map.smsg
-Info: Implemented 934 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "DadoASerEscrito[17]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[18]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[19]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[20]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[21]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[22]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[23]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[24]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[25]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[26]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[27]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[28]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[29]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[30]" is stuck at GND
+    Warning (13410): Pin "DadoASerEscrito[31]" is stuck at GND
+Info: Generated suppressed messages file C:/Users/lab7/Desktop/projeto/hardware.map.smsg
+Info: Implemented 1816 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 278 output pins
-    Info: Implemented 622 logic cells
+    Info: Implemented 287 output pins
+    Info: Implemented 1495 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 183 warnings
-    Info: Peak virtual memory: 266 megabytes
-    Info: Processing ended: Thu Apr 12 17:30:03 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 98 warnings
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Thu Apr 12 21:27:03 2018
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:10
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/vlma/Desktop/projeto/hardware.map.smsg.
+The suppressed messages can be found in C:/Users/lab7/Desktop/projeto/hardware.map.smsg.
 
 

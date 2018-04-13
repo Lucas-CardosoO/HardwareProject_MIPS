@@ -8,6 +8,7 @@ always_comb begin
 		1'b1: begin
 			saidaMux = entrada1;
 		end
+	endcase
 end
 
 endmodule: mux2entradas32bits
