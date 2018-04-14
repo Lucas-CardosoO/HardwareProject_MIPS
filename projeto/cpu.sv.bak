@@ -1,8 +1,8 @@
 module cpu(input clock, reset, 
   output logic IouD,
-  output logic [1:0]ULAOp, //Mudou de 3 pra 2 bits
+  output logic [1:0]ULAOp, FontePC, //Mudou de 3 pra 2 bits
   output logic [31:0]PC, AluSaida,
-  output logic [31:0]MemData, EntradaULA1, EntradaULA2,
+  output logic [31:0]MemData, EntradaULA1, EntradaULA2, EntradaPC,
   output logic [31:0]Alu, extensor32bits, Address, dadoPreMux,
   output logic[5:0] Instr31_26,
   output logic[4:0] Instr25_21,
@@ -67,7 +67,7 @@ module cpu(input clock, reset,
 	Registrador PCreg(.Clk(clock),
 	.Reset(reset),
 	.Load(PCEsc),
-	.Entrada(AluSaida),
+	.Entrada(EntradaPC),
 	.Saida(PC));
 
 	Registrador MDR(.Clk(clock),
@@ -172,7 +172,7 @@ module cpu(input clock, reset,
 	.entrada1(SaidaA),
 	.saidaMux(EntradaULA1));	
 	
-	mux4entradas32bits EntradaULA2Selection(.controlador(ULAFonteB),  // mudar nome do modulo do registrador para mux2entradas ->5<- bits
+	mux4entradas32bits EntradaULA2Selection(.controlador(ULAFonteB), 
 	.entrada0(SaidaB),
 	.entrada1(32'd4),
 	.entrada2(extensor32bits),
@@ -180,11 +180,16 @@ module cpu(input clock, reset,
 	.saidaMux(EntradaULA2));
 	
 	mux2entradas32bits_real DadoASerEscritoSelection(.controlador(MemParaReg),
-	.entrada0(Alu),
+	.entrada0(AluSaida),
 	.entrada1(dadoPreMux),
 	.saidaMux(DadoASerEscrito));
 	
-
+	mux4entradas32bits EntradaULA2Selection(.controlador(FontePC),  
+	.entrada0(Alu),
+	.entrada1(AluSaida),
+	.entrada2({ PC[31:28], { Instr25_21, Instr20_16, Instr15_0, } << 2, 2'b00 }),
+	.entrada3(32'd666),
+	.saidaMux(EntradaPC));
 
 
 
@@ -192,9 +197,8 @@ module cpu(input clock, reset,
 	.saida(extensor32bits));
 	
 	
-	
-	
-	
+
+
 	Banco_reg BancoDeRegistradores(.Clk(clock),
 	.Reset(reset),
 	.RegWrite(RegWrite),

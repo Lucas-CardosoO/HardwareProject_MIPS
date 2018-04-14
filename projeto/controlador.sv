@@ -1,6 +1,6 @@
 module controlador(input logic Clock, Reset, input logic[5:0]OpCode, InstrArit,
 output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA, MemParaReg,
-output logic[1:0] ULAFonteB,
+output logic[1:0] ULAFonteB, FontePC,
 output logic[1:0] RegACtrl,
 output logic[1:0] RegBCtrl, ULASaidaCtrl, MDRCtrl,
 output logic[1:0] ULAOp,//Mudou de 3 pra 2 bits
@@ -42,6 +42,7 @@ end
 always_comb begin
 	case(state)
 		BuscaMem : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; //
 			IREsc = 1'b0;
@@ -61,6 +62,7 @@ always_comb begin
 			
 		end
 		EsperaBusca1ELoadPc: begin
+			FontePC = 2'b01;
 			PCEsc = 1'b1;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -80,6 +82,7 @@ always_comb begin
 			
 		end
 		EsperaBusca2 : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -99,6 +102,7 @@ always_comb begin
 		end
 		
 		EscreverRegI : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b1;
@@ -121,6 +125,7 @@ always_comb begin
 			case(OpCode)
 				6'b000000: // Operacoes aritmeticas
 					begin
+						FontePC = 2'b01;
 						PCEsc = 1'b0;
 						CtrMem = 1'b0; // *
 						IREsc = 1'b0;
@@ -140,6 +145,7 @@ always_comb begin
 					end
 				6'b100011: // lw
 					begin 
+						FontePC = 2'b01;
 						PCEsc = 1'b0;
 						CtrMem = 1'b0; // *
 						IREsc = 1'b0;
@@ -159,6 +165,7 @@ always_comb begin
 					end
 				6'b101011: // sw
 					begin
+						FontePC = 2'b01;
 						PCEsc = 1'b0;
 						CtrMem = 1'b0; // *
 						IREsc = 1'b0;
@@ -178,6 +185,7 @@ always_comb begin
 					end
 					// continua nos proximos capitulos... ou nAO
 				default: begin
+					FontePC = 2'b01;
 					PCEsc = 1'b0;
 					CtrMem = 1'b0; // *
 					IREsc = 1'b0;
@@ -199,6 +207,7 @@ always_comb begin
 		end
 		
 		LWRegABLoad :begin	
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -219,6 +228,7 @@ always_comb begin
 		
 		
 		LWCalcOffset :begin	
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -238,6 +248,7 @@ always_comb begin
 		end
 		
 		LWReadMem : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -258,6 +269,7 @@ always_comb begin
 		end
 		
 		LWEspera1 : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -278,6 +290,7 @@ always_comb begin
 		end
 		
 		LWEspera2 : begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -298,6 +311,7 @@ always_comb begin
 		end
 		
 		LWMDRLoad :begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -318,6 +332,7 @@ always_comb begin
 		end
 		
 		LWFinish :begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -337,6 +352,7 @@ always_comb begin
 		end
 				
 		SWRegABLoad :begin	
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0;
 			IREsc = 1'b0;
@@ -356,6 +372,7 @@ always_comb begin
 		end
 		
 		SWCalcOffset :begin	
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0;
 			IREsc = 1'b0;
@@ -375,6 +392,7 @@ always_comb begin
 		end
 		
 		SWEscritaMem :begin	
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b1;
 			IREsc = 1'b0;
@@ -395,6 +413,7 @@ always_comb begin
 		
 		
 		RRegABLoad: begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b1;
@@ -413,6 +432,7 @@ always_comb begin
 		end
 		
 		RULAOp: begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -431,6 +451,7 @@ always_comb begin
 		end
 		
 		RRegLoad: begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
@@ -449,6 +470,7 @@ always_comb begin
 		end
 		
 		default: begin
+			FontePC = 2'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
