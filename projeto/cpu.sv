@@ -84,13 +84,13 @@ module cpu(input clock, reset,
 	
 	Registrador A(.Clk(clock),
 	.Reset(reset),
-	.Load(1'b1),
+	.Load(RegACtrl),
 	.Entrada(ReadData1),
 	.Saida(SaidaA));
 	
 	Registrador B(.Clk(clock),
 	.Reset(reset),
-	.Load(1'b1),
+	.Load(RegBCtrl),
 	.Entrada(ReadData2),
 	.Saida(SaidaB));
 	
@@ -169,18 +169,18 @@ module cpu(input clock, reset,
 	
 	mux2entradas32bits_real EntradaULA1Selection(.controlador(ULAFonteA), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
 	.entrada0(PC),
-	.entrada1(ReadData1),
+	.entrada1(SaidaA),
 	.saidaMux(EntradaULA1));	
 	
 	mux4entradas32bits EntradaULA2Selection(.controlador(ULAFonteB),  // mudar nome do modulo do registrador para mux2entradas ->5<- bits
-	.entrada0(ReadData2),
+	.entrada0(SaidaB),
 	.entrada1(32'd4),
 	.entrada2(extensor32bits),
 	.entrada3(32'd9),
 	.saidaMux(EntradaULA2));
 	
 	mux2entradas32bits_real DadoASerEscritoSelection(.controlador(MemParaReg),
-	.entrada0(Alu),
+	.entrada0(AluSaida),
 	.entrada1(dadoPreMux),
 	.saidaMux(DadoASerEscrito));
 	
@@ -192,9 +192,8 @@ module cpu(input clock, reset,
 	.saida(extensor32bits));
 	
 	
-	
-	
-	
+
+
 	Banco_reg BancoDeRegistradores(.Clk(clock),
 	.Reset(reset),
 	.RegWrite(RegWrite),

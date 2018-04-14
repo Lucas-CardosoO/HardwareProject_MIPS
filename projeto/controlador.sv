@@ -23,10 +23,9 @@ enum logic [5:0] {BuscaMem = 6'd0,
   SWRegABLoad = 6'd12,
   SWCalcOffset = 6'd13,
   SWEscritaMem = 6'd14,
-  RExecArit = 6'd15,
-  RRegABLoad = 6'd16,
-  RULAOp = 6'd17,
-  RRegLoad = 6'd18
+  RRegABLoad = 6'd15,
+  RULAOp = 6'd16,
+  RRegLoad = 6'd17
    /* continua */} nextState;
 
 
@@ -124,7 +123,7 @@ always_comb begin
 					begin
 						PCEsc = 1'b0;
 						CtrMem = 1'b0; // *
-						IREsc = 1'b1;
+						IREsc = 1'b0;
 						ULAOp = 2'b11;
 						RegWrite = 1'b0;
 						RegDst = 1'b1;
@@ -137,7 +136,7 @@ always_comb begin
 						ULASaidaCtrl = 1'b0;
 						MDRCtrl = 1'b0;
 						
-						nextState <= RExecArit;
+						nextState <= RRegABLoad;
 					end
 				6'b100011: // lw
 					begin 
@@ -395,7 +394,7 @@ always_comb begin
 		end
 		
 		
-		RExecArit: begin
+		RRegABLoad: begin
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b1;
@@ -416,7 +415,7 @@ always_comb begin
 		RULAOp: begin
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
-			IREsc = 1'b1;
+			IREsc = 1'b0;
 			ULAOp = 2'b10;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;
@@ -434,7 +433,7 @@ always_comb begin
 		RRegLoad: begin
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
-			IREsc = 1'b1;
+			IREsc = 1'b0;
 			ULAOp = 2'b10;
 			RegWrite = 1'b1;
 			RegDst = 1'b0;
@@ -449,13 +448,10 @@ always_comb begin
 			nextState = BuscaMem;
 		end
 		
-		
-		
-		
 		default: begin
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
-			IREsc = 1'b1;
+			IREsc = 1'b0;
 			ULAOp = 2'b11;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;

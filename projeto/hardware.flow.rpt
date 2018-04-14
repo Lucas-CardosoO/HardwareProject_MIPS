@@ -1,5 +1,5 @@
 Flow report for hardware
-Sat Apr 14 15:54:15 2018
+Sat Apr 14 17:32:16 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr 14 15:54:15 2018        ;
+; Flow Status                        ; Successful - Sat Apr 14 17:32:16 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                             ; EP2C70F896C7                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 1,923 / 68,416 ( 3 % )                       ;
-;     Total combinational functions  ; 1,707 / 68,416 ( 2 % )                       ;
+; Total logic elements               ; 1,735 / 68,416 ( 3 % )                       ;
+;     Total combinational functions  ; 1,689 / 68,416 ( 2 % )                       ;
 ;     Dedicated logic registers      ; 1,221 / 68,416 ( 2 % )                       ;
 ; Total registers                    ; 1221                                         ;
 ; Total pins                         ; 509 / 622 ( 82 % )                           ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/14/2018 15:53:44 ;
+; Start date & time ; 04/14/2018 17:31:39 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hardware            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 93179164542084.152373202401508 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 57606936739296.152373789902496 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                             ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                              ; --            ; --          ; --             ;
 ; PARTITION_COLOR                    ; 16764057                       ; --            ; cpu         ; Top            ;
@@ -89,11 +89,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:07     ; 1.0                     ; 270 MB              ; 00:00:09                           ;
-; Fitter                  ; 00:00:14     ; 1.8                     ; 377 MB              ; 00:00:16                           ;
-; Assembler               ; 00:00:04     ; 1.0                     ; 342 MB              ; 00:00:03                           ;
-; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 200 MB              ; 00:00:02                           ;
-; Total                   ; 00:00:28     ; --                      ; --                  ; 00:00:30                           ;
+; Analysis & Synthesis    ; 00:00:10     ; 1.0                     ; 265 MB              ; 00:00:08                           ;
+; Fitter                  ; 00:00:18     ; 2.5                     ; 376 MB              ; 00:00:23                           ;
+; Assembler               ; 00:00:06     ; 1.0                     ; 341 MB              ; 00:00:04                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 185 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:36     ; --                      ; --                  ; 00:00:36                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,10 +102,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; HWC16            ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; HWC16            ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; HWC16            ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; HWC16            ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; g2c33            ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; g2c33            ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; g2c33            ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; g2c33            ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 
