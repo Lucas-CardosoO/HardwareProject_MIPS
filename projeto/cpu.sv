@@ -8,7 +8,7 @@ module cpu(input clock, reset,
   output logic[4:0] Instr25_21,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
-  output logic[3:0] Estado,
+  output logic[5:0] Estado,
   output logic [4:0] RegDestinoSaida,
   output logic [31:0] ReadData1, ReadData2, DadoASerEscrito,
   output logic [31:0] SaidaA,
@@ -53,7 +53,6 @@ module cpu(input clock, reset,
 	//logic [31:0] ReadData2;
 	
 	// Fios Memoria
-	logic [31:0]DataWrite;
 	// logic [31:0]Address;
 	
 	//Extensor
@@ -131,7 +130,7 @@ module cpu(input clock, reset,
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
 	.Wr(CtrMem),
-	.DataIn(DataWrite),
+	.DataIn(SaidaB),
 	.DataOut(MemData));
 	
 	
@@ -202,7 +201,7 @@ module cpu(input clock, reset,
 	.ReadReg1(Instr25_21),
 	.ReadReg2(Instr20_16),
 	.WriteReg(RegDestinoSaida),
-	.WriteData(Alu), // saida do mux ( 0 - Alu, caso op arith, ou 1 - caso acesso a memoria, caso lw)
+	.WriteData(DadoASerEscrito), // saida do mux ( 0 - Alu, caso op arith, ou 1 - caso acesso a memoria, caso lw)
 	.ReadData1(ReadData1),
 	.ReadData2(ReadData2));
 	

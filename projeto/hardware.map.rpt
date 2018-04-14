@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hardware
-Fri Apr 13 17:49:28 2018
+Sat Apr 14 15:53:51 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,25 +15,24 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 15. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 16. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
- 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
- 19. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
- 20. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
- 21. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
- 22. Port Connectivity Checks: "controlador:ctrl"
- 23. Port Connectivity Checks: "Ula32:ULA"
- 24. Port Connectivity Checks: "AluControl:AluControl"
- 25. Port Connectivity Checks: "Registrador:B"
- 26. Port Connectivity Checks: "Registrador:A"
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 15. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 16. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
+ 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
+ 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
+ 19. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
+ 20. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
+ 21. Port Connectivity Checks: "controlador:ctrl"
+ 22. Port Connectivity Checks: "Ula32:ULA"
+ 23. Port Connectivity Checks: "AluControl:AluControl"
+ 24. Port Connectivity Checks: "Registrador:B"
+ 25. Port Connectivity Checks: "Registrador:A"
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,16 +58,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 13 17:49:28 2018        ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 14 15:53:51 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 333                                          ;
-;     Total combinational functions  ; 237                                          ;
-;     Dedicated logic registers      ; 132                                          ;
-; Total registers                    ; 132                                          ;
-; Total pins                         ; 507                                          ;
+; Total logic elements               ; 2,795                                        ;
+;     Total combinational functions  ; 1,707                                        ;
+;     Dedicated logic registers      ; 1,221                                        ;
+; Total registers                    ; 1221                                         ;
+; Total pins                         ; 509                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -172,29 +171,29 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                  ;
-+----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
-; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/instrucoes.mif             ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/cpu.sv                     ;
-; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Banco_reg.vhd              ;
-; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Instr_Reg.vhd              ;
-; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Memoria.vhd                ;
-; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Registrador.vhd            ;
-; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/ula32.vhd                  ;
-; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/controlador.sv             ;
-; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits.sv      ;
-; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux4entradas32bits.sv      ;
-; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits_real.sv ;
-; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/AluControl.sv              ;
-; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/extensor16to32bits.sv      ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf                ;
-; altram.tdf                       ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altram.tdf                    ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf                ;
-; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/db/altsyncram_e1a1.tdf     ;
-+----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                 ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                   ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
+; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/vlma/Desktop/projeto/instrucoes.mif                   ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/cpu.sv                           ;
+; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Banco_reg.vhd                    ;
+; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Instr_Reg.vhd                    ;
+; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Memoria.vhd                      ;
+; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/Registrador.vhd                  ;
+; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/vlma/Desktop/projeto/ula32.vhd                        ;
+; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/controlador.sv                   ;
+; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux2entradas32bits.sv            ;
+; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux4entradas32bits.sv            ;
+; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/mux2entradas32bits_real.sv       ;
+; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/AluControl.sv                    ;
+; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/vlma/Desktop/projeto/extensor16to32bits.sv            ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_ram_dq.tdf ;
+; altram.tdf                       ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altram.tdf     ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
+; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/vlma/Desktop/projeto/db/altsyncram_e1a1.tdf           ;
++----------------------------------+-----------------+----------------------------------+----------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -202,28 +201,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 333   ;
+; Estimated Total logic elements              ; 2,795 ;
 ;                                             ;       ;
-; Total combinational functions               ; 237   ;
+; Total combinational functions               ; 1707  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 89    ;
-;     -- 3 input functions                    ; 75    ;
-;     -- <=2 input functions                  ; 73    ;
+;     -- 4 input functions                    ; 1500  ;
+;     -- 3 input functions                    ; 174   ;
+;     -- <=2 input functions                  ; 33    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 217   ;
+;     -- normal mode                          ; 1687  ;
 ;     -- arithmetic mode                      ; 20    ;
 ;                                             ;       ;
-; Total registers                             ; 132   ;
-;     -- Dedicated logic registers            ; 132   ;
+; Total registers                             ; 1221  ;
+;     -- Dedicated logic registers            ; 1221  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 507   ;
+; I/O pins                                    ; 509   ;
 ; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 164   ;
-; Total fan-out                               ; 1908  ;
-; Average fan-out                             ; 2.10  ;
+; Maximum fan-out                             ; 1253  ;
+; Total fan-out                               ; 12240 ;
+; Average fan-out                             ; 3.53  ;
 +---------------------------------------------+-------+
 
 
@@ -232,34 +231,39 @@ applicable agreement for further details.
 +-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                            ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
 +-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu                                                  ; 237 (1)           ; 132 (0)      ; 8192        ; 0            ; 0       ; 0         ; 507  ; 0            ; |cpu                                                                                                          ; work         ;
+; |cpu                                                  ; 1707 (0)          ; 1221 (0)     ; 8192        ; 0            ; 0       ; 0         ; 509  ; 0            ; |cpu                                                                                                          ; work         ;
+;    |AluControl:AluControl|                            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
+;    |Banco_reg:BancoDeRegistradores|                   ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
 ;    |Instr_Reg:inst_reg|                               ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
 ;    |Memoria:Memory|                                   ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
-;       |lpm_ram_dq:MEM_plus_Three|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
-;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ; work         ;
+;       |lpm_ram_dq:MEM_plus_Three|                     ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ; work         ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
 ;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
 ;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
-;       |lpm_ram_dq:MEM_plus_Two|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
-;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
-;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
+;       |lpm_ram_dq:MEM_plus_Two|                       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ; work         ;
+;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ; work         ;
+;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block                                  ; work         ;
+;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ; work         ;
 ;       |lpm_ram_dq:MEM|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM                                                                            ; work         ;
 ;          |altram:sram|                                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
 ;             |altsyncram:ram_block|                    ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
 ;                |altsyncram_e1a1:auto_generated|       ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |Registrador:MDR|                                  ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDR                                                                                          ;              ;
+;    |Registrador:A|                                    ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:A                                                                                            ; work         ;
+;    |Registrador:B|                                    ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:B                                                                                            ; work         ;
+;    |Registrador:MDR|                                  ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDR                                                                                          ; work         ;
 ;    |Registrador:PCreg|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
 ;    |Registrador:ULASaida|                             ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:ULASaida                                                                                     ; work         ;
-;    |Ula32:ULA|                                        ; 75 (75)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
-;    |controlador:ctrl|                                 ; 26 (26)           ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |Ula32:ULA|                                        ; 103 (103)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
+;    |controlador:ctrl|                                 ; 47 (47)           ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |mux2entradas32bits:RegisterWriteSelection|        ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
 ;    |mux2entradas32bits_real:DadoASerEscritoSelection| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:DadoASerEscritoSelection                                                         ; work         ;
-;    |mux2entradas32bits_real:EntradaULA1Selection|     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
+;    |mux2entradas32bits_real:EntradaULA1Selection|     ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
 ;    |mux2entradas32bits_real:IouDMux|                  ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
-;    |mux4entradas32bits:EntradaULA2Selection|          ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
+;    |mux4entradas32bits:EntradaULA2Selection|          ; 36 (36)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
 +-------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -276,119 +280,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+---------------------------------------------+---------------------------------------------+
-; Register name                               ; Reason for Removal                          ;
-+---------------------------------------------+---------------------------------------------+
-; Banco_reg:BancoDeRegistradores|Reg0[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg1[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg2[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg3[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg4[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg5[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg6[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg7[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg8[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg9[0..31]  ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg10[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg11[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg12[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg13[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg14[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg15[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg16[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg17[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg18[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg19[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg20[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg21[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg22[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg23[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg24[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg25[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg26[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg27[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg28[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg29[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg30[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Banco_reg:BancoDeRegistradores|Reg31[0..31] ; Stuck at GND due to stuck port clock_enable ;
-; Registrador:B|Saida[0..31]                  ; Stuck at GND due to stuck port data_in      ;
-; Registrador:A|Saida[0..31]                  ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 1088    ;                                             ;
-+---------------------------------------------+---------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+-----------------------------------------+--------------------------------+--------------------------------------------------+
-; Register name                           ; Reason for Removal             ; Registers Removed due to This Register           ;
-+-----------------------------------------+--------------------------------+--------------------------------------------------+
-; Banco_reg:BancoDeRegistradores|Reg0[31] ; Stuck at GND                   ; Registrador:B|Saida[31], Registrador:A|Saida[31] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[30] ; Stuck at GND                   ; Registrador:B|Saida[30], Registrador:A|Saida[30] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[29] ; Stuck at GND                   ; Registrador:B|Saida[29], Registrador:A|Saida[29] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[28] ; Stuck at GND                   ; Registrador:B|Saida[28], Registrador:A|Saida[28] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[27] ; Stuck at GND                   ; Registrador:B|Saida[27], Registrador:A|Saida[27] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[26] ; Stuck at GND                   ; Registrador:B|Saida[26], Registrador:A|Saida[26] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[25] ; Stuck at GND                   ; Registrador:B|Saida[25], Registrador:A|Saida[25] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[24] ; Stuck at GND                   ; Registrador:B|Saida[24], Registrador:A|Saida[24] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[23] ; Stuck at GND                   ; Registrador:B|Saida[23], Registrador:A|Saida[23] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[22] ; Stuck at GND                   ; Registrador:B|Saida[22], Registrador:A|Saida[22] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[21] ; Stuck at GND                   ; Registrador:B|Saida[21], Registrador:A|Saida[21] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[20] ; Stuck at GND                   ; Registrador:B|Saida[20], Registrador:A|Saida[20] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[19] ; Stuck at GND                   ; Registrador:B|Saida[19], Registrador:A|Saida[19] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[18] ; Stuck at GND                   ; Registrador:B|Saida[18], Registrador:A|Saida[18] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[17] ; Stuck at GND                   ; Registrador:B|Saida[17], Registrador:A|Saida[17] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[16] ; Stuck at GND                   ; Registrador:B|Saida[16], Registrador:A|Saida[16] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[15] ; Stuck at GND                   ; Registrador:B|Saida[15], Registrador:A|Saida[15] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[14] ; Stuck at GND                   ; Registrador:B|Saida[14], Registrador:A|Saida[14] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[13] ; Stuck at GND                   ; Registrador:B|Saida[13], Registrador:A|Saida[13] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[12] ; Stuck at GND                   ; Registrador:B|Saida[12], Registrador:A|Saida[12] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[11] ; Stuck at GND                   ; Registrador:B|Saida[11], Registrador:A|Saida[11] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[10] ; Stuck at GND                   ; Registrador:B|Saida[10], Registrador:A|Saida[10] ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[9]  ; Stuck at GND                   ; Registrador:B|Saida[9], Registrador:A|Saida[9]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[8]  ; Stuck at GND                   ; Registrador:B|Saida[8], Registrador:A|Saida[8]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[7]  ; Stuck at GND                   ; Registrador:B|Saida[7], Registrador:A|Saida[7]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[6]  ; Stuck at GND                   ; Registrador:B|Saida[6], Registrador:A|Saida[6]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[5]  ; Stuck at GND                   ; Registrador:B|Saida[5], Registrador:A|Saida[5]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[4]  ; Stuck at GND                   ; Registrador:B|Saida[4], Registrador:A|Saida[4]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[3]  ; Stuck at GND                   ; Registrador:B|Saida[3], Registrador:A|Saida[3]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[2]  ; Stuck at GND                   ; Registrador:B|Saida[2], Registrador:A|Saida[2]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[1]  ; Stuck at GND                   ; Registrador:B|Saida[1], Registrador:A|Saida[1]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-; Banco_reg:BancoDeRegistradores|Reg0[0]  ; Stuck at GND                   ; Registrador:B|Saida[0], Registrador:A|Saida[0]   ;
-;                                         ; due to stuck port clock_enable ;                                                  ;
-+-----------------------------------------+--------------------------------+--------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; controlador:ctrl|state[5]             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -396,12 +295,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 132   ;
+; Total registers                              ; 1221  ;
 ; Number of registers using Synchronous Clear  ; 2     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 128   ;
+; Number of registers using Asynchronous Clear ; 1216  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Clock Enable       ; 1152  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -411,8 +310,11 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
-; 17:1               ; 2 bits    ; 22 LEs        ; 12 LEs               ; 10 LEs                 ; Yes        ; |cpu|controlador:ctrl|state[2]                     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux28 ;
+; 33:1               ; 3 bits    ; 66 LEs        ; 30 LEs               ; 36 LEs                 ; Yes        ; |cpu|controlador:ctrl|state[0]                     ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux23 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux15 ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux0           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |cpu|Banco_reg:BancoDeRegistradores|Mux43          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
 
 
@@ -620,7 +522,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Apr 13 17:49:25 2018
+    Info: Processing started: Sat Apr 14 15:53:44 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hardware -c hardware
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file cpu.sv
@@ -656,7 +558,7 @@ Info: Found 1 design units, including 1 entities, in source file alucontrol.sv
     Info: Found entity 1: AluControl
 Info: Found 1 design units, including 1 entities, in source file extensor16to32bits.sv
     Info: Found entity 1: extensor16to32bits
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(103): created implicit net for "ULAOpSelector"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(102): created implicit net for "ULAOpSelector"
 Info: Elaborating entity "cpu" for the top level hierarchy
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:PCreg"
 Info: Elaborating entity "AluControl" for hierarchy "AluControl:AluControl"
@@ -695,21 +597,6 @@ Info: Elaborating entity "extensor16to32bits" for hierarchy "extensor16to32bits:
 Info: Elaborating entity "Banco_reg" for hierarchy "Banco_reg:BancoDeRegistradores"
 Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "EntradaULA2[17]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[18]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[19]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[20]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[21]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[22]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[23]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[24]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[25]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[26]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[27]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[28]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[29]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[30]" is stuck at GND
-    Warning (13410): Pin "EntradaULA2[31]" is stuck at GND
     Warning (13410): Pin "extensor32bits[17]" is stuck at GND
     Warning (13410): Pin "extensor32bits[18]" is stuck at GND
     Warning (13410): Pin "extensor32bits[19]" is stuck at GND
@@ -725,153 +612,23 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "extensor32bits[29]" is stuck at GND
     Warning (13410): Pin "extensor32bits[30]" is stuck at GND
     Warning (13410): Pin "extensor32bits[31]" is stuck at GND
-    Warning (13410): Pin "ReadData1[0]" is stuck at GND
-    Warning (13410): Pin "ReadData1[1]" is stuck at GND
-    Warning (13410): Pin "ReadData1[2]" is stuck at GND
-    Warning (13410): Pin "ReadData1[3]" is stuck at GND
-    Warning (13410): Pin "ReadData1[4]" is stuck at GND
-    Warning (13410): Pin "ReadData1[5]" is stuck at GND
-    Warning (13410): Pin "ReadData1[6]" is stuck at GND
-    Warning (13410): Pin "ReadData1[7]" is stuck at GND
-    Warning (13410): Pin "ReadData1[8]" is stuck at GND
-    Warning (13410): Pin "ReadData1[9]" is stuck at GND
-    Warning (13410): Pin "ReadData1[10]" is stuck at GND
-    Warning (13410): Pin "ReadData1[11]" is stuck at GND
-    Warning (13410): Pin "ReadData1[12]" is stuck at GND
-    Warning (13410): Pin "ReadData1[13]" is stuck at GND
-    Warning (13410): Pin "ReadData1[14]" is stuck at GND
-    Warning (13410): Pin "ReadData1[15]" is stuck at GND
-    Warning (13410): Pin "ReadData1[16]" is stuck at GND
-    Warning (13410): Pin "ReadData1[17]" is stuck at GND
-    Warning (13410): Pin "ReadData1[18]" is stuck at GND
-    Warning (13410): Pin "ReadData1[19]" is stuck at GND
-    Warning (13410): Pin "ReadData1[20]" is stuck at GND
-    Warning (13410): Pin "ReadData1[21]" is stuck at GND
-    Warning (13410): Pin "ReadData1[22]" is stuck at GND
-    Warning (13410): Pin "ReadData1[23]" is stuck at GND
-    Warning (13410): Pin "ReadData1[24]" is stuck at GND
-    Warning (13410): Pin "ReadData1[25]" is stuck at GND
-    Warning (13410): Pin "ReadData1[26]" is stuck at GND
-    Warning (13410): Pin "ReadData1[27]" is stuck at GND
-    Warning (13410): Pin "ReadData1[28]" is stuck at GND
-    Warning (13410): Pin "ReadData1[29]" is stuck at GND
-    Warning (13410): Pin "ReadData1[30]" is stuck at GND
-    Warning (13410): Pin "ReadData1[31]" is stuck at GND
-    Warning (13410): Pin "ReadData2[0]" is stuck at GND
-    Warning (13410): Pin "ReadData2[1]" is stuck at GND
-    Warning (13410): Pin "ReadData2[2]" is stuck at GND
-    Warning (13410): Pin "ReadData2[3]" is stuck at GND
-    Warning (13410): Pin "ReadData2[4]" is stuck at GND
-    Warning (13410): Pin "ReadData2[5]" is stuck at GND
-    Warning (13410): Pin "ReadData2[6]" is stuck at GND
-    Warning (13410): Pin "ReadData2[7]" is stuck at GND
-    Warning (13410): Pin "ReadData2[8]" is stuck at GND
-    Warning (13410): Pin "ReadData2[9]" is stuck at GND
-    Warning (13410): Pin "ReadData2[10]" is stuck at GND
-    Warning (13410): Pin "ReadData2[11]" is stuck at GND
-    Warning (13410): Pin "ReadData2[12]" is stuck at GND
-    Warning (13410): Pin "ReadData2[13]" is stuck at GND
-    Warning (13410): Pin "ReadData2[14]" is stuck at GND
-    Warning (13410): Pin "ReadData2[15]" is stuck at GND
-    Warning (13410): Pin "ReadData2[16]" is stuck at GND
-    Warning (13410): Pin "ReadData2[17]" is stuck at GND
-    Warning (13410): Pin "ReadData2[18]" is stuck at GND
-    Warning (13410): Pin "ReadData2[19]" is stuck at GND
-    Warning (13410): Pin "ReadData2[20]" is stuck at GND
-    Warning (13410): Pin "ReadData2[21]" is stuck at GND
-    Warning (13410): Pin "ReadData2[22]" is stuck at GND
-    Warning (13410): Pin "ReadData2[23]" is stuck at GND
-    Warning (13410): Pin "ReadData2[24]" is stuck at GND
-    Warning (13410): Pin "ReadData2[25]" is stuck at GND
-    Warning (13410): Pin "ReadData2[26]" is stuck at GND
-    Warning (13410): Pin "ReadData2[27]" is stuck at GND
-    Warning (13410): Pin "ReadData2[28]" is stuck at GND
-    Warning (13410): Pin "ReadData2[29]" is stuck at GND
-    Warning (13410): Pin "ReadData2[30]" is stuck at GND
-    Warning (13410): Pin "ReadData2[31]" is stuck at GND
-    Warning (13410): Pin "SaidaA[0]" is stuck at GND
-    Warning (13410): Pin "SaidaA[1]" is stuck at GND
-    Warning (13410): Pin "SaidaA[2]" is stuck at GND
-    Warning (13410): Pin "SaidaA[3]" is stuck at GND
-    Warning (13410): Pin "SaidaA[4]" is stuck at GND
-    Warning (13410): Pin "SaidaA[5]" is stuck at GND
-    Warning (13410): Pin "SaidaA[6]" is stuck at GND
-    Warning (13410): Pin "SaidaA[7]" is stuck at GND
-    Warning (13410): Pin "SaidaA[8]" is stuck at GND
-    Warning (13410): Pin "SaidaA[9]" is stuck at GND
-    Warning (13410): Pin "SaidaA[10]" is stuck at GND
-    Warning (13410): Pin "SaidaA[11]" is stuck at GND
-    Warning (13410): Pin "SaidaA[12]" is stuck at GND
-    Warning (13410): Pin "SaidaA[13]" is stuck at GND
-    Warning (13410): Pin "SaidaA[14]" is stuck at GND
-    Warning (13410): Pin "SaidaA[15]" is stuck at GND
-    Warning (13410): Pin "SaidaA[16]" is stuck at GND
-    Warning (13410): Pin "SaidaA[17]" is stuck at GND
-    Warning (13410): Pin "SaidaA[18]" is stuck at GND
-    Warning (13410): Pin "SaidaA[19]" is stuck at GND
-    Warning (13410): Pin "SaidaA[20]" is stuck at GND
-    Warning (13410): Pin "SaidaA[21]" is stuck at GND
-    Warning (13410): Pin "SaidaA[22]" is stuck at GND
-    Warning (13410): Pin "SaidaA[23]" is stuck at GND
-    Warning (13410): Pin "SaidaA[24]" is stuck at GND
-    Warning (13410): Pin "SaidaA[25]" is stuck at GND
-    Warning (13410): Pin "SaidaA[26]" is stuck at GND
-    Warning (13410): Pin "SaidaA[27]" is stuck at GND
-    Warning (13410): Pin "SaidaA[28]" is stuck at GND
-    Warning (13410): Pin "SaidaA[29]" is stuck at GND
-    Warning (13410): Pin "SaidaA[30]" is stuck at GND
-    Warning (13410): Pin "SaidaA[31]" is stuck at GND
-    Warning (13410): Pin "SaidaB[0]" is stuck at GND
-    Warning (13410): Pin "SaidaB[1]" is stuck at GND
-    Warning (13410): Pin "SaidaB[2]" is stuck at GND
-    Warning (13410): Pin "SaidaB[3]" is stuck at GND
-    Warning (13410): Pin "SaidaB[4]" is stuck at GND
-    Warning (13410): Pin "SaidaB[5]" is stuck at GND
-    Warning (13410): Pin "SaidaB[6]" is stuck at GND
-    Warning (13410): Pin "SaidaB[7]" is stuck at GND
-    Warning (13410): Pin "SaidaB[8]" is stuck at GND
-    Warning (13410): Pin "SaidaB[9]" is stuck at GND
-    Warning (13410): Pin "SaidaB[10]" is stuck at GND
-    Warning (13410): Pin "SaidaB[11]" is stuck at GND
-    Warning (13410): Pin "SaidaB[12]" is stuck at GND
-    Warning (13410): Pin "SaidaB[13]" is stuck at GND
-    Warning (13410): Pin "SaidaB[14]" is stuck at GND
-    Warning (13410): Pin "SaidaB[15]" is stuck at GND
-    Warning (13410): Pin "SaidaB[16]" is stuck at GND
-    Warning (13410): Pin "SaidaB[17]" is stuck at GND
-    Warning (13410): Pin "SaidaB[18]" is stuck at GND
-    Warning (13410): Pin "SaidaB[19]" is stuck at GND
-    Warning (13410): Pin "SaidaB[20]" is stuck at GND
-    Warning (13410): Pin "SaidaB[21]" is stuck at GND
-    Warning (13410): Pin "SaidaB[22]" is stuck at GND
-    Warning (13410): Pin "SaidaB[23]" is stuck at GND
-    Warning (13410): Pin "SaidaB[24]" is stuck at GND
-    Warning (13410): Pin "SaidaB[25]" is stuck at GND
-    Warning (13410): Pin "SaidaB[26]" is stuck at GND
-    Warning (13410): Pin "SaidaB[27]" is stuck at GND
-    Warning (13410): Pin "SaidaB[28]" is stuck at GND
-    Warning (13410): Pin "SaidaB[29]" is stuck at GND
-    Warning (13410): Pin "SaidaB[30]" is stuck at GND
-    Warning (13410): Pin "SaidaB[31]" is stuck at GND
-    Warning (13410): Pin "CtrMem" is stuck at GND
-    Warning (13410): Pin "RegWrite" is stuck at GND
-    Warning (13410): Pin "RegDst" is stuck at GND
-Info: Generated suppressed messages file C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg
-Info: Implemented 904 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "Estado[5]" is stuck at GND
+Info: Generated suppressed messages file C:/Users/vlma/Desktop/projeto/hardware.map.smsg
+Info: Implemented 3464 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 505 output pins
-    Info: Implemented 365 logic cells
+    Info: Implemented 507 output pins
+    Info: Implemented 2923 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 167 warnings
-    Info: Peak virtual memory: 258 megabytes
-    Info: Processing ended: Fri Apr 13 17:49:28 2018
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:06
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 270 megabytes
+    Info: Processing ended: Sat Apr 14 15:53:51 2018
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:08
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg.
+The suppressed messages can be found in C:/Users/vlma/Desktop/projeto/hardware.map.smsg.
 
 

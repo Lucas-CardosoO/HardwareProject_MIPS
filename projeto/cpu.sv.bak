@@ -5,10 +5,10 @@ module cpu(input clock, reset,
   output logic [31:0]MemData, EntradaULA1, EntradaULA2,
   output logic [31:0]Alu, extensor32bits, Address, dadoPreMux,
   output logic[5:0] Instr31_26,
-  output logic[4:0] Instr25_21, dadoPreMux,
+  output logic[4:0] Instr25_21,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
-  output logic[3:0] Estado,
+  output logic[5:0] Estado,
   output logic [4:0] RegDestinoSaida,
   output logic [31:0] ReadData1, ReadData2, DadoASerEscrito,
   output logic [31:0] SaidaA,
@@ -53,7 +53,6 @@ module cpu(input clock, reset,
 	//logic [31:0] ReadData2;
 	
 	// Fios Memoria
-	logic [31:0]DataWrite;
 	// logic [31:0]Address;
 	
 	//Extensor
@@ -131,7 +130,7 @@ module cpu(input clock, reset,
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
 	.Wr(CtrMem),
-	.DataIn(DataWrite),
+	.DataIn(SaidaB),
 	.DataOut(MemData));
 	
 	

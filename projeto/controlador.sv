@@ -4,23 +4,29 @@ output logic[1:0] ULAFonteB,
 output logic[1:0] RegACtrl,
 output logic[1:0] RegBCtrl, ULASaidaCtrl, MDRCtrl,
 output logic[1:0] ULAOp,//Mudou de 3 pra 2 bits
-output[3:0] state,
+output[5:0] state,
 output logic IouD);
 
 
-enum logic [3:0] {BuscaMem = 4'd0,
-  EsperaBusca1ELoadPc = 4'd1,
-  EsperaBusca2 = 4'd2,
-  EscreverRegI = 4'd3,
-  Decode = 4'd4, 
-  LWRegABLoad = 4'd5, 
-  LWCalcOffset = 4'd6,
-  LWReadMem = 4'd7,
-  LWEspera1= 4'd8, 
-  LWEspera2 = 4'd9,
-  LWMDRLoad = 4'd10,
-  LWFinish = 4'd11,
-  RExecArit = 4'd14
+enum logic [5:0] {BuscaMem = 6'd0,
+  EsperaBusca1ELoadPc = 6'd1,
+  EsperaBusca2 = 6'd2,
+  EscreverRegI = 6'd3,
+  Decode = 6'd4, 
+  LWRegABLoad = 6'd5, 
+  LWCalcOffset = 6'd6,
+  LWReadMem = 6'd7,
+  LWEspera1= 6'd8, 
+  LWEspera2 = 6'd9,
+  LWMDRLoad = 6'd10,
+  LWFinish = 6'd11,
+  SWRegABLoad = 6'd12,
+  SWCalcOffset = 6'd13,
+  SWEscritaMem = 6'd14,
+  RExecArit = 6'd15,
+  RRegABLoad = 6'd16,
+  RULAOp = 6'd17,
+  RRegLoad = 6'd18
    /* continua */} nextState;
 
 
@@ -51,26 +57,7 @@ always_comb begin
 			RegBCtrl = 1'b0;
 			ULASaidaCtrl = 1'b1;
 			MDRCtrl = 1'b0;
-			
-			
-/*
-			PCEsc = 1'b0;
-			CtrMem = 1'b0; // *
-			IREsc = 1'b0;
-			ULAOp = 2'b11;
-			RegWrite = 1'b0;
-			RegDst = 1'b0;
-			ULAFonteA = 1'b0;
-			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
-			IouD = 1'b0;
-			RegACtrl = 1'b0;
-			RegBCtrl = 1'b0;
-			ULASaidaCtrl = 1'b0;
-			MDRCtrl = 1'b0;
-			
-*/
-			
+	
 			nextState <= EsperaBusca1ELoadPc;
 			
 		end
@@ -140,7 +127,7 @@ always_comb begin
 						IREsc = 1'b1;
 						ULAOp = 2'b11;
 						RegWrite = 1'b0;
-						RegDst = 1'b0;
+						RegDst = 1'b1;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
 						MemParaReg = 1'b0;
@@ -188,7 +175,7 @@ always_comb begin
 						ULASaidaCtrl = 1'b0;
 						MDRCtrl = 1'b0;
 						
-						nextState <= BuscaMem;
+						nextState <= SWRegABLoad;
 					end
 					// continua nos proximos capitulos... ou nAO
 				default: begin
@@ -212,24 +199,6 @@ always_comb begin
 			endcase
 		end
 		
-		RExecArit: begin
-			PCEsc = 1'b0;
-			CtrMem = 1'b0; // *
-			IREsc = 1'b1;
-			ULAOp = 2'b11;
-			RegWrite = 1'b0;
-			RegDst = 1'b0;
-			ULAFonteA = 1'b0;
-			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
-			IouD = 1'b0;
-			RegACtrl = 1'b0;
-			RegBCtrl = 1'b0;
-			ULASaidaCtrl = 1'b0;
-			MDRCtrl = 1'b0;
-			nextState = BuscaMem;
-		end
-		
 		LWRegABLoad :begin	
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
@@ -248,6 +217,7 @@ always_comb begin
 			
 			nextState = LWCalcOffset ;
 		end
+		
 		
 		LWCalcOffset :begin	
 			PCEsc = 1'b0;
@@ -353,7 +323,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 2'b11;
-			RegWrite = 1'b0;
+			RegWrite = 1'b1;
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
@@ -366,6 +336,119 @@ always_comb begin
 			
 			nextState <= BuscaMem;
 		end
+				
+		SWRegABLoad :begin	
+			PCEsc = 1'b0;
+			CtrMem = 1'b0;
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 1'b0;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			
+			nextState = SWCalcOffset ;
+		end
+		
+		SWCalcOffset :begin	
+			PCEsc = 1'b0;
+			CtrMem = 1'b0;
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 1'b0;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			
+			nextState = SWEscritaMem ;
+		end
+		
+		SWEscritaMem :begin	
+			PCEsc = 1'b0;
+			CtrMem = 1'b1;
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 1'b0;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			
+			nextState = BuscaMem ;
+		end
+		
+		
+		RExecArit: begin
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b1;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 1'b0;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			nextState = RULAOp;
+		end
+		
+		RULAOp: begin
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b1;
+			ULAOp = 2'b10;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b00;
+			MemParaReg = 1'b0;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			nextState = RRegLoad;
+		end
+		
+		RRegLoad: begin
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b1;
+			ULAOp = 2'b10;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b00;
+			MemParaReg = 1'b0;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			nextState = BuscaMem;
+		end
+		
 		
 		
 		
