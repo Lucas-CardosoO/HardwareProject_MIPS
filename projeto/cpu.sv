@@ -21,7 +21,12 @@ module cpu(input clock, reset,
   output logic RegDst,
   output logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl,
   output logic[1:0] ULAFonteB,
-  output logic MemParaReg);
+  output logic MemParaReg,
+  output logic PCEscCond,
+  output logic ZeroULA,
+  output logic[31:0] extensorEShift,
+  output logic[2:0] ULAOpSelector)
+  ;
 	
 	/* controlador
 	logic Load_ir;
@@ -37,7 +42,6 @@ module cpu(input clock, reset,
 	// lixo da ula
 	logic OverflowULA;
 	logic NegativoULA;
-	logic ZeroULA;
 	logic IgualULA;
 	logic MaiorULA;
 	logic MenorULA;
@@ -66,7 +70,7 @@ module cpu(input clock, reset,
 
 	Registrador PCreg(.Clk(clock),
 	.Reset(reset),
-	.Load(PCEsc),
+	.Load(PCEsc || (PCEscCond && ZeroULA)),
 	.Entrada(EntradaPC),
 	.Saida(PC));
 
@@ -152,7 +156,10 @@ module cpu(input clock, reset,
 	.RegACtrl(RegACtrl),
 	.RegBCtrl(RegBCtrl),
 	.ULASaidaCtrl(ULASaidaCtrl),
-	.MDRCtrl(MDRCtrl));
+	.InstrArit(Instr15_0[5:0]),
+	.PCEscCond(PCEscCond),
+	.MDRCtrl(MDRCtrl),
+	.FontePC(FontePC));
 	
 	
 	
@@ -176,7 +183,7 @@ module cpu(input clock, reset,
 	.entrada0(SaidaB),
 	.entrada1(32'd4),
 	.entrada2(extensor32bits),
-	.entrada3(32'd9),
+	.entrada3(extensorEShift),
 	.saidaMux(EntradaULA2));
 	
 	mux2entradas32bits_real DadoASerEscritoSelection(.controlador(MemParaReg),
@@ -196,7 +203,7 @@ module cpu(input clock, reset,
 	extensor16to32bits extenssor(.entrada(Instr15_0),
 	.saida(extensor32bits));
 	
-	
+	shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift));
 
 
 	Banco_reg BancoDeRegistradores(.Clk(clock),

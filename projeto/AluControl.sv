@@ -28,6 +28,9 @@ always_comb begin
 				end
 			endcase
 		end
+		2'b01: begin
+			ULAOpSelector = 3'b010; //Subtraçlão pra o beq
+		end
 		default: begin
 			ULAOpSelector = 3'b000;	
 		end

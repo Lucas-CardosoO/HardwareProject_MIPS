@@ -21,12 +21,15 @@ always_comb begin
 					ULAOpSelector = 3'b011;
 				end
 				xorULA: begin
-					ULAOpSelector = 3'b011;
+					ULAOpSelector = 3'b110;
 				end
 				default: begin
 					ULAOpSelector = 3'b001;
 				end
 			endcase
+		end
+		2'b01: begin
+			ULAOpSelector = 3'b010;
 		end
 		default: begin
 			ULAOpSelector = 3'b000;	
