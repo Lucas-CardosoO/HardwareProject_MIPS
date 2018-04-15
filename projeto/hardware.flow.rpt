@@ -1,5 +1,5 @@
 Flow report for hardware
-Sun Apr 15 16:35:40 2018
+Sun Apr 15 17:44:53 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Sun Apr 15 16:35:39 2018        ;
+; Flow Status                        ; Successful - Sun Apr 15 17:44:53 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                             ; EP2C70F896C7                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 1,971 / 68,416 ( 3 % )                       ;
-;     Total combinational functions  ; 1,929 / 68,416 ( 3 % )                       ;
+; Total logic elements               ; 2,003 / 68,416 ( 3 % )                       ;
+;     Total combinational functions  ; 1,962 / 68,416 ( 3 % )                       ;
 ;     Dedicated logic registers      ; 1,221 / 68,416 ( 2 % )                       ;
 ; Total registers                    ; 1221                                         ;
 ; Total pins                         ; 580 / 622 ( 93 % )                           ;
@@ -63,25 +63,26 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/15/2018 16:34:57 ;
+; Start date & time ; 04/15/2018 17:44:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hardware            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                   ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
-; Assignment Name                    ; Value                          ; Default Value ; Entity Name ; Section Id     ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 17727280409309.152382089608352 ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP             ; 85                             ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP             ; 0                              ; --            ; --          ; --             ;
-; PARTITION_COLOR                    ; 16764057                       ; --            ; cpu         ; Top            ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                         ; --            ; cpu         ; Top            ;
-; TOP_LEVEL_ENTITY                   ; cpu                            ; hardware      ; --          ; --             ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                            ; --            ; --          ; eda_blast_fpga ;
-+------------------------------------+--------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                    ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
+; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID              ; 17727280409309.152382504903700                                  ; --            ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP             ; 85                                                              ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP             ; 0                                                               ; --            ; --          ; --             ;
+; MISC_FILE                          ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.dpf ; --            ; --          ; --             ;
+; PARTITION_COLOR                    ; 16764057                                                        ; --            ; cpu         ; Top            ;
+; PARTITION_NETLIST_TYPE             ; SOURCE                                                          ; --            ; cpu         ; Top            ;
+; TOP_LEVEL_ENTITY                   ; cpu                                                             ; hardware      ; --          ; --             ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                                                             ; --            ; --          ; eda_blast_fpga ;
++------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
@@ -89,11 +90,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:13     ; 1.0                     ; 266 MB              ; 00:00:19                           ;
-; Fitter                  ; 00:00:20     ; 2.3                     ; 378 MB              ; 00:00:25                           ;
-; Assembler               ; 00:00:06     ; 1.0                     ; 343 MB              ; 00:00:04                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 188 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:40     ; --                      ; --                  ; 00:00:49                           ;
+; Analysis & Synthesis    ; 00:00:13     ; 1.0                     ; 273 MB              ; 00:00:19                           ;
+; Fitter                  ; 00:00:20     ; 2.0                     ; 378 MB              ; 00:00:26                           ;
+; Assembler               ; 00:00:06     ; 1.0                     ; 343 MB              ; 00:00:05                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 189 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:41     ; --                      ; --                  ; 00:00:51                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

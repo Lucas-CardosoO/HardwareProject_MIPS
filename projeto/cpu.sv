@@ -45,6 +45,8 @@ module cpu(input clock, reset,
 	logic IgualULA;
 	logic MaiorULA;
 	logic MenorULA;
+	logic[31:0] pcJump;
+	logic PCEscCondBNE;
 	
 	// Saidas Mux
 	// logic [4:0] RegDestinoSaida; // Instr20_16 ou Instr15_0[4:0]
@@ -70,7 +72,7 @@ module cpu(input clock, reset,
 
 	Registrador PCreg(.Clk(clock),
 	.Reset(reset),
-	.Load(PCEsc || (PCEscCond && ZeroULA)),
+	.Load(PCEsc || (PCEscCond && ZeroULA) || (PCEscCondBNE && !ZeroULA)),
 	.Entrada(EntradaPC),
 	.Saida(PC));
 
@@ -159,7 +161,8 @@ module cpu(input clock, reset,
 	.InstrArit(Instr15_0[5:0]),
 	.PCEscCond(PCEscCond),
 	.MDRCtrl(MDRCtrl),
-	.FontePC(FontePC));
+	.FontePC(FontePC),
+	.PCEscCondBNE(PCEscCondBNE));
 	
 	
 	
@@ -194,7 +197,7 @@ module cpu(input clock, reset,
 	mux4entradas32bits FontePCSelection(.controlador(FontePC),  
 	.entrada0(Alu),
 	.entrada1(AluSaida),
-	.entrada2({ PC[31:28], { Instr25_21, Instr20_16, Instr15_0, } << 2, 2'b00 }),
+	.entrada2(pcJump),
 	.entrada3(32'd666),
 	.saidaMux(EntradaPC));
 
@@ -204,6 +207,8 @@ module cpu(input clock, reset,
 	.saida(extensor32bits));
 	
 	shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift));
+	
+	shiftLeft2bits26 shifterJ(.entrada({ Instr25_21, Instr20_16, Instr15_0 }), .entradaPC(PC), .saida(pcJump));
 
 
 	Banco_reg BancoDeRegistradores(.Clk(clock),
