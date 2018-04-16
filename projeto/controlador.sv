@@ -603,7 +603,7 @@ always_comb begin
 			IREsc = 1'b1;
 			ULAOp = 2'b11;
 			RegWrite = 1'b0;
-			RegDst = 1'b0;
+			RegDst = 1'b1;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
 			MemParaReg = 1'b0;
@@ -625,7 +625,7 @@ always_comb begin
 			IREsc = 1'b0;
 			ULAOp = 2'b10;
 			RegWrite = 1'b0;
-			RegDst = 1'b0;
+			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
 			MemParaReg = 1'b0;
@@ -647,7 +647,7 @@ always_comb begin
 			IREsc = 1'b0;
 			ULAOp = 2'b10;
 			RegWrite = 1'b1;
-			RegDst = 1'b0;
+			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
 			MemParaReg = 1'b0;

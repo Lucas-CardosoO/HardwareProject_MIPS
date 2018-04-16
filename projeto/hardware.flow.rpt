@@ -1,5 +1,5 @@
 Flow report for hardware
-Mon Apr 16 08:57:35 2018
+Mon Apr 16 10:19:27 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Mon Apr 16 08:57:35 2018        ;
+; Flow Status                        ; Successful - Mon Apr 16 10:19:27 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
@@ -46,8 +46,8 @@ applicable agreement for further details.
 ; Device                             ; EP2C70F896C7                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 1,951 / 68,416 ( 3 % )                       ;
-;     Total combinational functions  ; 1,908 / 68,416 ( 3 % )                       ;
+; Total logic elements               ; 1,957 / 68,416 ( 3 % )                       ;
+;     Total combinational functions  ; 1,909 / 68,416 ( 3 % )                       ;
 ;     Dedicated logic registers      ; 1,221 / 68,416 ( 2 % )                       ;
 ; Total registers                    ; 1221                                         ;
 ; Total pins                         ; 240 / 622 ( 39 % )                           ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/16/2018 08:56:56 ;
+; Start date & time ; 04/16/2018 10:18:48 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hardware            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 57606936731235.152387981602532                                  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 57606936731235.152388472807612                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                               ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.dpf ; --            ; --          ; --             ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:13     ; 1.0                     ; 268 MB              ; 00:00:12                           ;
-; Fitter                  ; 00:00:17     ; 2.3                     ; 376 MB              ; 00:00:21                           ;
+; Analysis & Synthesis    ; 00:00:12     ; 1.0                     ; 264 MB              ; 00:00:12                           ;
+; Fitter                  ; 00:00:18     ; 2.5                     ; 376 MB              ; 00:00:24                           ;
 ; Assembler               ; 00:00:05     ; 1.0                     ; 341 MB              ; 00:00:04                           ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 186 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:37     ; --                      ; --                  ; 00:00:38                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 186 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:36     ; --                      ; --                  ; 00:00:41                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
