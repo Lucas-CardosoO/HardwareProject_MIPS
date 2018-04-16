@@ -2,7 +2,10 @@ module cpu(input clock, reset,
   output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite,
-  output logic[5:0] Estado
+  output logic[5:0] Estado,
+  output logic[31:0] extensorEShift,
+  output logic[31:0] extensor32bits, Address,
+  output logic [31:0]EntradaULA1, EntradaULA2
   )
   ;
 	
@@ -27,8 +30,8 @@ module cpu(input clock, reset,
 	logic PCEscCondBNE;
 	logic IouD;
 	logic [1:0]ULAOp, FontePC; //Mudou de 3 pra 2 bits
-	logic [31:0]EntradaULA1, EntradaULA2, EntradaPC;
-	logic [31:0]extensor32bits, Address;
+	logic [31:0]EntradaPC;//EntradaULA1, EntradaULA2, EntradaPC;
+	//logic [31:0]Address;//extensor32bits, Address;
 	logic[5:0] Instr31_26;
 	logic[4:0] Instr25_21;
 	logic[4:0] Instr20_16;
@@ -43,8 +46,10 @@ module cpu(input clock, reset,
 	logic MemParaReg;
 	logic PCEscCond;
 	logic ZeroULA;
-	logic[31:0] extensorEShift;
+	//logic[31:0] extensorEShift;
 	logic[2:0] ULAOpSelector;
+	logic[4:0] NumShift;
+	logic resetRegA;
 	
 	// Saidas Mux
 	// logic [4:0] RegDestinoSaida; // Instr20_16 ou Instr15_0[4:0]
@@ -87,7 +92,7 @@ module cpu(input clock, reset,
 	.Saida(AluOut));
 	
 	Registrador A(.Clk(clock),
-	.Reset(reset),
+	.Reset(reset || resetRegA),
 	.Load(RegACtrl),
 	.Entrada(ReadData1),
 	.Saida(SaidaA));
@@ -160,7 +165,9 @@ module cpu(input clock, reset,
 	.PCEscCond(PCEscCond),
 	.MDRCtrl(MDRCtrl),
 	.FontePC(FontePC),
-	.PCEscCondBNE(PCEscCondBNE));
+	.PCEscCondBNE(PCEscCondBNE),
+	.NumShift(NumShift),
+	.resetRegA(resetRegA));
 	
 	
 	
@@ -204,7 +211,7 @@ module cpu(input clock, reset,
 	extensor16to32bits extenssor(.entrada(Instr15_0),
 	.saida(extensor32bits));
 	
-	shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift));
+	shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift), .contrl(NumShift));
 	
 	shiftLeft2bits26 shifterJ(.entrada({ Instr25_21, Instr20_16, Instr15_0 }), .entradaPC(PC), .saida(pcJump));
 
@@ -219,7 +226,15 @@ module cpu(input clock, reset,
 	.ReadData1(ReadData1),
 	.ReadData2(ReadData2));
 	
-
+/*	
+	RegDesloc Deslocamento(.Clk(clock),
+		 	.Reset(reset),
+			.Shift(3'b010),
+			.N(NumShift),
+			.Entrada(extensor32bits),
+			.Saida(extensorEShift));
+	
+*/
 
 endmodule: cpu
 
