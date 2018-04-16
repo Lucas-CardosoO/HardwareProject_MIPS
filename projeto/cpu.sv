@@ -1,31 +1,9 @@
-module cpu(input clock, reset, 
-  output logic IouD,
-  output logic [1:0]ULAOp, FontePC, //Mudou de 3 pra 2 bits
-  output logic [31:0]PC, AluSaida,
-  output logic [31:0]MemData, EntradaULA1, EntradaULA2, EntradaPC,
-  output logic [31:0]Alu, extensor32bits, Address, dadoPreMux,
-  output logic[5:0] Instr31_26,
-  output logic[4:0] Instr25_21,
-  output logic[4:0] Instr20_16,
-  output logic[15:0] Instr15_0,
-  output logic[5:0] Estado,
-  output logic [4:0] RegDestinoSaida,
-  output logic [31:0] ReadData1, ReadData2, DadoASerEscrito,
-  output logic [31:0] SaidaA,
-  output logic [31:0] SaidaB,
-  output logic Load_ir,
-  output logic PCEsc,
-  output logic CtrMem,
-  output logic RegWrite,
-  output logic ULAFonteA,
-  output logic RegDst,
-  output logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl,
-  output logic[1:0] ULAFonteB,
-  output logic MemParaReg,
-  output logic PCEscCond,
-  output logic ZeroULA,
-  output logic[31:0] extensorEShift,
-  output logic[2:0] ULAOpSelector)
+module cpu(input clock, reset,
+  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC,
+  output logic [4:0] WriteRegister,
+  output logic wr, RegWrite, IRWrite,
+  output logic[5:0] Estado
+  )
   ;
 	
 	/* controlador
@@ -47,6 +25,26 @@ module cpu(input clock, reset,
 	logic MenorULA;
 	logic[31:0] pcJump;
 	logic PCEscCondBNE;
+	logic IouD;
+	logic [1:0]ULAOp, FontePC; //Mudou de 3 pra 2 bits
+	logic [31:0]EntradaULA1, EntradaULA2, EntradaPC;
+	logic [31:0]extensor32bits, Address;
+	logic[5:0] Instr31_26;
+	logic[4:0] Instr25_21;
+	logic[4:0] Instr20_16;
+	logic[15:0] Instr15_0;
+	logic [31:0] ReadData1, ReadData2;
+	logic [31:0] SaidaA;
+	logic PCEsc;
+	logic ULAFonteA;
+	logic RegDst;
+	logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl;
+	logic[1:0] ULAFonteB;
+	logic MemParaReg;
+	logic PCEscCond;
+	logic ZeroULA;
+	logic[31:0] extensorEShift;
+	logic[2:0] ULAOpSelector;
 	
 	// Saidas Mux
 	// logic [4:0] RegDestinoSaida; // Instr20_16 ou Instr15_0[4:0]
@@ -76,17 +74,17 @@ module cpu(input clock, reset,
 	.Entrada(EntradaPC),
 	.Saida(PC));
 
-	Registrador MDR(.Clk(clock),
+	Registrador MDRreg(.Clk(clock),
 	.Reset(reset),
 	.Load(MDRCtrl),
 	.Entrada(MemData),
-	.Saida(dadoPreMux));
+	.Saida(MDR));
 	
 	Registrador ULASaida(.Clk(clock),
 	.Reset(reset),
 	.Load(ULASaidaCtrl),
 	.Entrada(Alu),
-	.Saida(AluSaida));
+	.Saida(AluOut));
 	
 	Registrador A(.Clk(clock),
 	.Reset(reset),
@@ -98,7 +96,7 @@ module cpu(input clock, reset,
 	.Reset(reset),
 	.Load(RegBCtrl),
 	.Entrada(ReadData2),
-	.Saida(SaidaB));
+	.Saida(WriteDataMem));
 	
 	
 	
@@ -123,7 +121,7 @@ module cpu(input clock, reset,
 
 	Instr_Reg inst_reg(.Clk(clock), 
 	.Reset(reset), 
-	.Load_ir(Load_ir), 
+	.Load_ir(IRWrite), 
 	.Entrada(MemData), 
 	.Instr31_26(Instr31_26),
 	.Instr25_21(Instr25_21),
@@ -135,8 +133,8 @@ module cpu(input clock, reset,
 
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
-	.Wr(CtrMem),
-	.DataIn(SaidaB),
+	.Wr(wr),
+	.DataIn(WriteDataMem),
 	.DataOut(MemData));
 	
 	
@@ -145,8 +143,8 @@ module cpu(input clock, reset,
 	.OpCode(Instr31_26),
 	.Reset(reset),
 	.PCEsc(PCEsc),
-	.CtrMem(CtrMem),
-	.IREsc(Load_ir),
+	.CtrMem(wr),
+	.IREsc(IRWrite),
 	.ULAOp(ULAOp),
 	.MemParaReg(MemParaReg),
 	.RegWrite(RegWrite),
@@ -170,11 +168,11 @@ module cpu(input clock, reset,
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
 	.entrada0(Instr20_16),
 	.entrada1(Instr15_0[15:11]),
-	.saidaMux(RegDestinoSaida));
+	.saidaMux(WriteRegister));
 	
 	mux2entradas32bits_real IouDMux(.controlador(IouD), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
 	.entrada0(PC),
-	.entrada1(AluSaida),
+	.entrada1(AluOut),
 	.saidaMux(Address));
 	
 	mux2entradas32bits_real EntradaULA1Selection(.controlador(ULAFonteA), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
@@ -183,20 +181,20 @@ module cpu(input clock, reset,
 	.saidaMux(EntradaULA1));	
 	
 	mux4entradas32bits EntradaULA2Selection(.controlador(ULAFonteB), 
-	.entrada0(SaidaB),
+	.entrada0(WriteDataMem),
 	.entrada1(32'd4),
 	.entrada2(extensor32bits),
 	.entrada3(extensorEShift),
 	.saidaMux(EntradaULA2));
 	
 	mux2entradas32bits_real DadoASerEscritoSelection(.controlador(MemParaReg),
-	.entrada0(AluSaida),
-	.entrada1(dadoPreMux),
-	.saidaMux(DadoASerEscrito));
+	.entrada0(AluOut),
+	.entrada1(MDR),
+	.saidaMux(WriteDataReg));
 	
 	mux4entradas32bits FontePCSelection(.controlador(FontePC),  
 	.entrada0(Alu),
-	.entrada1(AluSaida),
+	.entrada1(AluOut),
 	.entrada2(pcJump),
 	.entrada3(32'd666),
 	.saidaMux(EntradaPC));
@@ -216,8 +214,8 @@ module cpu(input clock, reset,
 	.RegWrite(RegWrite),
 	.ReadReg1(Instr25_21),
 	.ReadReg2(Instr20_16),
-	.WriteReg(RegDestinoSaida),
-	.WriteData(DadoASerEscrito), // saida do mux ( 0 - Alu, caso op arith, ou 1 - caso acesso a memoria, caso lw)
+	.WriteReg(WriteRegister),
+	.WriteData(WriteDataReg), // saida do mux ( 0 - Alu, caso op arith, ou 1 - caso acesso a memoria, caso lw)
 	.ReadData1(ReadData1),
 	.ReadData2(ReadData2));
 	
