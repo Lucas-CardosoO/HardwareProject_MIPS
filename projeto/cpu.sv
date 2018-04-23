@@ -13,7 +13,8 @@ module cpu(input clock, reset,
   output logic CtrlMuxDeslocamento,
   output logic [1:0] NumShiftCtrl,
   output logic [4:0] NumShiftEntrada,
-  output logic [31:0] EntradaRegDeslocamento
+  output logic [31:0] EntradaRegDeslocamento,
+  output logic [1:0] MemParaReg
   );
 	
 	
@@ -34,7 +35,6 @@ module cpu(input clock, reset,
 	logic RegDst;
 	logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl;
 	logic[1:0] ULAFonteB;
-	logic MemParaReg;
 	logic PCEscCond;
 	logic ZeroULA;
 	logic[2:0] ULAOpSelector;
@@ -152,9 +152,11 @@ module cpu(input clock, reset,
 	.entrada3(extensorEShift),
 	.saidaMux(EntradaULA2));
 	
-	mux2entradas32bits_real DadoASerEscritoSelection(.controlador(MemParaReg),
+	mux4entradas32bits DadoASerEscritoSelection(.controlador(MemParaReg),
 	.entrada0(AluOut),
 	.entrada1(MDR),
+	.entrada2(extensorEShift),
+	.entrada3(32'd666),
 	.saidaMux(WriteDataReg));
 	
 	mux4entradas32bits FontePCSelection(.controlador(FontePC),  
@@ -166,7 +168,7 @@ module cpu(input clock, reset,
 
 	mux2entradas32bits_real dadoASerDeslocado(.controlador(CtrlMuxDeslocamento),
 	.entrada0(extensor32bits),
-	.entrada1(SaidaB),
+	.entrada1(WriteDataMem),
 	.saidaMux(EntradaRegDeslocamento));
 	
 	mux4entradas5bits NumShiftSelection(.controlador(NumShiftCtrl),

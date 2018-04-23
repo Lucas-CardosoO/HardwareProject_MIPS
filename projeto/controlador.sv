@@ -1,6 +1,6 @@
 module controlador(input logic Clock, Reset, input logic[5:0] OpCode, InstrArit,
-output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA, MemParaReg,
-output logic[1:0] ULAFonteB, FontePC,
+output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA,
+output logic[1:0] ULAFonteB, FontePC, MemParaReg,
 output logic[1:0] RegACtrl,
 output logic[1:0] RegBCtrl, ULASaidaCtrl, MDRCtrl,
 output logic[1:0] ULAOp,
@@ -44,6 +44,10 @@ enum logic [5:0] {BuscaMem = 6'd0,
   BEQBegin = 6'd29,
   BNEDesloc = 6'd30,
   BNEBegin = 6'd31,
+  SLLLoadB = 6'd32,
+  SLLLoadRegDesloc = 6'd33,
+  SLLCalcDesloc = 6'd34,
+  SLLRegEsc = 6'd35
   
   
    /* continua */} nextState;
@@ -71,7 +75,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -97,7 +101,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -123,7 +127,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -150,7 +154,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -184,7 +188,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 1'b0;
+									MemParaReg = 2'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -199,7 +203,7 @@ always_comb begin
 									
 									nextState <= BreakState;
 								end
-							6'b000000:
+							6'b000000: // NOP ou sll
 								begin
 									FontePC = 2'b00;
 									PCEsc = 1'b0;
@@ -210,7 +214,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 1'b0;
+									MemParaReg = 2'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -223,7 +227,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									
-									nextState <= BuscaMem;
+									nextState <= SLLLoadB;
 								end
 								
 							6'b001000:
@@ -237,7 +241,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b1;
 									ULAFonteB = 2'b00;
-									MemParaReg = 1'b0;
+									MemParaReg = 2'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -263,7 +267,7 @@ always_comb begin
 								RegDst = 1'b1;
 								ULAFonteA = 1'b0;
 								ULAFonteB = 2'b00;
-								MemParaReg = 1'b0;
+								MemParaReg = 2'b00;
 								IouD = 1'b0;
 								RegACtrl = 1'b0;
 								RegBCtrl = 1'b0;
@@ -293,7 +297,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -319,7 +323,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -345,7 +349,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -372,7 +376,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg = 1'b0;
+						MemParaReg =2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -399,7 +403,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -426,7 +430,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b1;
 						ULAFonteB = 2'b11;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -452,7 +456,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg = 1'b0;
+						MemParaReg = 2'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -470,6 +474,110 @@ always_comb begin
 			endcase
 		end
 		
+		SLLLoadB: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = SLLLoadRegDesloc; 
+		end
+		
+		SLLLoadRegDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b001;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1;
+					
+			nextState = SLLCalcDesloc; 
+		end
+		
+		SLLCalcDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b01;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = SLLRegEsc; 
+		end
+		
+		SLLRegEsc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b10;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = BuscaMem; 
+		end
+		
 		LUISoma: begin
 			FontePC = 2'b00;
 			PCEsc = 1'b0;
@@ -480,7 +588,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -507,7 +615,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -533,7 +641,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg =2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -560,7 +668,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -586,7 +694,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -613,7 +721,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -640,7 +748,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -667,7 +775,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -693,7 +801,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b1;
+			MemParaReg = 2'b01;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -719,7 +827,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -745,7 +853,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -771,7 +879,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -798,7 +906,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -824,7 +932,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -850,7 +958,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -876,7 +984,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -902,7 +1010,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -928,7 +1036,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -954,7 +1062,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -980,7 +1088,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1006,7 +1114,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1032,7 +1140,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1058,7 +1166,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -1084,7 +1192,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1110,7 +1218,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b0;
@@ -1137,7 +1245,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1164,7 +1272,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 1'b0;
+			MemParaReg = 2'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
