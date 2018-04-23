@@ -14,9 +14,8 @@ output logic [4:0] NumShift);
 
 
 enum logic [5:0] {BuscaMem = 6'd0,
-  EsperaBusca1ELoadPc = 6'd1,
-  EsperaBusca2 = 6'd2,
-  EscreverRegI = 6'd3,
+  EsperaBusca = 6'd1,
+  EscIR = 6'd2,
   Decode = 6'd4, 
   LWRegABLoad = 6'd5, 
   LWCalcOffset = 6'd6,
@@ -44,6 +43,7 @@ enum logic [5:0] {BuscaMem = 6'd0,
   BEQBegin = 6'd29,
   BNEDesloc = 6'd30,
   BNEBegin = 6'd31
+  
    /* continua */} nextState;
 
 
@@ -61,7 +61,7 @@ always_comb begin
 	case(state)
 		BuscaMem : begin
 			FontePC = 2'b00;
-			PCEsc = 1'b0;
+			PCEsc = 1'b1;
 			CtrMem = 1'b0; //
 			IREsc = 1'b0;
 			ULAOp = 2'b00;
@@ -81,10 +81,10 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShift = 5'b00000;
 	
-			nextState <= EsperaBusca1ELoadPc;
+			nextState <= EsperaBusca;
 			
 		end
-		EsperaBusca1ELoadPc: begin
+		EsperaBusca: begin
 			FontePC = 2'b00;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
@@ -106,14 +106,14 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShift = 5'b00000;
 			
-			nextState <= EsperaBusca2;
+			nextState <= EscIR;
 			
 		end
-		EsperaBusca2 : begin
+		EscIR : begin
 			FontePC = 2'b00;
-			PCEsc = 1'b1;
+			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
-			IREsc = 1'b0;
+			IREsc = 1'b1;
 			ULAOp = 2'b00;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;
@@ -131,14 +131,15 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShift = 5'b00000;
 			
-			nextState <= EscreverRegI ;
+			nextState <= Decode;
 		end
 		
-		EscreverRegI : begin
+		/*
+			EscreverRegI : begin
 			FontePC = 2'b00;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
-			IREsc = 1'b1;
+			IREsc = 1'b0;
 			ULAOp = 2'b11;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;
@@ -158,6 +159,7 @@ always_comb begin
 			
 			nextState <= Decode ;
 		end
+		*/
 		
 		Decode: begin
 			case(OpCode)

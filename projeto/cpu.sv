@@ -5,7 +5,11 @@ module cpu(input clock, reset,
   output logic[5:0] Estado,
   output logic[31:0] extensorEShift,
   output logic[31:0] extensor32bits, Address,
-  output logic [31:0]EntradaULA1, EntradaULA2
+  output logic [31:0]EntradaULA1, EntradaULA2,
+  output logic [5:0] Instr31_26,
+  output logic[4:0] Instr25_21,
+  output logic[4:0] Instr20_16,
+  output logic[15:0] Instr15_0
   );
 	
 	
@@ -19,10 +23,6 @@ module cpu(input clock, reset,
 	logic IouD;
 	logic [1:0]ULAOp, FontePC; 
 	logic [31:0]EntradaPC;
-	logic[5:0] Instr31_26;
-	logic[4:0] Instr25_21;
-	logic[4:0] Instr20_16;
-	logic[15:0] Instr15_0;
 	logic [31:0] ReadData1, ReadData2;
 	logic [31:0] SaidaA;
 	logic PCEsc;
