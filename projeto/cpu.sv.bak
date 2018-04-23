@@ -5,11 +5,16 @@ module cpu(input clock, reset,
   output logic[5:0] Estado,
   output logic[31:0] extensorEShift,
   output logic[31:0] extensor32bits, Address,
-  output logic [31:0]EntradaULA1, EntradaULA2.
+  output logic [31:0]EntradaULA1, EntradaULA2,
   output logic [5:0] Instr31_26,
   output logic[4:0] Instr25_21,
   output logic[4:0] Instr20_16,
-  output logic[15:0] Instr15_0
+  output logic[15:0] Instr15_0,
+  output logic CtrlMuxDeslocamento,
+  output logic [1:0] NumShiftCtrl,
+  output logic [4:0] NumShiftEntrada,
+  output [31:] EntradaRegDeslocamento
+  
   );
 	
 	
@@ -121,9 +126,10 @@ module cpu(input clock, reset,
 	.MDRCtrl(MDRCtrl),
 	.FontePC(FontePC),
 	.PCEscCondBNE(PCEscCondBNE),
-	.NumShift(NumShift),
+	.NumShiftCtrl(NumShiftCtrl),
 	.resetRegA(resetRegA),
-	.ShiftControl(ShiftControl));
+	.ShiftControl(ShiftControl),
+	.CtrlMuxDeslocamento(CtrlMuxDeslocamento));
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
 	.entrada0(Instr20_16),
@@ -159,7 +165,17 @@ module cpu(input clock, reset,
 	.entrada3(32'd666),
 	.saidaMux(EntradaPC));
 
-
+	mux2entradas32bits_real dadoASerDeslocado(.controlador(CtrlMuxDeslocamento),
+	.entrada0(extensor32bits),
+	.entrada1(SaidaB),
+	.saidaMux(EntradaRegDeslocamento));
+	
+	mux4entradas5bits NumShiftSelection(.controlador(NumShiftCtrl),
+	.entrada0(5'b00100), 
+	.entrada1(Instr15_0[10:6]),
+	.entrada2(5'd9), // SaidaA,
+	.entrada3(5'd9),
+	.saidaMux(NumShiftEntrada));
 
 	extensor16to32bits extenssor(.entrada(Instr15_0),
 	.saida(extensor32bits));
@@ -183,8 +199,8 @@ module cpu(input clock, reset,
 	RegDesloc Deslocamento(.Clk(clock),
 		 	.Reset(reset),
 			.Shift(ShiftControl),
-			.N(NumShift),
-			.Entrada(extensor32bits),
+			.N(NumShiftEntrada),
+			.Entrada(EntradaRegDeslocamento),
 			.Saida(extensorEShift));
 
 endmodule: cpu

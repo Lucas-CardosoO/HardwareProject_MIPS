@@ -53,6 +53,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 mux2entradas32bits_real:IouDMux
 mux2entradas32bits_real:EntradaULA1Selection
 mux2entradas32bits_real:DadoASerEscritoSelection
+mux2entradas32bits_real:dadoASerDeslocado
 }
 # macro_sequence
 
@@ -1212,42 +1213,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-cpu
-# storage
-db|hardware.(0).cnf
-db|hardware.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-cpu.sv
-b39b3a9476fb24eb7bee809a4b7cd9e8
-9
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 controlador
 # storage
 db|hardware.(10).cnf
@@ -1259,7 +1224,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-fd816d1cc847d35b7dccd16c5fa449fd
+31f1ebf8388f4a9826c6ccb597a9edcf
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1279,6 +1244,78 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 controlador:ctrl
+}
+# macro_sequence
+
+# end
+# entity
+mux4entradas5bits
+# storage
+db|hardware.(19).cnf
+db|hardware.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+mux4entradas5bits.sv
+66e2de5aba2e8364ced9ff13c367c9d
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+mux4entradas5bits:NumShiftSelection
+}
+# macro_sequence
+
+# end
+# entity
+cpu
+# storage
+db|hardware.(0).cnf
+db|hardware.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+cpu.sv
+02b5e3e218b32c8d2d48f5a4fdcd1e
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
 }
 # macro_sequence
 

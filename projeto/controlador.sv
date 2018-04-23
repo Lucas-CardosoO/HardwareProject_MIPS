@@ -10,7 +10,8 @@ output logic PCEscCondBNE,
 output logic IouD,
 output logic resetRegA,
 output logic [2:0] ShiftControl,
-output logic [4:0] NumShift);
+output logic CtrlMuxDeslocamento,
+output logic [1:0] NumShiftCtrl);
 
 
 enum logic [5:0] {BuscaMem = 6'd0,
@@ -42,7 +43,8 @@ enum logic [5:0] {BuscaMem = 6'd0,
   BEQDesloc = 6'd28,
   BEQBegin = 6'd29,
   BNEDesloc = 6'd30,
-  BNEBegin = 6'd31
+  BNEBegin = 6'd31,
+  
   
    /* continua */} nextState;
 
@@ -79,7 +81,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= EsperaBusca;
 			
@@ -104,7 +107,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= EscIR;
 			
@@ -129,7 +133,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= Decode;
 		end
@@ -155,7 +160,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= Decode ;
 		end
@@ -188,7 +194,8 @@ always_comb begin
 									PCEscCondBNE = 1'b0;
 									resetRegA = 1'b0;
 									ShiftControl = 3'b000;
-									NumShift = 5'b00000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
 									
 									nextState <= BreakState;
 								end
@@ -213,7 +220,8 @@ always_comb begin
 									PCEscCondBNE = 1'b0;
 									resetRegA = 1'b0;
 									ShiftControl = 3'b000;
-									NumShift = 5'b00000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
 									
 									nextState <= BuscaMem;
 								end
@@ -239,7 +247,8 @@ always_comb begin
 									PCEscCondBNE = 1'b0;
 									resetRegA = 1'b0;
 									ShiftControl = 3'b000;
-									NumShift = 5'b00000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
 									
 									nextState <= RRegLoadABJr;
 								end
@@ -264,12 +273,15 @@ always_comb begin
 								PCEscCondBNE = 1'b0;
 								resetRegA = 1'b0;
 								ShiftControl = 3'b000;
-								NumShift = 5'b00000;
+								NumShiftCtrl = 2'b00;
+								CtrlMuxDeslocamento = 1'b0;
 								
 								nextState <= RRegABLoad;
 							end
 						endcase
 					end
+					
+				
 				6'b000010: //Jump
 					begin
 						FontePC = 2'b10;
@@ -291,7 +303,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b0;
 						ShiftControl = 3'b000;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState <= BuscaMem ;
 					end
@@ -316,7 +329,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b0;
 						ShiftControl = 3'b000;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState <= LWRegABLoad ;
 					end
@@ -341,7 +355,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b0;
 						ShiftControl = 3'b000;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState <= SWRegABLoad;
 					end
@@ -367,7 +382,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b0;
 						ShiftControl = 3'b001;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState = BEQDesloc;
 					end
@@ -393,7 +409,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b0;
 						ShiftControl = 3'b001;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState = BNEDesloc;
 					end
@@ -419,7 +436,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b1;
 						ShiftControl = 3'b001;
-						NumShift = 5'b00000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState = LUISoma;                                                                                                        
 					end
@@ -444,7 +462,8 @@ always_comb begin
 						PCEscCondBNE = 1'b0;
 						resetRegA = 1'b1;
 						ShiftControl = 3'b010;
-						NumShift = 5'b10000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
 						
 						nextState = BuscaMem;  
 					end
@@ -471,7 +490,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b1;
 			ShiftControl = 3'b010;
-			NumShift = 5'b10000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 					
 			nextState = LUICarregaReg;    
 	
@@ -497,7 +517,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -522,7 +543,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = LWCalcOffset ;
 		end
@@ -548,7 +570,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = LWReadMem ;
 		end
@@ -573,7 +596,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= LWEspera1 ;
 			
@@ -599,7 +623,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= LWEspera2;
 			
@@ -625,7 +650,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= LWMDRLoad ;
 			
@@ -651,7 +677,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= LWFinish ;
 		end
@@ -676,7 +703,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= BuscaMem;
 		end
@@ -701,7 +729,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = SWCalcOffset ;
 		end
@@ -726,7 +755,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = SWEscritaMem ;
 		end
@@ -751,7 +781,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = BuscaMem;
 		end
@@ -777,7 +808,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = RULAOp;
 		end
@@ -802,7 +834,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = RRegLoad;
 		end
@@ -827,7 +860,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = BuscaMem;
 		end
@@ -852,7 +886,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = BreakState;
 		end
@@ -877,7 +912,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = BEQBegin;
 		end
@@ -902,7 +938,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 				
 			nextState = BEQLoadAB;
 		end
@@ -927,7 +964,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= BEQSolution;
 		end
@@ -952,7 +990,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= BuscaMem;
 		end
@@ -977,7 +1016,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState = BNEBegin;
 		end
@@ -1002,7 +1042,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 						
 			nextState = BNELoadAB;
 		end
@@ -1027,7 +1068,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= BNESolution;
 		end
@@ -1052,7 +1094,8 @@ always_comb begin
 			PCEscCondBNE = 1'b1;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
-			NumShift = 5'b00000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= BuscaMem;
 		end
@@ -1077,7 +1120,8 @@ always_comb begin
 			PCEscCondBNE = 1'b1;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= RLoadPCJr;
 	
@@ -1103,7 +1147,8 @@ always_comb begin
 			PCEscCondBNE = 1'b1;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 	
 			nextState <= BuscaMem;
 	
@@ -1129,7 +1174,8 @@ always_comb begin
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b010;
-			NumShift = 5'b00010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
 			
 			nextState <= BuscaMem;
 		end
