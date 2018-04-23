@@ -104,8 +104,6 @@ module cpu(input clock, reset,
 	.Saida(WriteDataMem));
 	
 	
-	
-	
 	AluControl AluControl(.funct(Instr15_0[5:0]),
 	.ULAOp(ULAOp),
 	.ULAOpSelector(ULAOpSelector));
