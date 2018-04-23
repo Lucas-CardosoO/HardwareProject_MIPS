@@ -268,9 +268,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-shiftLeft2bits:shifter
-}
 # macro_sequence
 
 # end
@@ -1076,19 +1073,19 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-cpu
+RegDesloc
 # storage
-db|hardware.(0).cnf
-db|hardware.(0).cnf
+db|hardware.(18).cnf
+db|hardware.(18).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
-# case_sensitive
+# case_insensitive
 # source_file
-cpu.sv
-7d315ee8264a422df357c88ce1669
-9
+regdesloc.vhd
+b3fd1cc13485145ad9596242b48e19b
+5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
 OFF
@@ -1098,16 +1095,13 @@ AUTO_RAM_RECOGNITION
 ON
 AUTO_ROM_RECOGNITION
 ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
 }
 # hierarchies {
-|
+RegDesloc:Deslocamento
 }
+# lmf
+|users|sgfl|desktop|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
@@ -1206,13 +1200,49 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-ffb144553714272b6046c18b84336b
+2484fb3b157cd258bf6bdda4086781e
 }
 # hierarchies {
 Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
 Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
 Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
 Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+cpu
+# storage
+db|hardware.(0).cnf
+db|hardware.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+cpu.sv
+f21eb6681cd44e5c73bd3cac72964d
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
 }
 # macro_sequence
 
@@ -1229,7 +1259,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-58acf5477ce39cc797eb996e3256ac
+b3d4fa4af99e7b6498458f0aebe712d
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

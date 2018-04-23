@@ -144,127 +144,105 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux53" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux14" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux224" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux156" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux54" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux15" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux225" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux157" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux55" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux16" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux226" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux158" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux56" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux17" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux227" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux159" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux57" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux18" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux228" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux58" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux19" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux148" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux229" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux940" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux59" CBX_FILE_NAME="mux_3nc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux149" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux860" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux941" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux780" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux861" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux942" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux781" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux862" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux943" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux782" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux863" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux944" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux783" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux864" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux945" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux784" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux865" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux946" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux310" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux160" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux785" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux866" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux947" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux161" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux20" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux230" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux311" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux786" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux867" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux948" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux162" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux60" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux21" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux150" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux231" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux312" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux787" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux868" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux949" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux163" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux61" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux22" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux151" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux232" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux313" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux788" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux869" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux164" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux62" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux23" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux152" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux233" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux314" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux789" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux165" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux63" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux24" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux153" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux234" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux315" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux166" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux25" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux154" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux235" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux316" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux167" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux26" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux155" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux236" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux317" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux168" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux27" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux156" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux237" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux318" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux169" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux28" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux157" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux238" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux319" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux29" CBX_FILE_NAME="mux_umc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux158" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux239" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux950" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux159" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux870" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux951" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux790" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux871" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux952" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux10" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux791" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux872" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux953" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux11" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux792" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux873" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux954" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux12" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux793" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux874" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux955" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux13" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux400" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux794" CBX_FILE_NAME="mux_ioc.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux875" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux956" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux170" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux14" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux320" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux401" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux795" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux876" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux957" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux171" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux30" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux15" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux240" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -273,6 +251,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux796" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux877" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux958" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux172" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|mux4entradas32bits:FontePCSelection|lpm_mux:Mux31" CBX_FILE_NAME="mux_umc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux16" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux160" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -282,6 +261,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux797" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux878" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux959" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux173" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux161" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux17" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux242" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -289,30 +269,36 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux404" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux798" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux879" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux174" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux162" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux18" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux243" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux324" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux405" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux799" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux175" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux163" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux19" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux244" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux325" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux406" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_e1a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux176" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux164" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux245" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux326" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux407" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux177" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux165" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux246" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux327" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux408" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux178" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux166" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux247" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux328" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux409" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux179" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux167" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux248" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux329" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -343,12 +329,14 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux410" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux885" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux966" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux180" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux6" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux24" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux330" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux411" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux886" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux967" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux181" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux7" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux25" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux250" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -356,6 +344,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux412" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux887" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux968" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux182" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux8" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux170" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux251" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -364,6 +353,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux413" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux888" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux969" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux183" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux9" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux171" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux252" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -371,20 +361,24 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux333" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux414" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux889" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux184" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux172" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux253" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux28" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux334" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux415" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux185" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux173" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux254" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux29" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux335" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux416" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux186" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux174" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux255" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux336" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux417" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux187" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux175" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux256" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux337" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -474,31 +468,41 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux346" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux427" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux508" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux10" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux185" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux266" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux347" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux428" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux509" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux11" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux186" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux267" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux348" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux429" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux12" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux187" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux268" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux349" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux13" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux188" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux269" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux980" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux14" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux189" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux981" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux15" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux982" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux16" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux40" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux983" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux17" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux41" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux984" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux18" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux42" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux510" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux985" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux19" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux43" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux430" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux511" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -544,40 +548,50 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux356" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux437" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux518" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux20" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux195" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux276" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux357" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux438" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux519" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux21" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux196" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux277" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux358" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux439" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux22" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1000" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux197" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux278" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux359" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux23" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1001" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux198" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux279" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux990" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux24" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1002" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux199" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux991" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux25" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1003" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux992" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux26" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1004" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux50" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux993" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux27" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1005" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux51" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux600" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux994" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux28" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1006" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux52" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux520" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux601" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux995" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux29" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1007" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux440" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux521" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -630,29 +644,39 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux447" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux528" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux609" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux30" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux286" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux367" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux448" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux529" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux31" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux287" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux368" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux449" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux32" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1010" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux288" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux369" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux33" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1011" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux289" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux34" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1012" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux35" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1013" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux36" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1014" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux60" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux37" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1015" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux61" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux610" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux38" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1016" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux530" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux611" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux62" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux39" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1017" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux450" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux531" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -701,41 +725,51 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux457" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux538" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux619" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux40" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux296" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux377" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux458" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux539" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux41" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux2" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux297" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux378" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux459" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux42" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1020" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux298" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux3" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux379" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux43" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1021" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux299" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux4" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux44" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1022" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux5" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux45" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1023" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux6" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux46" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1024" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux7" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux70" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux700" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux47" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1025" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux620" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux701" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux71" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux8" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux48" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1026" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux540" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux621" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux702" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux72" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux9" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux49" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1027" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux460" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux541" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -784,28 +818,38 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux467" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux548" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux629" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux50" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux387" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux468" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux549" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux51" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux388" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux469" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux52" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1030" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux389" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux53" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1031" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux54" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1032" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux55" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1033" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux56" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1034" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux710" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux80" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux57" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1035" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux630" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux711" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux81" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux58" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1036" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux550" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux631" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux712" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux82" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux59" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux1037" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux470" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux551" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -854,9 +898,11 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux477" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux558" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux639" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux60" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux397" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux478" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux559" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux61" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux398" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux479" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block" CBX_FILE_NAME="altsyncram_e1a1.tdf"/>
@@ -1098,12 +1144,14 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux747" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux828" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux909" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux123" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux21" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux111" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux586" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux667" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux748" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux829" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux124" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Ula32:ULA|lpm_mux:Mux22" CBX_FILE_NAME="mux_3nc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux112" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux587" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -1160,25 +1208,35 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux128" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux129" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux840" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux0" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux841" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux1" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux680" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux842" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux2" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux681" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux843" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux3" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux682" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux844" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux4" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux683" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux845" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux5" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux684" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux846" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux6" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux685" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux847" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux7" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux130" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux686" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux848" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux8" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux131" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux687" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux849" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|RegDesloc:Deslocamento|lpm_mux:Mux9" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux132" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux688" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux133" CBX_FILE_NAME="mux_ioc.tdf"/>
@@ -1228,5 +1286,43 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux308" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux147" CBX_FILE_NAME="mux_ioc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux309" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux148" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux149" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux860" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux861" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux862" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux863" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux864" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux865" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux310" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux866" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux311" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux867" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux150" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux312" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux868" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux151" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux313" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux869" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux152" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux314" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux153" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux315" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux154" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux316" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux155" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux317" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux156" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux318" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux157" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux319" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux158" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux159" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux870" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux871" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux872" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux873" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux874" CBX_FILE_NAME="mux_ioc.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|Banco_reg:BancoDeRegistradores|lpm_mux:Mux875" CBX_FILE_NAME="mux_ioc.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

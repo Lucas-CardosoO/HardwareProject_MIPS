@@ -6,21 +6,9 @@ module cpu(input clock, reset,
   output logic[31:0] extensorEShift,
   output logic[31:0] extensor32bits, Address,
   output logic [31:0]EntradaULA1, EntradaULA2
-  )
-  ;
+  );
 	
-	/* controlador
-	logic Load_ir;
-	logic PCEsc;
-	logic CtrMem;
-	logic RegWrite;
-	logic ULAFonteA;
-	logic RegDst;
-	logic[1:0] ULAFonteB;
-	logic MemParaReg;
-	*/
 	
-	// lixo da ula
 	logic OverflowULA;
 	logic NegativoULA;
 	logic IgualULA;
@@ -29,9 +17,8 @@ module cpu(input clock, reset,
 	logic[31:0] pcJump;
 	logic PCEscCondBNE;
 	logic IouD;
-	logic [1:0]ULAOp, FontePC; //Mudou de 3 pra 2 bits
-	logic [31:0]EntradaPC;//EntradaULA1, EntradaULA2, EntradaPC;
-	//logic [31:0]Address;//extensor32bits, Address;
+	logic [1:0]ULAOp, FontePC; 
+	logic [31:0]EntradaPC;
 	logic[5:0] Instr31_26;
 	logic[4:0] Instr25_21;
 	logic[4:0] Instr20_16;
@@ -46,33 +33,11 @@ module cpu(input clock, reset,
 	logic MemParaReg;
 	logic PCEscCond;
 	logic ZeroULA;
-	//logic[31:0] extensorEShift;
 	logic[2:0] ULAOpSelector;
 	logic[4:0] NumShift;
+	logic[2:0] ShiftControl;
 	logic resetRegA;
 	
-	// Saidas Mux
-	// logic [4:0] RegDestinoSaida; // Instr20_16 ou Instr15_0[4:0]
-	// logic [4:0] EntradaULA1;
-	// logic [4:0] EntradaULA2;
-	// logic [31:0] DadoASerEscrito;
-	
-	// Saida Banco de Registradores
-	//logic [31:0] ReadData1;
-	//logic [31:0] ReadData2;
-	
-	// Fios Memoria
-	// logic [31:0]Address;
-	
-	//Extensor
-	// logic [31:0] extensor32bits;
-	
-	//Fios registradores A e B
-	// logic [31:0] SaidaA;
-	// logic [31:0] SaidaB;	
-	
-	
-
 	Registrador PCreg(.Clk(clock),
 	.Reset(reset),
 	.Load(PCEsc || (PCEscCond && ZeroULA) || (PCEscCondBNE && !ZeroULA)),
@@ -119,9 +84,6 @@ module cpu(input clock, reset,
 	.Maior(MaiorULA),
 	.Menor(MenorULA));
 
-
-
-
 	Instr_Reg inst_reg(.Clk(clock), 
 	.Reset(reset), 
 	.Load_ir(IRWrite), 
@@ -131,16 +93,11 @@ module cpu(input clock, reset,
 	.Instr20_16(Instr20_16),
 	.Instr15_0(Instr15_0));
 
-
-
-
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
 	.Wr(wr),
 	.DataIn(WriteDataMem),
 	.DataOut(MemData));
-	
-	
 	
 	controlador ctrl(.Clock(clock),
 	.OpCode(Instr31_26),
@@ -165,22 +122,20 @@ module cpu(input clock, reset,
 	.FontePC(FontePC),
 	.PCEscCondBNE(PCEscCondBNE),
 	.NumShift(NumShift),
-	.resetRegA(resetRegA));
+	.resetRegA(resetRegA),
+	.ShiftControl(ShiftControl));
 	
-	
-	
-	
-	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
+	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
 	.entrada0(Instr20_16),
 	.entrada1(Instr15_0[15:11]),
 	.saidaMux(WriteRegister));
 	
-	mux2entradas32bits_real IouDMux(.controlador(IouD), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
+	mux2entradas32bits_real IouDMux(.controlador(IouD),
 	.entrada0(PC),
 	.entrada1(AluOut),
 	.saidaMux(Address));
 	
-	mux2entradas32bits_real EntradaULA1Selection(.controlador(ULAFonteA), // mudar nome do modulo do registrador para mux2entradas ->5<- bits
+	mux2entradas32bits_real EntradaULA1Selection(.controlador(ULAFonteA),
 	.entrada0(PC),
 	.entrada1(SaidaA),
 	.saidaMux(EntradaULA1));	
@@ -209,7 +164,7 @@ module cpu(input clock, reset,
 	extensor16to32bits extenssor(.entrada(Instr15_0),
 	.saida(extensor32bits));
 	
-	shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift), .contrl(NumShift));
+	//shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift), .contrl(NumShift));
 	
 	shiftLeft2bits26 shifterJ(.entrada({ Instr25_21, Instr20_16, Instr15_0 }), .entradaPC(PC), .saida(pcJump));
 
@@ -220,19 +175,17 @@ module cpu(input clock, reset,
 	.ReadReg1(Instr25_21),
 	.ReadReg2(Instr20_16),
 	.WriteReg(WriteRegister),
-	.WriteData(WriteDataReg), // saida do mux ( 0 - Alu, caso op arith, ou 1 - caso acesso a memoria, caso lw)
+	.WriteData(WriteDataReg),
 	.ReadData1(ReadData1),
 	.ReadData2(ReadData2));
 	
-/*	
+	
 	RegDesloc Deslocamento(.Clk(clock),
 		 	.Reset(reset),
-			.Shift(3'b010),
+			.Shift(ShiftControl),
 			.N(NumShift),
 			.Entrada(extensor32bits),
 			.Saida(extensorEShift));
-	
-*/
 
 endmodule: cpu
 

@@ -24832,8 +24832,8 @@ VECTOR("C:/Users/sgfl/Desktop/waveform1.vwf")
 VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 {
 	ZOOM{
-		ZBEGIN = 0;
-		ZEND = 51200;
+		ZBEGIN = 305150;
+		ZEND = 356350;
 		NUMERATOR = 20;
 		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
