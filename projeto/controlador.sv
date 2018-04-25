@@ -47,7 +47,10 @@ enum logic [5:0] {BuscaMem = 6'd0,
   SLLLoadB = 6'd32,
   SLLLoadRegDesloc = 6'd33,
   SLLCalcDesloc = 6'd34,
-  SLLRegEsc = 6'd35
+  SLLRegEsc = 6'd35,
+  SLLVLoadRegDesloc = 6'd36,
+  SLLVCalcDesloc = 6'd37,
+  SLLVRegEsc = 6'd38
   
   
    /* continua */} nextState;
@@ -256,6 +259,38 @@ always_comb begin
 									
 									nextState <= RRegLoadABJr;
 								end
+								
+							6'h4:
+								begin // sllv
+									FontePC = 2'b00;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0;
+									IREsc = 1'b0;
+									ULAOp = 2'b00;
+									RegWrite = 1'b0;
+									RegDst = 1'b0;
+									ULAFonteA = 1'b1;
+									ULAFonteB = 2'b00;
+									MemParaReg = 2'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
+									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									
+									nextState <= SLLVLoadRegDesloc;
+								end
+								
+						
+							
+								
+								
 							
 							default: begin
 								FontePC = 2'b00;
@@ -473,6 +508,86 @@ always_comb begin
 					end
 			endcase
 		end
+		
+		SLLVLoadRegDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; // load do registrador
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
+					
+			nextState = SLLVCalcDesloc; 
+		end
+		
+		SLLVCalcDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010; // deslocamento a esquerda N vezes
+			NumShiftCtrl = 2'b10; // seleciona a entrada N do regdesloc
+			// *********** pode causar overflow !!! ainda não tratado!
+			CtrlMuxDeslocamento = 1'b1;
+					
+			nextState = SLLVRegEsc; 
+		end
+		
+		SLLVRegEsc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1; // habilita a escrita no banco de regs.
+			RegDst = 1'b1; // registrador a ser escrito será intr[15:11]
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b10; // seleciona o que vai ser escrito para o que está saindo do registrador deslocamento
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0; // reset tem que ser 0
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1;
+					
+			nextState = BuscaMem; 
+		end
+		
 		
 		SLLLoadB: begin
 			FontePC = 2'b00;

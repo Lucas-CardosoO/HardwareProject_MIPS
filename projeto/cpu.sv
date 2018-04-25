@@ -14,7 +14,9 @@ module cpu(input clock, reset,
   output logic [1:0] NumShiftCtrl,
   output logic [4:0] NumShiftEntrada,
   output logic [31:0] EntradaRegDeslocamento,
-  output logic [1:0] MemParaReg
+  output logic [1:0] MemParaReg,
+  output logic [31:0] SaidaA,
+  output logic[4:0] NumShift
   );
 	
 	
@@ -29,7 +31,7 @@ module cpu(input clock, reset,
 	logic [1:0]ULAOp, FontePC; 
 	logic [31:0]EntradaPC;
 	logic [31:0] ReadData1, ReadData2;
-	logic [31:0] SaidaA;
+	// logic [31:0] SaidaA;
 	logic PCEsc;
 	logic ULAFonteA;
 	logic RegDst;
@@ -38,7 +40,7 @@ module cpu(input clock, reset,
 	logic PCEscCond;
 	logic ZeroULA;
 	logic[2:0] ULAOpSelector;
-	logic[4:0] NumShift;
+	//logic[4:0] NumShift;
 	logic[2:0] ShiftControl;
 	logic resetRegA;
 	
@@ -174,7 +176,7 @@ module cpu(input clock, reset,
 	mux4entradas5bits NumShiftSelection(.controlador(NumShiftCtrl),
 	.entrada0(5'b00100), 
 	.entrada1(Instr15_0[10:6]),
-	.entrada2(5'd9), // SaidaA,
+	.entrada2(SaidaA[4:0]),
 	.entrada3(5'd9),
 	.saidaMux(NumShiftEntrada));
 
