@@ -18,6 +18,8 @@ module cpu(input clock, reset,
   output logic [31:0] SaidaA,
   output logic[4:0] NumShift
   );
+  
+  
 	
 	
 	logic OverflowULA;
@@ -55,6 +57,15 @@ module cpu(input clock, reset,
 	.Load(MDRCtrl),
 	.Entrada(MemData),
 	.Saida(MDR));
+	
+	/*
+	Registrador EPC(.Clk(clock),
+	.Reset(reset),
+	.Load(LoadEPC),
+	.Entrada(),
+	.Saida(MDR));
+	*/
+
 	
 	Registrador ULASaida(.Clk(clock),
 	.Reset(reset),
@@ -130,7 +141,8 @@ module cpu(input clock, reset,
 	.NumShiftCtrl(NumShiftCtrl),
 	.resetRegA(resetRegA),
 	.ShiftControl(ShiftControl),
-	.CtrlMuxDeslocamento(CtrlMuxDeslocamento));
+	.CtrlMuxDeslocamento(CtrlMuxDeslocamento)
+);
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
 	.entrada0(Instr20_16),
@@ -205,6 +217,8 @@ module cpu(input clock, reset,
 			.N(NumShiftEntrada),
 			.Entrada(EntradaRegDeslocamento),
 			.Saida(extensorEShift));
+	
+	
 
 endmodule: cpu
 

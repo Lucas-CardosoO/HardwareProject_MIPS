@@ -50,7 +50,13 @@ enum logic [5:0] {BuscaMem = 6'd0,
   SLLRegEsc = 6'd35,
   SLLVLoadRegDesloc = 6'd36,
   SLLVCalcDesloc = 6'd37,
-  SLLVRegEsc = 6'd38
+  SLLVRegEsc = 6'd38,
+  SRLLoadB = 6'd39,
+  SRLLoadRegDesloc = 6'd40,
+  SRLCalcDesloc = 6'd41,
+  SRLRegEsc = 6'd42,
+  ADDIExec = 6'd43,
+  ADDIFinish = 6'd44
   
   
    /* continua */} nextState;
@@ -179,7 +185,7 @@ always_comb begin
 				6'b000000: // Operacoes aritmeticas
 					begin
 						case(InstrArit)
-						
+				
 							6'b001101:
 								begin
 									FontePC = 2'b00;
@@ -232,6 +238,34 @@ always_comb begin
 									
 									nextState <= SLLLoadB;
 								end
+								
+							6'b000010:
+								begin //srl
+									FontePC = 2'b00;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0; // *
+									IREsc = 1'b0;
+									ULAOp = 2'b00;
+									RegWrite = 1'b0;
+									RegDst = 1'b0;
+									ULAFonteA = 1'b0;
+									ULAFonteB = 2'b00;
+									MemParaReg = 2'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b0;
+									RegBCtrl = 1'b0;
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									
+									nextState <= SRLLoadB;
+								end
+									
 								
 							6'b001000:
 								begin //jr
@@ -320,6 +354,32 @@ always_comb begin
 						endcase
 					end
 					
+				6'b001000:  //ADDI
+					begin
+						FontePC = 2'b00;
+						PCEsc = 1'b0;
+						CtrMem = 1'b0; // *
+						IREsc = 1'b0;
+						ULAOp = 2'b00;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b0;
+						ULAFonteB = 2'b00;
+						MemParaReg = 2'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b0;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+									
+						nextState <= ADDIExec;
+					end
 				
 				6'b000010: //Jump
 					begin
@@ -480,6 +540,7 @@ always_comb begin
 						
 						nextState = LUISoma;                                                                                                        
 					end
+					
 				default:
 					begin
 						FontePC = 2'b00;
@@ -508,6 +569,59 @@ always_comb begin
 					end
 			endcase
 		end
+		
+		ADDIExec: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; // load do registrador
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1;
+			
+			nextState = ADDIFinish;  
+		end
+		
+		ADDIFinish: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; // load do registrador
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
+					
+			nextState = BuscaMem; 
+		end
+		
 		
 		SLLVLoadRegDesloc: begin
 			FontePC = 2'b00;
@@ -615,6 +729,32 @@ always_comb begin
 			nextState = SLLLoadRegDesloc; 
 		end
 		
+		SRLLoadB: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = SRLLoadRegDesloc; 
+		end
+		
 		SLLLoadRegDesloc: begin
 			FontePC = 2'b00;
 			PCEsc = 1'b0;
@@ -639,6 +779,32 @@ always_comb begin
 			CtrlMuxDeslocamento = 1'b1;
 					
 			nextState = SLLCalcDesloc; 
+		end
+		
+		SRLLoadRegDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b001;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1;
+					
+			nextState = SRLCalcDesloc; 
 		end
 		
 		SLLCalcDesloc: begin
@@ -667,7 +833,59 @@ always_comb begin
 			nextState = SLLRegEsc; 
 		end
 		
+		SRLCalcDesloc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b011;
+			NumShiftCtrl = 2'b01;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = SRLRegEsc; 
+		end
+				
 		SLLRegEsc: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b10;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b1;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+					
+			nextState = BuscaMem; 
+		end
+		
+		SRLRegEsc: begin
 			FontePC = 2'b00;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
@@ -1059,6 +1277,8 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			
+			
 			
 			nextState = RRegLoad;
 		end
