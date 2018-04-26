@@ -12,7 +12,8 @@ output logic resetRegA,
 output logic [2:0] ShiftControl,
 output logic CtrlMuxDeslocamento,
 output logic [1:0] NumShiftCtrl,
-output logic [1:0] WordouHWouByte);
+output logic [1:0] WordouHWouByte,
+output logic LoadMult);
 
 
 enum logic [5:0] {BuscaMem = 6'd0,
@@ -113,6 +114,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= EsperaBusca;
 			
@@ -140,6 +142,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= EscIR;
 			
@@ -167,6 +170,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= Decode;
 		end
@@ -195,6 +199,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= Decode ;
 		end
@@ -230,6 +235,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
 									
 									nextState <= BreakState;
 								end
@@ -257,6 +263,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
 									
 									nextState <= SLLLoadB;
 								end
@@ -285,6 +292,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
 									
 									nextState <= SRLLoadB;
 								end
@@ -314,6 +322,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
 									
 									nextState <= RRegLoadABJr;
 								end
@@ -342,6 +351,7 @@ always_comb begin
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
 									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
 									
 									nextState <= SLLVLoadRegDesloc;
 								end
@@ -374,6 +384,7 @@ always_comb begin
 								NumShiftCtrl = 2'b00;
 								CtrlMuxDeslocamento = 1'b0;
 								WordouHWouByte = 2'b00;
+								LoadMult = 1'b0;
 								
 								nextState <= RRegABLoad;
 							end
@@ -404,6 +415,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 									
 						nextState <= ADDIExec;
 					end
@@ -432,6 +444,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState <= BuscaMem ;
 					end
@@ -459,6 +472,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState <= LWRegABLoad ;
 					end
@@ -486,6 +500,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState <= SWRegABLoad;
 					end
@@ -514,6 +529,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState = BEQDesloc;
 					end
@@ -542,6 +558,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState = BNEDesloc;
 					end
@@ -570,6 +587,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState = LUISoma;                                                                                                        
 					end
@@ -598,6 +616,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
 						nextState <= LBURegABLoad ;
 					end
@@ -626,8 +645,9 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
 						
-						nextState <= LBURegABLoad ;
+						nextState <= LHURegABLoad ;
 					end
 			
 					
@@ -655,6 +675,7 @@ always_comb begin
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
 						WordouHWouByte = 2'b00;
+						LoadMult = 1'b1;
 						
 						nextState = BuscaMem;  
 					end
@@ -684,6 +705,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = ADDIFinish;  
 		end
@@ -711,6 +733,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -739,6 +762,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SLLVCalcDesloc; 
 		end
@@ -767,6 +791,7 @@ always_comb begin
 			// *********** pode causar overflow !!! ainda não tratado!
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SLLVRegEsc; 
 		end
@@ -794,6 +819,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -822,6 +848,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SLLLoadRegDesloc; 
 		end
@@ -849,6 +876,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SRLLoadRegDesloc; 
 		end
@@ -876,6 +904,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SLLCalcDesloc; 
 		end
@@ -903,6 +932,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SRLCalcDesloc; 
 		end
@@ -930,6 +960,7 @@ always_comb begin
 			NumShiftCtrl = 2'b01;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SLLRegEsc; 
 		end
@@ -957,6 +988,7 @@ always_comb begin
 			NumShiftCtrl = 2'b01;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = SRLRegEsc; 
 		end
@@ -984,6 +1016,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -1011,6 +1044,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -1038,6 +1072,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = LUICarregaReg;    
 	
@@ -1066,6 +1101,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 					
 			nextState = BuscaMem; 
 		end
@@ -1093,6 +1129,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = LBUCalcOffset ;
 		end
@@ -1120,6 +1157,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = LBUReadMem;
 		end
@@ -1147,37 +1185,38 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LBUEspera1 ;
 		end
 		
-		LBUEspera1:
-			begin
-				FontePC = 2'b00;
-				PCEsc = 1'b0;
-				CtrMem = 1'b0; // *
-				IREsc = 1'b0;
-				ULAOp = 2'b11;
-				RegWrite = 1'b0;
-				RegDst = 1'b0;
-				ULAFonteA = 1'b0;
-				ULAFonteB = 2'b00;
-				MemParaReg = 2'b00;
-				IouD = 1'b1;
-				RegACtrl = 1'b0;
-				RegBCtrl = 1'b0;
-				ULASaidaCtrl = 1'b0;
-				MDRCtrl = 1'b0;
-				PCEscCond = 1'b0;
-				PCEscCondBNE = 1'b0;
-				resetRegA = 1'b0;
-				ShiftControl = 3'b010;
-				NumShiftCtrl = 2'b00;
-				CtrlMuxDeslocamento = 1'b0;
-				WordouHWouByte = 2'b00;
+		LBUEspera1: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-				nextState <= LBUEspera2;
-			end
+			nextState <= LBUEspera2;
+		end
 			
 		LBUEspera2: begin
 			FontePC = 2'b00;
@@ -1202,6 +1241,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LBUMDRLoad ;
 		end
@@ -1229,6 +1269,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LBUFinish ;
 		end
@@ -1256,6 +1297,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b10;
+			LoadMult = 1'b0;
 			
 			nextState <= BuscaMem;
 		end
@@ -1283,8 +1325,9 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-			nextState = LBUCalcOffset ;
+			nextState = LHUCalcOffset ;
 		end
 		
 		LHUCalcOffset: begin
@@ -1310,8 +1353,9 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-			nextState = LBUReadMem;
+			nextState = LHUReadMem;
 		end
 		
 		LHUReadMem: begin
@@ -1337,37 +1381,38 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-			nextState <= LBUEspera1 ;
+			nextState <= LHUEspera1 ;
 		end
 		
-		LHUEspera1:
-			begin
-				FontePC = 2'b00;
-				PCEsc = 1'b0;
-				CtrMem = 1'b0; // *
-				IREsc = 1'b0;
-				ULAOp = 2'b11;
-				RegWrite = 1'b0;
-				RegDst = 1'b0;
-				ULAFonteA = 1'b0;
-				ULAFonteB = 2'b00;
-				MemParaReg = 2'b00;
-				IouD = 1'b1;
-				RegACtrl = 1'b0;
-				RegBCtrl = 1'b0;
-				ULASaidaCtrl = 1'b0;
-				MDRCtrl = 1'b0;
-				PCEscCond = 1'b0;
-				PCEscCondBNE = 1'b0;
-				resetRegA = 1'b0;
-				ShiftControl = 3'b010;
-				NumShiftCtrl = 2'b00;
-				CtrlMuxDeslocamento = 1'b0;
-				WordouHWouByte = 2'b00;
+		LHUEspera1: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-				nextState <= LBUEspera2;
-			end
+			nextState <= LHUEspera2;
+		end
 			
 		LHUEspera2: begin
 			FontePC = 2'b00;
@@ -1392,8 +1437,9 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-			nextState <= LBUMDRLoad ;
+			nextState <= LHUMDRLoad ;
 		end
 		
 		LHUMDRLoad: begin
@@ -1419,8 +1465,9 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
-			nextState <= LBUFinish ;
+			nextState <= LHUFinish ;
 		end
 		
 		LHUFinish: begin
@@ -1446,6 +1493,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b01;
+			LoadMult = 1'b0;
 			
 			nextState <= BuscaMem;
 		end
@@ -1474,6 +1522,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = LWCalcOffset ;
 		end
@@ -1502,6 +1551,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = LWReadMem ;
 		end
@@ -1529,6 +1579,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LWEspera1 ;
 			
@@ -1557,6 +1608,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LWEspera2;
 			
@@ -1585,6 +1637,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LWMDRLoad ;
 			
@@ -1613,6 +1666,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= LWFinish ;
 		end
@@ -1640,6 +1694,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= BuscaMem;
 		end
@@ -1667,6 +1722,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = SWCalcOffset ;
 		end
@@ -1694,6 +1750,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = SWEscritaMem ;
 		end
@@ -1721,6 +1778,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = BuscaMem;
 		end
@@ -1749,6 +1807,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = RULAOp;
 		end
@@ -1776,6 +1835,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			
 			
@@ -1805,6 +1865,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = BuscaMem;
 		end
@@ -1831,6 +1892,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			LoadMult = 1'b0;
 			
 			WordouHWouByte = 2'b00;
 			nextState = BreakState;
@@ -1859,6 +1921,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = BEQBegin;
 		end
@@ -1886,6 +1949,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 				
 			nextState = BEQLoadAB;
 		end
@@ -1913,6 +1977,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= BEQSolution;
 		end
@@ -1940,6 +2005,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= BuscaMem;
 		end
@@ -1967,6 +2033,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState = BNEBegin;
 		end
@@ -1994,6 +2061,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 						
 			nextState = BNELoadAB;
 		end
@@ -2021,6 +2089,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= BNESolution;
 		end
@@ -2048,6 +2117,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= BuscaMem;
 		end
@@ -2075,6 +2145,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= RLoadPCJr;
 	
@@ -2103,6 +2174,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 	
 			nextState <= BuscaMem;
 	
@@ -2131,6 +2203,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
 			
 			nextState <= BuscaMem;
 		end

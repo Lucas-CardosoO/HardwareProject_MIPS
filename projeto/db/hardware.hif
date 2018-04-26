@@ -1143,18 +1143,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-cpu
+getByteOrHw
 # storage
-db|hardware.(0).cnf
-db|hardware.(0).cnf
+db|hardware.(20).cnf
+db|hardware.(20).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-cpu.sv
-c570b04c3063f3e2668ecd7d44b197
+getbyteorhw.sv
+915fdcede687936913ea16137c875cc7
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1173,7 +1173,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-|
+getByteOrHw:CortadorDePalavras
 }
 # macro_sequence
 
@@ -1273,7 +1273,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-c9b30e24c6894f4fa85f78fc1bcf02c
+7b1a0a76f3112fe7e68b4aa5877f9d
 }
 # hierarchies {
 Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
@@ -1296,7 +1296,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-d5367e23e2d03198d84cd9cd649ae739
+197dec2af94321f4a1d3a73ec47e3ea
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1321,18 +1321,18 @@ controlador:ctrl
 
 # end
 # entity
-getByteOrHw
+mul
 # storage
-db|hardware.(20).cnf
-db|hardware.(20).cnf
+db|hardware.(21).cnf
+db|hardware.(21).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-getbyteorhw.sv
-915fdcede687936913ea16137c875cc7
+mul.sv
+3090aa38b86cc60cf535e28ad87ee
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1351,7 +1351,43 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-getByteOrHw:CortadorDePalavras
+mul:Multiplicador
+}
+# macro_sequence
+
+# end
+# entity
+cpu
+# storage
+db|hardware.(0).cnf
+db|hardware.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+cpu.sv
+18eedbc274bff90ea7928b26dc6498d
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
 }
 # macro_sequence
 
