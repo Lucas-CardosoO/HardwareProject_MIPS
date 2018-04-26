@@ -16,7 +16,9 @@ module cpu(input clock, reset,
   output logic [31:0] EntradaRegDeslocamento,
   output logic [1:0] MemParaReg,
   output logic [31:0] SaidaA,
-  output logic[4:0] NumShift
+  output logic[4:0] NumShift,
+  output logic [31:0] flavio,
+  output logic [1:0] WordouHWouByte
   );
   
   
@@ -141,7 +143,8 @@ module cpu(input clock, reset,
 	.NumShiftCtrl(NumShiftCtrl),
 	.resetRegA(resetRegA),
 	.ShiftControl(ShiftControl),
-	.CtrlMuxDeslocamento(CtrlMuxDeslocamento)
+	.CtrlMuxDeslocamento(CtrlMuxDeslocamento),
+	.WordouHWouByte(WordouHWouByte)
 );
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
@@ -168,7 +171,7 @@ module cpu(input clock, reset,
 	
 	mux4entradas32bits DadoASerEscritoSelection(.controlador(MemParaReg),
 	.entrada0(AluOut),
-	.entrada1(MDR),
+	.entrada1(flavio),
 	.entrada2(extensorEShift),
 	.entrada3(32'd666),
 	.saidaMux(WriteDataReg));
@@ -218,6 +221,9 @@ module cpu(input clock, reset,
 			.Entrada(EntradaRegDeslocamento),
 			.Saida(extensorEShift));
 	
+	getByteOrHw CortadorDePalavras(.WordouHWouByte(WordouHWouByte),
+				.MDR(MDR),
+				.flavio(flavio));
 	
 
 endmodule: cpu

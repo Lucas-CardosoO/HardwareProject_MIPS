@@ -11,7 +11,8 @@ output logic IouD,
 output logic resetRegA,
 output logic [2:0] ShiftControl,
 output logic CtrlMuxDeslocamento,
-output logic [1:0] NumShiftCtrl);
+output logic [1:0] NumShiftCtrl,
+output logic [1:0] WordouHWouByte);
 
 
 enum logic [5:0] {BuscaMem = 6'd0,
@@ -56,7 +57,21 @@ enum logic [5:0] {BuscaMem = 6'd0,
   SRLCalcDesloc = 6'd41,
   SRLRegEsc = 6'd42,
   ADDIExec = 6'd43,
-  ADDIFinish = 6'd44
+  ADDIFinish = 6'd44,
+  LBURegABLoad = 6'd45,
+  LBUCalcOffset = 6'd46,
+  LBUReadMem = 6'd47,
+  LBUEspera1= 6'd48, 
+  LBUEspera2 = 6'd49,
+  LBUMDRLoad = 6'd50,
+  LBUFinish = 6'd51,
+  LHURegABLoad = 6'd52,
+  LHUCalcOffset = 6'd53,
+  LHUReadMem = 6'd54,
+  LHUEspera1= 6'd55, 
+  LHUEspera2 = 6'd56,
+  LHUMDRLoad = 6'd57,
+  LHUFinish = 6'd58
   
   
    /* continua */} nextState;
@@ -74,6 +89,7 @@ end
 
 always_comb begin
 	case(state)
+	
 		BuscaMem : begin
 			FontePC = 2'b00;
 			PCEsc = 1'b1;
@@ -96,6 +112,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= EsperaBusca;
 			
@@ -122,6 +139,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= EscIR;
 			
@@ -148,6 +166,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= Decode;
 		end
@@ -175,6 +194,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= Decode ;
 		end
@@ -209,6 +229,7 @@ always_comb begin
 									ShiftControl = 3'b000;
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
 									
 									nextState <= BreakState;
 								end
@@ -235,6 +256,7 @@ always_comb begin
 									ShiftControl = 3'b000;
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
 									
 									nextState <= SLLLoadB;
 								end
@@ -262,6 +284,7 @@ always_comb begin
 									ShiftControl = 3'b000;
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
 									
 									nextState <= SRLLoadB;
 								end
@@ -290,6 +313,7 @@ always_comb begin
 									ShiftControl = 3'b000;
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
 									
 									nextState <= RRegLoadABJr;
 								end
@@ -317,6 +341,7 @@ always_comb begin
 									ShiftControl = 3'b000;
 									NumShiftCtrl = 2'b00;
 									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
 									
 									nextState <= SLLVLoadRegDesloc;
 								end
@@ -348,6 +373,7 @@ always_comb begin
 								ShiftControl = 3'b000;
 								NumShiftCtrl = 2'b00;
 								CtrlMuxDeslocamento = 1'b0;
+								WordouHWouByte = 2'b00;
 								
 								nextState <= RRegABLoad;
 							end
@@ -377,6 +403,7 @@ always_comb begin
 						ShiftControl = 3'b000;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 									
 						nextState <= ADDIExec;
 					end
@@ -404,6 +431,7 @@ always_comb begin
 						ShiftControl = 3'b000;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState <= BuscaMem ;
 					end
@@ -430,6 +458,7 @@ always_comb begin
 						ShiftControl = 3'b000;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState <= LWRegABLoad ;
 					end
@@ -456,6 +485,7 @@ always_comb begin
 						ShiftControl = 3'b000;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState <= SWRegABLoad;
 					end
@@ -483,6 +513,7 @@ always_comb begin
 						ShiftControl = 3'b001;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState = BEQDesloc;
 					end
@@ -510,6 +541,7 @@ always_comb begin
 						ShiftControl = 3'b001;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState = BNEDesloc;
 					end
@@ -537,9 +569,67 @@ always_comb begin
 						ShiftControl = 3'b001;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState = LUISoma;                                                                                                        
 					end
+					
+					6'b100100: //lbu
+						begin 
+						FontePC = 2'b00;
+						PCEsc = 1'b0;
+						CtrMem = 1'b0; // *
+						IREsc = 1'b0;
+						ULAOp = 2'b11;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b0;
+						ULAFonteB = 2'b00;
+						MemParaReg = 2'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b0;
+						RegBCtrl = 1'b0;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						
+						nextState <= LBURegABLoad ;
+					end
+					
+					6'b100101: //lhu
+						begin 
+						FontePC = 2'b00;
+						PCEsc = 1'b0;
+						CtrMem = 1'b0; // *
+						IREsc = 1'b0;
+						ULAOp = 2'b11;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b0;
+						ULAFonteB = 2'b00;
+						MemParaReg = 2'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b0;
+						RegBCtrl = 1'b0;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						
+						nextState <= LBURegABLoad ;
+					end
+			
 					
 				default:
 					begin
@@ -564,6 +654,7 @@ always_comb begin
 						ShiftControl = 3'b010;
 						NumShiftCtrl = 2'b00;
 						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
 						
 						nextState = BuscaMem;  
 					end
@@ -592,6 +683,7 @@ always_comb begin
 			ShiftControl = 3'b001; // load do registrador
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
+			WordouHWouByte = 2'b00;
 			
 			nextState = ADDIFinish;  
 		end
@@ -602,7 +694,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 2'b00;
-			RegWrite = 1'b0;
+			RegWrite = 1'b1;
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -618,6 +710,7 @@ always_comb begin
 			ShiftControl = 3'b001; // load do registrador
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
+			WordouHWouByte = 2'b00;
 					
 			nextState = BuscaMem; 
 		end
@@ -645,6 +738,7 @@ always_comb begin
 			ShiftControl = 3'b001; // load do registrador
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1; // seleciona a saída do resgitrador B para ser o número a ser deslocado
+			WordouHWouByte = 2'b00;
 					
 			nextState = SLLVCalcDesloc; 
 		end
@@ -672,6 +766,7 @@ always_comb begin
 			NumShiftCtrl = 2'b10; // seleciona a entrada N do regdesloc
 			// *********** pode causar overflow !!! ainda não tratado!
 			CtrlMuxDeslocamento = 1'b1;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SLLVRegEsc; 
 		end
@@ -698,6 +793,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
+			WordouHWouByte = 2'b00;
 					
 			nextState = BuscaMem; 
 		end
@@ -725,6 +821,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SLLLoadRegDesloc; 
 		end
@@ -751,6 +848,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SRLLoadRegDesloc; 
 		end
@@ -777,6 +875,7 @@ always_comb begin
 			ShiftControl = 3'b001;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SLLCalcDesloc; 
 		end
@@ -803,6 +902,7 @@ always_comb begin
 			ShiftControl = 3'b001;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SRLCalcDesloc; 
 		end
@@ -829,6 +929,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b01;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SLLRegEsc; 
 		end
@@ -855,6 +956,7 @@ always_comb begin
 			ShiftControl = 3'b011;
 			NumShiftCtrl = 2'b01;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = SRLRegEsc; 
 		end
@@ -881,6 +983,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = BuscaMem; 
 		end
@@ -907,6 +1010,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = BuscaMem; 
 		end
@@ -933,6 +1037,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = LUICarregaReg;    
 	
@@ -960,9 +1065,391 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 					
 			nextState = BuscaMem; 
 		end
+		
+		LBURegABLoad: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg =2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState = LBUCalcOffset ;
+		end
+		
+		LBUCalcOffset: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState = LBUReadMem;
+		end
+		
+		LBUReadMem: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUEspera1 ;
+		end
+		
+		LBUEspera1:
+			begin
+				FontePC = 2'b00;
+				PCEsc = 1'b0;
+				CtrMem = 1'b0; // *
+				IREsc = 1'b0;
+				ULAOp = 2'b11;
+				RegWrite = 1'b0;
+				RegDst = 1'b0;
+				ULAFonteA = 1'b0;
+				ULAFonteB = 2'b00;
+				MemParaReg = 2'b00;
+				IouD = 1'b1;
+				RegACtrl = 1'b0;
+				RegBCtrl = 1'b0;
+				ULASaidaCtrl = 1'b0;
+				MDRCtrl = 1'b0;
+				PCEscCond = 1'b0;
+				PCEscCondBNE = 1'b0;
+				resetRegA = 1'b0;
+				ShiftControl = 3'b010;
+				NumShiftCtrl = 2'b00;
+				CtrlMuxDeslocamento = 1'b0;
+				WordouHWouByte = 2'b00;
+			
+				nextState <= LBUEspera2;
+			end
+			
+		LBUEspera2: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUMDRLoad ;
+		end
+		
+		LBUMDRLoad: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b1;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUFinish ;
+		end
+		
+		LBUFinish: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b01;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b10;
+			
+			nextState <= BuscaMem;
+		end
+		
+		LHURegABLoad: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg =2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b1;
+			RegBCtrl = 1'b1;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState = LBUCalcOffset ;
+		end
+		
+		LHUCalcOffset: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b00;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState = LBUReadMem;
+		end
+		
+		LHUReadMem: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUEspera1 ;
+		end
+		
+		LHUEspera1:
+			begin
+				FontePC = 2'b00;
+				PCEsc = 1'b0;
+				CtrMem = 1'b0; // *
+				IREsc = 1'b0;
+				ULAOp = 2'b11;
+				RegWrite = 1'b0;
+				RegDst = 1'b0;
+				ULAFonteA = 1'b0;
+				ULAFonteB = 2'b00;
+				MemParaReg = 2'b00;
+				IouD = 1'b1;
+				RegACtrl = 1'b0;
+				RegBCtrl = 1'b0;
+				ULASaidaCtrl = 1'b0;
+				MDRCtrl = 1'b0;
+				PCEscCond = 1'b0;
+				PCEscCondBNE = 1'b0;
+				resetRegA = 1'b0;
+				ShiftControl = 3'b010;
+				NumShiftCtrl = 2'b00;
+				CtrlMuxDeslocamento = 1'b0;
+				WordouHWouByte = 2'b00;
+			
+				nextState <= LBUEspera2;
+			end
+			
+		LHUEspera2: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUMDRLoad ;
+		end
+		
+		LHUMDRLoad: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b1;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			
+			nextState <= LBUFinish ;
+		end
+		
+		LHUFinish: begin
+			FontePC = 2'b00;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 2'b11;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 2'b01;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b01;
+			
+			nextState <= BuscaMem;
+		end
+		
 		
 		LWRegABLoad :begin	
 			FontePC = 2'b00;
@@ -986,6 +1473,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = LWCalcOffset ;
 		end
@@ -1013,6 +1501,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = LWReadMem ;
 		end
@@ -1039,6 +1528,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= LWEspera1 ;
 			
@@ -1066,6 +1556,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= LWEspera2;
 			
@@ -1093,6 +1584,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= LWMDRLoad ;
 			
@@ -1120,6 +1612,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= LWFinish ;
 		end
@@ -1146,6 +1639,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= BuscaMem;
 		end
@@ -1172,6 +1666,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = SWCalcOffset ;
 		end
@@ -1198,6 +1693,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = SWEscritaMem ;
 		end
@@ -1224,6 +1720,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = BuscaMem;
 		end
@@ -1251,6 +1748,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = RULAOp;
 		end
@@ -1277,6 +1775,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			
 			
@@ -1305,6 +1804,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = BuscaMem;
 		end
@@ -1332,6 +1832,7 @@ always_comb begin
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			
+			WordouHWouByte = 2'b00;
 			nextState = BreakState;
 		end
 		
@@ -1357,6 +1858,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = BEQBegin;
 		end
@@ -1383,6 +1885,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 				
 			nextState = BEQLoadAB;
 		end
@@ -1409,6 +1912,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= BEQSolution;
 		end
@@ -1435,6 +1939,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= BuscaMem;
 		end
@@ -1461,6 +1966,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState = BNEBegin;
 		end
@@ -1487,6 +1993,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 						
 			nextState = BNELoadAB;
 		end
@@ -1513,6 +2020,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= BNESolution;
 		end
@@ -1539,6 +2047,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= BuscaMem;
 		end
@@ -1565,6 +2074,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= RLoadPCJr;
 	
@@ -1592,6 +2102,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 	
 			nextState <= BuscaMem;
 	
@@ -1619,6 +2130,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
 			
 			nextState <= BuscaMem;
 		end
