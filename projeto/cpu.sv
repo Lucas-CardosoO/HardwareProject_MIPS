@@ -15,6 +15,7 @@ module cpu(input clock, reset,
   output logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste,
   output logic LoadMult
   );
+  
     logic[31:0] extensor32bits, Address; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [4:0] CounterTest;
 	logic [31:0] flavio;
@@ -232,8 +233,8 @@ module cpu(input clock, reset,
 				
 	mul Multiplicador(.Clock(clock),
 					  .load(LoadMult),
-					  .multiplicador(32'd3),
-					  .multiplicando(32'd5),
+					  .multiplicador(32'd11),
+					  .multiplicando(32'd3),
 					  .resultado(resultadoMultTeste),
 					  .resultado_atual(resultado_atualMultTest),
 					  .multiplicando_atual(multiplicando_atualTeste),

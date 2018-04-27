@@ -15,8 +15,9 @@ module cpu(input clock, reset,
   output logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste,
   output logic LoadMult
   );
+  
     logic[31:0] extensor32bits, Address; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
-	logic [4:0] CounterTest
+	logic [4:0] CounterTest;
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	
