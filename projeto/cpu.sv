@@ -11,11 +11,17 @@ module cpu(input clock, reset,
   output logic[31:0] extensorEShift,
   output logic[31:0] ExceptionAddress,
   output logic [1:0] MemParaReg,
-  output logic [63:0] resultadoMultTeste, resultado_atualMultTest,
-  output logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste,
   output logic LoadMult, ExceptionSelector
   );
   
+  
+	// multiplicador:
+	logic [63:0] resultadoMultTeste, resultado_atualMultTest;
+	logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste;
+	
+	
+	
+	
     logic[31:0] extensor32bits, Address; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [4:0] CounterTest;
 	logic [31:0] flavio;

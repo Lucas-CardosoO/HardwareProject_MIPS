@@ -2,7 +2,7 @@ module AluControl(input logic[5:0] funct,
 input logic[1:0] ULAOp,
 output logic[2:0] ULAOpSelector);
 
-enum logic [5:0] {addu = 6'h20, andULA = 6'h24, sub = 6'h22, xorULA = 6'h26 /* continua */} man;
+enum logic [5:0] {addu = 6'h21, andULA = 6'h24, subu = 6'h23, xorULA = 6'h26, add = 6'h20, sub = 6'h22 /* continua */} man;
 
 always_comb begin
 	case(ULAOp)
@@ -14,7 +14,7 @@ always_comb begin
 				addu: begin
 					ULAOpSelector = 3'b001;
 				end
-				sub: begin
+				subu: begin
 					ULAOpSelector = 3'b010;
 				end
 				andULA: begin
@@ -22,6 +22,12 @@ always_comb begin
 				end
 				xorULA: begin
 					ULAOpSelector = 3'b110;
+				end
+				add: begin 
+					ULAOpSelector = 3'b001;
+				end
+				sub: begin
+					ULAOpSelector = 3'b010;
 				end
 				default: begin
 					ULAOpSelector = 3'b001;

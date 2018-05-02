@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hardware
-Wed May 02 12:03:51 2018
+Wed May 02 14:38:32 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -14,28 +14,26 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 15. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 16. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
- 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
- 19. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
- 20. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
- 21. Port Connectivity Checks: "mul:Multiplicador"
- 22. Port Connectivity Checks: "mux4entradas5bits:NumShiftSelection"
- 23. Port Connectivity Checks: "mux2entradas32bits_real:ExceptionMUX"
- 24. Port Connectivity Checks: "mux8entradas32bits:FontePCSelection"
- 25. Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection"
- 26. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
- 27. Port Connectivity Checks: "controlador:ctrl"
- 28. Port Connectivity Checks: "Ula32:ULA"
- 29. Analysis & Synthesis Messages
- 30. Analysis & Synthesis Suppressed Messages
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 12. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 15. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
+ 16. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
+ 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
+ 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
+ 19. Port Connectivity Checks: "mul:Multiplicador"
+ 20. Port Connectivity Checks: "mux4entradas5bits:NumShiftSelection"
+ 21. Port Connectivity Checks: "mux2entradas32bits_real:ExceptionMUX"
+ 22. Port Connectivity Checks: "mux8entradas32bits:FontePCSelection"
+ 23. Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection"
+ 24. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
+ 25. Port Connectivity Checks: "controlador:ctrl"
+ 26. Port Connectivity Checks: "Ula32:ULA"
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -61,16 +59,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 02 12:03:51 2018        ;
+; Analysis & Synthesis Status        ; Successful - Wed May 02 14:38:31 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 4,117                                        ;
-;     Total combinational functions  ; 2,991                                        ;
-;     Dedicated logic registers      ; 1,452                                        ;
-; Total registers                    ; 1452                                         ;
-; Total pins                         ; 628                                          ;
+; Total logic elements               ; 3,825                                        ;
+;     Total combinational functions  ; 2,763                                        ;
+;     Dedicated logic registers      ; 1,286                                        ;
+; Total registers                    ; 1286                                         ;
+; Total pins                         ; 436                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -210,28 +208,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 4,117 ;
+; Estimated Total logic elements              ; 3,825 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2991  ;
+; Total combinational functions               ; 2763  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2165  ;
-;     -- 3 input functions                    ; 665   ;
-;     -- <=2 input functions                  ; 161   ;
+;     -- 4 input functions                    ; 2126  ;
+;     -- 3 input functions                    ; 537   ;
+;     -- <=2 input functions                  ; 100   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2876  ;
-;     -- arithmetic mode                      ; 115   ;
+;     -- normal mode                          ; 2714  ;
+;     -- arithmetic mode                      ; 49    ;
 ;                                             ;       ;
-; Total registers                             ; 1452  ;
-;     -- Dedicated logic registers            ; 1452  ;
+; Total registers                             ; 1286  ;
+;     -- Dedicated logic registers            ; 1286  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 628   ;
+; I/O pins                                    ; 436   ;
 ; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1484  ;
-; Total fan-out                               ; 17425 ;
-; Average fan-out                             ; 3.41  ;
+; Maximum fan-out                             ; 1318  ;
+; Total fan-out                               ; 16209 ;
+; Average fan-out                             ; 3.59  ;
 +---------------------------------------------+-------+
 
 
@@ -240,15 +238,15 @@ applicable agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu                                              ; 2991 (12)         ; 1452 (0)     ; 8192        ; 0            ; 0       ; 0         ; 628  ; 0            ; |cpu                                                                                                          ; work         ;
+; |cpu                                              ; 2763 (16)         ; 1286 (0)     ; 8192        ; 0            ; 0       ; 0         ; 436  ; 0            ; |cpu                                                                                                          ; work         ;
 ;    |AluControl:AluControl|                        ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
 ;    |Banco_reg:BancoDeRegistradores|               ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
 ;    |Instr_Reg:inst_reg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
 ;    |Memoria:Memory|                               ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
+;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
-;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
+;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ; work         ;
 ;       |lpm_ram_dq:MEM_plus_Three|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ; work         ;
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
@@ -261,22 +259,21 @@ applicable agreement for further details.
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |RegDesloc:Deslocamento|                       ; 579 (579)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
+;    |RegDesloc:Deslocamento|                       ; 587 (587)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
 ;    |Registrador:A|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:A                                                                                            ; work         ;
 ;    |Registrador:B|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:B                                                                                            ; work         ;
 ;    |Registrador:EPC|                              ; 31 (31)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:EPC                                                                                          ; work         ;
-;    |Registrador:MDRreg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDRreg                                                                                       ;              ;
-;    |Registrador:PCreg|                            ; 12 (12)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
+;    |Registrador:MDRreg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDRreg                                                                                       ; work         ;
+;    |Registrador:PCreg|                            ; 13 (13)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
 ;    |Registrador:ULASaida|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:ULASaida                                                                                     ; work         ;
-;    |Ula32:ULA|                                    ; 239 (239)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
-;    |controlador:ctrl|                             ; 226 (226)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
-;    |mul:Multiplicador|                            ; 205 (205)         ; 166 (166)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mul:Multiplicador                                                                                        ; work         ;
+;    |Ula32:ULA|                                    ; 207 (207)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
+;    |controlador:ctrl|                             ; 220 (220)         ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
 ;    |mux2entradas32bits:RegisterWriteSelection|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
 ;    |mux2entradas32bits_real:EntradaULA1Selection| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
 ;    |mux2entradas32bits_real:IouDMux|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
 ;    |mux2entradas32bits_real:dadoASerDeslocado|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:dadoASerDeslocado                                                                ; work         ;
-;    |mux4entradas32bits:DadoASerEscritoSelection|  ; 88 (88)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:DadoASerEscritoSelection                                                              ;              ;
-;    |mux4entradas32bits:EntradaULA2Selection|      ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
+;    |mux4entradas32bits:DadoASerEscritoSelection|  ; 90 (90)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:DadoASerEscritoSelection                                                              ; work         ;
+;    |mux4entradas32bits:EntradaULA2Selection|      ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ;              ;
 ;    |mux4entradas5bits:NumShiftSelection|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas5bits:NumShiftSelection                                                                      ; work         ;
 ;    |mux8entradas32bits:FontePCSelection|          ; 56 (56)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux8entradas32bits:FontePCSelection                                                                      ; work         ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
@@ -295,62 +292,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+----------------------------------------------+------------------------------------------------------+
-; Register name                                ; Reason for Removal                                   ;
-+----------------------------------------------+------------------------------------------------------+
-; mul:Multiplicador|multiplicando_atual[0]     ; Stuck at GND due to stuck port data_in               ;
-; mul:Multiplicador|multiplicador_atual[3..31] ; Stuck at GND due to stuck port data_in               ;
-; mul:Multiplicador|multiplicador_atual[2]     ; Merged with mul:Multiplicador|multiplicando_atual[1] ;
-; Total Number of Removed Registers = 31       ;                                                      ;
-+----------------------------------------------+------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                 ;
-+-------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name                             ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+-------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; mul:Multiplicador|multiplicador_atual[31] ; Stuck at GND              ; mul:Multiplicador|multiplicador_atual[30],                                          ;
-;                                           ; due to stuck port data_in ; mul:Multiplicador|multiplicador_atual[29],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[28],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[27],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[26],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[25],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[24],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[23],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[22],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[21],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[20],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[19],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[18],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[17],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[16],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[15],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[14],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[13],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[12],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[11],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[10],                                          ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[9], mul:Multiplicador|multiplicador_atual[8], ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[7], mul:Multiplicador|multiplicador_atual[6], ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[5], mul:Multiplicador|multiplicador_atual[4], ;
-;                                           ;                           ; mul:Multiplicador|multiplicador_atual[3]                                            ;
-+-------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-
-
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1452  ;
-; Number of registers using Synchronous Clear  ; 5     ;
+; Total registers                              ; 1286  ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 5     ;
 ; Number of registers using Asynchronous Clear ; 1280  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1338  ;
+; Number of registers using Clock Enable       ; 1274  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -360,24 +312,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[29]                       ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[22]                       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[23]                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[3]                            ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[1]                    ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[18]                   ;
-; 128:1              ; 5 bits    ; 425 LEs       ; 225 LEs              ; 200 LEs                ; Yes        ; |cpu|controlador:ctrl|state[5]                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas5bits:NumShiftSelection|Mux4          ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |cpu|AluControl:AluControl|Mux0                        ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux15     ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux52                                   ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux4                                    ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux8  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[28]                       ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[19]                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[15]                           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[22]                           ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[7]                    ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[27]                   ;
+; 128:1              ; 2 bits    ; 170 LEs       ; 72 LEs               ; 98 LEs                 ; Yes        ; |cpu|controlador:ctrl|state[0]                         ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas5bits:NumShiftSelection|Mux2          ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |cpu|AluControl:AluControl|Mux1                        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux20     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux58                                   ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux9                                    ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux6  ;
 ; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux19 ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux31 ;
-; 64:1               ; 2 bits    ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |cpu|controlador:ctrl|Selector22                       ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux30 ;
+; 64:1               ; 2 bits    ; 84 LEs        ; 56 LEs               ; 28 LEs                 ; No         ; |cpu|controlador:ctrl|Selector20                       ;
 ; 65:1               ; 2 bits    ; 86 LEs        ; 52 LEs               ; 34 LEs                 ; No         ; |cpu|controlador:ctrl|Selector14                       ;
-; 127:1              ; 2 bits    ; 168 LEs       ; 80 LEs               ; 88 LEs                 ; No         ; |cpu|controlador:ctrl|Selector15                       ;
+; 127:1              ; 2 bits    ; 168 LEs       ; 80 LEs               ; 88 LEs                 ; No         ; |cpu|controlador:ctrl|Selector18                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -520,6 +472,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; multiplicador[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; multiplicando[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
 ; multiplicando[31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; resultado            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; resultado_atual      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; multiplicando_atual  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; multiplicador_atual  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; counter              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
@@ -623,7 +579,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 02 12:03:36 2018
+    Info: Processing started: Wed May 02 14:38:11 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hardware -c hardware
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file cpu.sv
@@ -671,7 +627,7 @@ Info: Found 1 design units, including 1 entities, in source file getbyteorhw.sv
     Info: Found entity 1: getByteOrHw
 Info: Found 1 design units, including 1 entities, in source file mux8entradas32bits.sv
     Info: Found entity 1: mux8entradas32bits
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(70): created implicit net for "LoadEPC"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(76): created implicit net for "LoadEPC"
 Info: Elaborating entity "cpu" for the top level hierarchy
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:PCreg"
 Info: Elaborating entity "AluControl" for hierarchy "AluControl:AluControl"
@@ -701,6 +657,10 @@ Info: Found 1 design units, including 1 entities, in source file db/altsyncram_e
     Info: Found entity 1: altsyncram_e1a1
 Info: Elaborating entity "altsyncram_e1a1" for hierarchy "Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated"
 Info: Elaborating entity "controlador" for hierarchy "controlador:ctrl"
+Warning (10230): Verilog HDL assignment warning at controlador.sv(96): truncated value with size 7 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(99): truncated value with size 7 to match size of target (6)
+Warning (10199): Verilog HDL Case Statement warning at controlador.sv(865): case item expression never matches the case expression
+Warning (10199): Verilog HDL Case Statement warning at controlador.sv(895): case item expression never matches the case expression
 Info: Elaborating entity "mux2entradas32bits" for hierarchy "mux2entradas32bits:RegisterWriteSelection"
 Info: Elaborating entity "mux2entradas32bits_real" for hierarchy "mux2entradas32bits_real:IouDMux"
 Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits_real.sv(5): variable "entrada1" is read inside the Always Construct but isn't in the Always Construct's Event Control
@@ -749,47 +709,17 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ExceptionAddress[29]" is stuck at GND
     Warning (13410): Pin "ExceptionAddress[30]" is stuck at GND
     Warning (13410): Pin "ExceptionAddress[31]" is stuck at GND
-    Warning (13410): Pin "multiplicando_atualTeste[0]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[3]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[4]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[5]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[6]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[7]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[8]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[9]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[10]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[11]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[12]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[13]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[14]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[15]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[16]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[17]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[18]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[19]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[20]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[21]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[22]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[23]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[24]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[25]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[26]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[27]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[28]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[29]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[30]" is stuck at GND
-    Warning (13410): Pin "multiplicador_atualTeste[31]" is stuck at GND
 Info: Generated suppressed messages file C:/Users/vlma/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg
-Info: Implemented 4936 device resources after synthesis - the final resource count might be different
+Info: Implemented 4357 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 626 output pins
-    Info: Implemented 4276 logic cells
+    Info: Implemented 434 output pins
+    Info: Implemented 3889 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 276 megabytes
-    Info: Processing ended: Wed May 02 12:03:51 2018
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:14
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 43 warnings
+    Info: Peak virtual memory: 274 megabytes
+    Info: Processing ended: Wed May 02 14:38:32 2018
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:27
 
 
 +------------------------------------------+

@@ -201,42 +201,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 
 # end
 # entity
-AluControl
-# storage
-db|hardware.(2).cnf
-db|hardware.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-alucontrol.sv
-255123e96ca0368ae8c9cd5b2eb88a8d
-9
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-AluControl:AluControl
-}
-# macro_sequence
-
-# end
-# entity
 mux4entradas5bits
 # storage
 db|hardware.(19).cnf
@@ -1216,6 +1180,78 @@ extensor16to32bits:extenssor
 
 # end
 # entity
+getByteOrHw
+# storage
+db|hardware.(20).cnf
+db|hardware.(20).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+getbyteorhw.sv
+80bf32e72041b3354311916c96e061fd
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+getByteOrHw:CortadorDePalavras
+}
+# macro_sequence
+
+# end
+# entity
+AluControl
+# storage
+db|hardware.(2).cnf
+db|hardware.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+alucontrol.sv
+f11eeeda51af49588bde5d57cc139498
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+AluControl:AluControl
+}
+# macro_sequence
+
+# end
+# entity
 cpu
 # storage
 db|hardware.(0).cnf
@@ -1227,7 +1263,7 @@ ON
 # case_sensitive
 # source_file
 cpu.sv
-815d66dc92f745b9a5f72e03f57d7f
+480cbb3ad4c7d98fdececd13eb8d
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1346,7 +1382,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-b353b1b6f340ca61ae2f2f24aec1480
+f8ad7de332abf4f4b460cbc4c21a1148
 }
 # hierarchies {
 Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
@@ -1369,7 +1405,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-3dc469c2692a1dfe4d1c33d4728eeed
+3c14d3507ebb434b6b36857abbcd5495
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1389,42 +1425,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 controlador:ctrl
-}
-# macro_sequence
-
-# end
-# entity
-getByteOrHw
-# storage
-db|hardware.(20).cnf
-db|hardware.(20).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-getbyteorhw.sv
-80bf32e72041b3354311916c96e061fd
-9
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-getByteOrHw:CortadorDePalavras
 }
 # macro_sequence
 
