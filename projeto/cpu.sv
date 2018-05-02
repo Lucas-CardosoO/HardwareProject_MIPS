@@ -1,5 +1,5 @@
 module cpu(input clock, reset,
-  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC,
+  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC, EPCOut,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite,
   output logic[5:0] Estado,
@@ -9,11 +9,11 @@ module cpu(input clock, reset,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
   output logic[31:0] extensorEShift,
-  
+  output logic[31:0] ExceptionAddress,
   output logic [1:0] MemParaReg,
   output logic [63:0] resultadoMultTeste, resultado_atualMultTest,
   output logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste,
-  output logic LoadMult
+  output logic LoadMult, ExceptionSelector
   );
   
     logic[31:0] extensor32bits, Address; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
@@ -64,13 +64,13 @@ module cpu(input clock, reset,
 	.Entrada(MemData),
 	.Saida(MDR));
 	
-	/*
+	
 	Registrador EPC(.Clk(clock),
 	.Reset(reset),
 	.Load(LoadEPC),
-	.Entrada(),
-	.Saida(MDR));
-	*/
+	.Entrada(PC-4),
+	.Saida(EPCOut)); // instrução rte : EPC -> PC: tro
+	
 
 	
 	Registrador ULASaida(.Clk(clock),
@@ -149,7 +149,10 @@ module cpu(input clock, reset,
 	.ShiftControl(ShiftControl),
 	.CtrlMuxDeslocamento(CtrlMuxDeslocamento),
 	.WordouHWouByte(WordouHWouByte),
-	.LoadMult(LoadMult)
+	.LoadMult(LoadMult),
+	.LoadEPC(LoadEPC),
+	.ExceptionSelector(ExceptionSelector),
+	.Overflow(OverflowULA)
 );
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
@@ -181,12 +184,21 @@ module cpu(input clock, reset,
 	.entrada3(32'd666),
 	.saidaMux(WriteDataReg));
 	
-	mux4entradas32bits FontePCSelection(.controlador(FontePC),  
+	mux8entradas32bits FontePCSelection(.controlador(FontePC),  
 	.entrada0(Alu),
 	.entrada1(AluOut),
 	.entrada2(pcJump),
-	.entrada3(32'd666),
+	.entrada3(ExceptionAddress),
+	.entrada4(EPCOut),
+	.entrada5(32'd0),
+	.entrada6(32'd0),
+	.entrada7(32'd0),
 	.saidaMux(EntradaPC));
+	
+	mux2entradas32bits_real ExceptionMUX(.controlador(ExceptionSelector),
+	.entrada0(32'd254), // OPCODE	não existente
+	.entrada1(32'd255), //Overflow arit
+	.saidaMux(ExceptionAddress));
 
 	mux2entradas32bits_real dadoASerDeslocado(.controlador(CtrlMuxDeslocamento),
 	.entrada0(extensor32bits),

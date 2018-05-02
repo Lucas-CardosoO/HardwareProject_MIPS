@@ -5,7 +5,7 @@ always_comb begin
 		saida = {16'b0, entrada};
 	end
 	else begin
-		saida = {16'b1, entrada};
+		saida = {16'b1111111111111111, entrada};
 	end
 end
 endmodule: extensor16to32bits
