@@ -2,7 +2,7 @@ module cpu(input clock, reset,
   output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC, EPCOut,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite,
-  output logic[5:0] Estado,
+  output logic[6:0] Estado,
   output logic [31:0]EntradaULA1, EntradaULA2,
   output logic [5:0] Instr31_26,
   output logic[4:0] Instr25_21,
@@ -42,7 +42,8 @@ module cpu(input clock, reset,
 	logic[31:0] pcJump;
 	logic PCEscCondBNE;
 	logic IouD;
-	logic [1:0]ULAOp, FontePC; 
+	logic [2:0]ULAOp;
+	logic [2:0] FontePC; 
 	logic [31:0]EntradaPC;
 	logic [31:0] ReadData1, ReadData2;
 	// logic [31:0] SaidaA;
@@ -202,7 +203,7 @@ module cpu(input clock, reset,
 	.saidaMux(EntradaPC));
 	
 	mux2entradas32bits_real ExceptionMUX(.controlador(ExceptionSelector),
-	.entrada0(32'd254), // OPCODE	não existente
+	.entrada0(32'd254), // OPCODE inexistente
 	.entrada1(32'd255), //Overflow arit
 	.saidaMux(ExceptionAddress));
 

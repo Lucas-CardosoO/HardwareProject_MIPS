@@ -23,19 +23,26 @@ always_comb begin
 				xorULA: begin
 					ULAOpSelector = 3'b110;
 				end
-				default: begin
-					ULAOpSelector = 3'b001;
-				end
 				add: begin 
 					ULAOpSelector = 3'b001;
 				end
 				sub: begin
 					ULAOpSelector = 3'b010;
 				end
+				default: begin
+					ULAOpSelector = 3'b001;
+				end
 			endcase
 		end
 		2'b01: begin
 			ULAOpSelector = 3'b010; //Subtraçlão pra o beq
+		end
+		2'b10: begin
+			ULAOpSelector = 3'b110;
+		end
+		
+		2'b11: begin
+			ULAOpSelector = 3'b011;
 		end
 		default: begin
 			ULAOpSelector = 3'b000;	

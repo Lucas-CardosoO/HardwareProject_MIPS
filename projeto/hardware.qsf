@@ -67,7 +67,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE AluControl.sv
 set_global_assignment -name SYSTEMVERILOG_FILE extensor16to32bits.sv
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE waveform1.vwf
 set_global_assignment -name SYSTEMVERILOG_FILE shiftLeft2bits.sv
-set_global_assignment -name SIMULATOR_GENERATE_POWERPLAY_VCD_FILE OFF
+set_global_assignment -name SIMULATOR_GENERATE_POWERPLAY_VCD_FILE ON
 set_global_assignment -name SIMULATOR_GENERATE_SIGNAL_ACTIVITY_FILE OFF
 set_global_assignment -name SYSTEMVERILOG_FILE shiftLeft2bits26.sv
 set_global_assignment -name MISC_FILE "C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.dpf"
@@ -76,3 +76,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE mul.sv
 set_global_assignment -name SYSTEMVERILOG_FILE getByteOrHw.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux8entradas32bits.sv
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SIMULATOR_POWERPLAY_VCD_FILE_OUTPUT_DESTINATION hardware.vcd
