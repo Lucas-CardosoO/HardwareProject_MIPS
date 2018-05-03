@@ -14,16 +14,16 @@ always_comb begin
 			saidaMux <= entrada3;
 		end 
 		3'b0100:begin
-			saidaMux <= entrada0;
+			saidaMux <= entrada4;
 		end
 		3'b101:begin
-			saidaMux <= entrada1;
+			saidaMux <= entrada5;
 		end
 		3'b110:begin
-			saidaMux <= entrada2;
+			saidaMux <= entrada6;
 		end
 		3'b111:begin
-			saidaMux <= entrada3;
+			saidaMux <= entrada7;
 		end 
 
 		endcase

@@ -236,43 +236,6 @@ mux4entradas5bits:NumShiftSelection
 
 # end
 # entity
-mux8entradas32bits
-# storage
-db|hardware.(22).cnf
-db|hardware.(22).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-mux8entradas32bits.sv
-3a68d8455ed7d2d21076d568fb476760
-9
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-mux8entradas32bits:DadoASerEscritoSelection
-mux8entradas32bits:FontePCSelection
-}
-# macro_sequence
-
-# end
-# entity
 extensor16to32bits
 # storage
 db|hardware.(14).cnf
@@ -1360,6 +1323,42 @@ Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyn
 
 # end
 # entity
+cpu
+# storage
+db|hardware.(0).cnf
+db|hardware.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+cpu.sv
+8d53cac6f5908cab798146ed41b6067
+9
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 controlador
 # storage
 db|hardware.(10).cnf
@@ -1371,7 +1370,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-9bc6e1cecdbf7cbbaca66cf269c0f318
+99cc4687ef1ba4c5f9758dfbbb3f9d
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1396,18 +1395,18 @@ controlador:ctrl
 
 # end
 # entity
-cpu
+mux8entradas32bits
 # storage
-db|hardware.(0).cnf
-db|hardware.(0).cnf
+db|hardware.(22).cnf
+db|hardware.(22).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-cpu.sv
-c6d3284d9834eab299debdbd2721d1
+mux8entradas32bits.sv
+2658cf17701e8aff583719f38d6f1e
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1426,7 +1425,8 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-|
+mux8entradas32bits:DadoASerEscritoSelection
+mux8entradas32bits:FontePCSelection
 }
 # macro_sequence
 

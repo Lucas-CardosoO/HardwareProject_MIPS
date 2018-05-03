@@ -23,7 +23,6 @@ module cpu(input clock, reset,
 	logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste;
 	
     logic[31:0] extensor32bits, Address, MDR, EPCOut; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
-	logic [4:0] CounterTest;
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	
@@ -272,7 +271,7 @@ module cpu(input clock, reset,
 					  .multiplicando_atual(multiplicando_atualTeste),
 					  .multiplicador_atual(multiplicador_atualTeste),
 					  .resultado(resultado_mult),
-					  .counter(counter_mult));
+					  .counter(contador_mult));
 	
 
 endmodule: cpu

@@ -1,7 +1,7 @@
 module controlador(input logic Clock, Reset, Overflow, input logic [4:0]contador_mult, input logic[5:0] OpCode, InstrArit,
 output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA,
-output logic[1:0] ULAFonteB, MemParaReg,
-output logic[2:0] FontePC,
+output logic[1:0] ULAFonteB,
+output logic[2:0] FontePC, MemParaReg,
 output logic[1:0] RegACtrl,
 output logic[1:0] RegBCtrl, ULASaidaCtrl, MDRCtrl,
 output logic[2:0] ULAOp,
@@ -471,7 +471,7 @@ always_comb begin
 									CtrMem = 1'b0; // *
 									IREsc = 1'b0;
 									ULAOp = 3'b011;
-									RegWrite = 1'b0;
+									RegWrite = 1'b1;
 									RegDst = 1'b1;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
@@ -492,8 +492,7 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
-									
-									nextState <= MULT;
+									nextState <= BuscaMem;
 									end
 								6'h12: //MHLO
 									begin
@@ -502,7 +501,7 @@ always_comb begin
 									CtrMem = 1'b0; // *
 									IREsc = 1'b0;
 									ULAOp = 3'b011;
-									RegWrite = 1'b0;
+									RegWrite = 1'b1;
 									RegDst = 1'b1;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
@@ -523,8 +522,7 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
-									
-									nextState <= MULT;
+									nextState <= BuscaMem;
 									end
 						
 							default: begin 
