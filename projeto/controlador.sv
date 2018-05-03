@@ -1,4 +1,4 @@
-module controlador(input logic Clock, Reset, Overflow, input logic[5:0] OpCode, InstrArit,
+module controlador(input logic Clock, Reset, Overflow, input logic [4:0]contador_mult, input logic[5:0] OpCode, InstrArit,
 output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA,
 output logic[1:0] ULAFonteB, MemParaReg,
 output logic[2:0] FontePC,
@@ -15,8 +15,8 @@ output logic CtrlMuxDeslocamento,
 output logic [1:0] NumShiftCtrl,
 output logic [1:0] WordouHWouByte,
 output logic LoadMult,
-output logic ExceptionSelector, LoadEPC);
-
+output logic ExceptionSelector, LoadEPC
+);
 
 enum logic [6:0] {
   BuscaMem = 7'd0,
@@ -89,11 +89,15 @@ enum logic [6:0] {
   SXORIFinish = 7'd67,
   ANDIExec = 7'd68,
   ANDIFinish = 7'd69,
-  MULT = 7'd70
+  MULT = 7'd70,
+  MULTLoop = 7'd71,
+  Mhlo = 7'd72,
+  Mfhi = 7'd73
   
   
   
    /* continua */} nextState;
+  
 
 
 
@@ -119,7 +123,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -135,6 +139,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 	
 			nextState <= EsperaBusca;
 			
@@ -149,7 +154,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -165,6 +170,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= EscIR;
 			
@@ -179,7 +185,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -195,6 +201,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= Decode;
 		end
@@ -216,7 +223,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -232,6 +239,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									
 									
 									nextState <= BreakState;
 								end
@@ -246,37 +254,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
-									IouD = 1'b0;
-									RegACtrl = 1'b0;
-									RegBCtrl = 1'b0;
-									ULASaidaCtrl = 1'b0;
-									MDRCtrl = 1'b0;
-									PCEscCond = 1'b0;
-									PCEscCondBNE = 1'b0;
-									resetRegA = 1'b0;
-									ShiftControl = 3'b000;
-									NumShiftCtrl = 2'b00;
-									CtrlMuxDeslocamento = 1'b0;
-									WordouHWouByte = 2'b00;
-									LoadMult = 1'b0;
-									ExceptionSelector = 1'b0;
-									LoadEPC = 1'b0;
-									nextState <= SLLLoadB;
-								end
-								
-							6'h2:
-								begin //srl
-									FontePC = 3'b000;
-									PCEsc = 1'b0;
-									CtrMem = 1'b0; // *
-									IREsc = 1'b0;
-									ULAOp = 3'b000;
-									RegWrite = 1'b0;
-									RegDst = 1'b0;
-									ULAFonteA = 1'b0;
-									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -293,6 +271,39 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
+									
+									nextState <= SLLLoadB;
+								end
+								
+							6'h2:
+								begin //srl
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0; // *
+									IREsc = 1'b0;
+									ULAOp = 3'b000;
+									RegWrite = 1'b0;
+									RegDst = 1'b0;
+									ULAFonteA = 1'b0;
+									ULAFonteB = 2'b00;
+									MemParaReg = 3'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b0;
+									RegBCtrl = 1'b0;
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									
 									nextState <= SRLLoadB;
 								end
 							6'h7: // SRAV
@@ -306,7 +317,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b1;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
 									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
@@ -322,6 +333,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									
 									
 									nextState <= SRAVLoadRegDesloc;
 								end
@@ -337,7 +349,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b1;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -354,6 +366,7 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
+									
 									nextState <= RRegLoadABJr;
 								end
 								
@@ -368,7 +381,7 @@ always_comb begin
 									RegDst = 1'b0;
 									ULAFonteA = 1'b1;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
 									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
@@ -385,6 +398,7 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
+									
 									nextState <= SLLVLoadRegDesloc;
 								end
 								
@@ -399,7 +413,7 @@ always_comb begin
 									RegDst = 1'b1;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b0;
 									RegBCtrl = 1'b0;
@@ -416,6 +430,7 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
+									
 									nextState <= SRALoadB;
 								end
 								6'h18: //MUL
@@ -429,7 +444,7 @@ always_comb begin
 									RegDst = 1'b1;
 									ULAFonteA = 1'b0;
 									ULAFonteB = 2'b00;
-									MemParaReg = 2'b00;
+									MemParaReg = 3'b00;
 									IouD = 1'b0;
 									RegACtrl = 1'b1;
 									RegBCtrl = 1'b1;
@@ -446,6 +461,69 @@ always_comb begin
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
 									
+									
+									nextState <= MULT;
+									end
+								6'h10: //MFHI
+									begin
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0; // *
+									IREsc = 1'b0;
+									ULAOp = 3'b011;
+									RegWrite = 1'b0;
+									RegDst = 1'b1;
+									ULAFonteA = 1'b0;
+									ULAFonteB = 2'b00;
+									MemParaReg = 3'b100;
+									IouD = 1'b0;
+									RegACtrl = 1'b1;
+									RegBCtrl = 1'b1;
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									
+									nextState <= MULT;
+									end
+								6'h12: //MHLO
+									begin
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0; // *
+									IREsc = 1'b0;
+									ULAOp = 3'b011;
+									RegWrite = 1'b0;
+									RegDst = 1'b1;
+									ULAFonteA = 1'b0;
+									ULAFonteB = 2'b00;
+									MemParaReg = 3'b101;
+									IouD = 1'b0;
+									RegACtrl = 1'b1;
+									RegBCtrl = 1'b1;
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									
 									nextState <= MULT;
 									end
 						
@@ -459,7 +537,7 @@ always_comb begin
 								RegDst = 1'b1;
 								ULAFonteA = 1'b0;
 								ULAFonteB = 2'b00;
-								MemParaReg = 2'b00;
+								MemParaReg = 3'b00;
 								IouD = 1'b0;
 								RegACtrl = 1'b0;
 								RegBCtrl = 1'b0;
@@ -475,6 +553,7 @@ always_comb begin
 								LoadMult = 1'b0;
 								ExceptionSelector = 1'b0;
 								LoadEPC = 1'b0;
+								
 								
 								nextState <= RRegABLoad;
 							end
@@ -492,7 +571,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b1;
 						RegBCtrl = 1'b0;
@@ -508,6 +587,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 									
 						nextState <= ADDIExec;
 					end
@@ -523,7 +603,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b1;
 						RegBCtrl = 1'b0;
@@ -539,6 +619,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 									
 						nextState <= ADDIUExec;
 					end
@@ -554,7 +635,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -570,6 +651,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 						
 						nextState <= BuscaMem ;
 					end
@@ -584,7 +666,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -601,6 +683,7 @@ always_comb begin
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
 						
+						
 						nextState <= LWRegABLoad ;
 					end
 				6'b101011: // sw
@@ -614,7 +697,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -630,6 +713,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 						
 						nextState <= SWRegABLoad;
 					end
@@ -645,7 +729,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg =2'b00;
+						MemParaReg =3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -661,6 +745,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 						
 						nextState = BEQDesloc;
 					end
@@ -676,7 +761,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -693,6 +778,7 @@ always_comb begin
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
 						
+						
 						nextState = BNEDesloc;
 					end
 					
@@ -707,7 +793,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b1;
 						ULAFonteB = 2'b11;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -724,6 +810,7 @@ always_comb begin
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
 						
+						
 						nextState = LUISoma;                                                                                                        
 					end
 					
@@ -738,7 +825,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -754,6 +841,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 						
 						nextState <= LBURegABLoad ;
 					end
@@ -769,7 +857,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -786,6 +874,7 @@ always_comb begin
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
 						
+						
 						nextState <= LHURegABLoad ;
 					end
 			
@@ -800,7 +889,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b1;
 						RegBCtrl = 1'b0;
@@ -816,6 +905,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 									
 						nextState <= SXORIExec;
 					end
@@ -830,7 +920,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b00;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b1;
 						RegBCtrl = 1'b0;
@@ -846,6 +936,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						
 									
 						nextState <= ANDIExec;
 					end
@@ -861,7 +952,7 @@ always_comb begin
 						RegDst = 1'b0;
 						ULAFonteA = 1'b0;
 						ULAFonteB = 2'b11;
-						MemParaReg = 2'b00;
+						MemParaReg = 3'b00;
 						IouD = 1'b0;
 						RegACtrl = 1'b0;
 						RegBCtrl = 1'b0;
@@ -878,6 +969,7 @@ always_comb begin
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b1;
 						
+												
 						nextState = BuscaMem;  
 					end
 			endcase
@@ -893,7 +985,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -909,9 +1001,46 @@ always_comb begin
 			LoadMult = 1'b1;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
-					
-			nextState = BuscaMem; 
+			
+			nextState <= MULTLoop;			
 		end
+		
+		MULTLoop: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			
+			if(contador_mult == 5'b11111) begin
+				nextState = BuscaMem;
+			end
+			else begin 
+				nextState = MULTLoop;
+			end
+		end
+		
+		
 		
 		ADDIExec: begin
 			CtrMem = 1'b0; // *
@@ -921,7 +1050,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -935,6 +1064,7 @@ always_comb begin
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
 			LoadMult = 1'b0;
+			
 			
 			if(Overflow) begin
 				PCEsc = 1'b0;
@@ -966,7 +1096,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -982,6 +1112,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -994,7 +1125,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1012,6 +1143,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
+			
 			
 			nextState = ADDIUFinish; 
 		end
@@ -1026,7 +1158,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1042,6 +1174,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1054,7 +1187,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1072,6 +1205,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
+			
 			
 			nextState = SXORIFinish; 
 		end
@@ -1086,7 +1220,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1102,6 +1236,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1114,7 +1249,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1133,6 +1268,7 @@ always_comb begin
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
 			
+			
 			nextState = ANDIFinish; 
 		end
 		
@@ -1146,7 +1282,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1162,6 +1298,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1177,7 +1314,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1193,6 +1330,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SLLVCalcDesloc; 
 		end
@@ -1207,7 +1345,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1224,6 +1362,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SLLVRegEsc; 
 		end
@@ -1238,7 +1377,7 @@ always_comb begin
 			RegDst = 1'b1; // registrador a ser escrito será intr[15:11]
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b10; // seleciona o que vai ser escrito para o que está saindo do registrador deslocamento
+			MemParaReg = 3'b10; // seleciona o que vai ser escrito para o que está saindo do registrador deslocamento
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1254,6 +1393,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1268,7 +1408,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1284,6 +1424,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRAVCalcDesloc; 
 		end
@@ -1298,7 +1439,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1314,7 +1455,8 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
-					
+			
+								
 			nextState = SRAVRegEsc; 
 		end
 		
@@ -1328,7 +1470,7 @@ always_comb begin
 			RegDst = 1'b1; // registrador a ser escrito será intr[15:11]
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b10; // seleciona o que vai ser escrito para o que está saindo do registrador deslocamento
+			MemParaReg = 3'b10; // seleciona o que vai ser escrito para o que está saindo do registrador deslocamento
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1344,6 +1486,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1358,7 +1501,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b1;
@@ -1374,6 +1517,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRLLoadRegDesloc; 
 		end
@@ -1388,7 +1532,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1404,6 +1548,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRLCalcDesloc; 
 		end
@@ -1419,7 +1564,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1435,6 +1580,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRLRegEsc; 
 		end
@@ -1449,7 +1595,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b10;
+			MemParaReg = 3'b10;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1465,6 +1611,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end	
@@ -1479,7 +1626,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b1;
@@ -1495,6 +1642,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRALoadRegDesloc; 
 		end
@@ -1509,7 +1657,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1525,6 +1673,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRACalcDesloc; 
 		end
@@ -1540,7 +1689,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1556,6 +1705,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SRARegEsc; 
 		end
@@ -1570,7 +1720,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b10;
+			MemParaReg = 3'b10;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1586,6 +1736,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end	
@@ -1602,7 +1753,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b1;
@@ -1618,6 +1769,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SLLLoadRegDesloc; 
 		end
@@ -1633,7 +1785,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1649,6 +1801,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SLLCalcDesloc; 
 		end
@@ -1664,7 +1817,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1680,6 +1833,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = SLLRegEsc; 
 		end
@@ -1694,7 +1848,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b10;
+			MemParaReg = 3'b10;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1710,6 +1864,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1726,7 +1881,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1742,6 +1897,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = LUICarregaReg;    
 	
@@ -1757,7 +1913,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1773,6 +1929,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 					
 			nextState = BuscaMem; 
 		end
@@ -1787,7 +1944,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg =2'b00;
+			MemParaReg =3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -1804,6 +1961,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LBUCalcOffset ;
 		end
 		
@@ -1817,7 +1975,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1834,6 +1992,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LBUReadMem;
 		end
 		
@@ -1847,7 +2006,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1863,6 +2022,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LBUEspera1 ;
 		end
@@ -1877,7 +2037,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1893,6 +2053,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LBUEspera2;
 		end
@@ -1907,7 +2068,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1924,6 +2085,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LBUMDRLoad ;
 		end
 		
@@ -1937,7 +2099,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1954,6 +2116,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LBUFinish ;
 		end
 		
@@ -1967,7 +2130,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b01;
+			MemParaReg = 3'b01;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -1984,6 +2147,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= BuscaMem;
 		end
 		
@@ -1997,7 +2161,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg =2'b00;
+			MemParaReg =3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2014,6 +2178,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LHUCalcOffset ;
 		end
 		
@@ -2027,7 +2192,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2044,6 +2209,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LHUReadMem;
 		end
 		
@@ -2057,7 +2223,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2073,6 +2239,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LHUEspera1 ;
 		end
@@ -2087,7 +2254,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2103,6 +2270,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LHUEspera2;
 		end
@@ -2117,7 +2285,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2134,6 +2302,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LHUMDRLoad ;
 		end
 		
@@ -2147,7 +2316,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2164,6 +2333,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LHUFinish ;
 		end
 		
@@ -2177,7 +2347,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b01;
+			MemParaReg = 3'b01;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2194,6 +2364,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= BuscaMem;
 		end
 		
@@ -2208,7 +2379,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg =2'b00;
+			MemParaReg =3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2225,6 +2396,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LWCalcOffset ;
 		end
 		
@@ -2239,7 +2411,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2256,6 +2428,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = LWReadMem ;
 		end
 		
@@ -2269,7 +2442,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2285,6 +2458,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LWEspera1 ;
 			
@@ -2300,7 +2474,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2316,6 +2490,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= LWEspera2;
 			
@@ -2331,7 +2506,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2348,6 +2523,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LWMDRLoad ;
 			
 		end
@@ -2362,7 +2538,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2379,6 +2555,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= LWFinish ;
 		end
 		
@@ -2392,7 +2569,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b01;
+			MemParaReg = 3'b01;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2409,6 +2586,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState <= BuscaMem;
 		end
 				
@@ -2422,7 +2600,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2439,6 +2617,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = SWCalcOffset ;
 		end
 		
@@ -2452,7 +2631,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2469,6 +2648,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = SWEscritaMem ;
 		end
 		
@@ -2482,7 +2662,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b10;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b1;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2499,6 +2679,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = BuscaMem;
 		end
 		
@@ -2513,7 +2694,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2530,6 +2711,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = RULAOp;
 		end
 		
@@ -2541,7 +2723,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2557,6 +2739,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			if(Overflow &&(InstrArit == 6'h20 || InstrArit == 6'h22)) begin
 				FontePC = 3'b11;
@@ -2584,7 +2767,7 @@ always_comb begin
 			RegDst = 1'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2601,6 +2784,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = BuscaMem;
 		end
 		
@@ -2614,7 +2798,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2629,6 +2813,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			WordouHWouByte = 2'b00;
 			nextState = BreakState;
@@ -2644,7 +2829,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2661,6 +2846,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = BEQBegin;
 		end
 		
@@ -2674,7 +2860,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2690,6 +2876,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 				
 			nextState = BEQLoadAB;
 		end
@@ -2704,7 +2891,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2720,6 +2907,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 	
 			nextState <= BEQSolution;
 		end
@@ -2734,7 +2922,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2750,6 +2938,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 	
 			nextState <= BuscaMem;
 		end
@@ -2764,7 +2953,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2781,6 +2970,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			
+			
 			nextState = BNEBegin;
 		end
 		
@@ -2794,7 +2984,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b11;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2810,6 +3000,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 						
 			nextState = BNELoadAB;
 		end
@@ -2824,7 +3015,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
@@ -2840,6 +3031,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 	
 			nextState <= BNESolution;
 		end
@@ -2854,7 +3046,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; ;; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2870,7 +3062,8 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
-	
+			
+				
 			nextState <= BuscaMem;
 		end
 		
@@ -2884,7 +3077,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b0;
@@ -2900,6 +3093,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			nextState <= RLoadPCJr;
 	
 		end
@@ -2914,7 +3108,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0; //
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2930,6 +3124,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 	
 			nextState <= BuscaMem;
 	
@@ -2945,7 +3140,7 @@ always_comb begin
 			RegDst = 1'b0;
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b00;
-			MemParaReg = 2'b00;
+			MemParaReg = 3'b00;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2961,6 +3156,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			
 			
 			nextState <= BuscaMem;
 		end

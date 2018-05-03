@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hardware
-Thu May 03 16:13:04 2018
+Thu May 03 18:26:24 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -29,7 +29,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  21. Port Connectivity Checks: "mux4entradas5bits:NumShiftSelection"
  22. Port Connectivity Checks: "mux2entradas32bits_real:ExceptionMUX"
  23. Port Connectivity Checks: "mux8entradas32bits:FontePCSelection"
- 24. Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection"
+ 24. Port Connectivity Checks: "mux8entradas32bits:DadoASerEscritoSelection"
  25. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
  26. Port Connectivity Checks: "controlador:ctrl"
  27. Port Connectivity Checks: "Ula32:ULA"
@@ -62,16 +62,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 03 16:13:04 2018        ;
+; Analysis & Synthesis Status        ; Successful - Thu May 03 18:26:23 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 4,134                                        ;
-;     Total combinational functions  ; 3,008                                        ;
-;     Dedicated logic registers      ; 1,450                                        ;
-; Total registers                    ; 1450                                         ;
-; Total pins                         ; 565                                          ;
+; Total logic elements               ; 4,111                                        ;
+;     Total combinational functions  ; 2,987                                        ;
+;     Dedicated logic registers      ; 1,418                                        ;
+; Total registers                    ; 1418                                         ;
+; Total pins                         ; 538                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -211,28 +211,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 4,134 ;
+; Estimated Total logic elements              ; 4,111 ;
 ;                                             ;       ;
-; Total combinational functions               ; 3008  ;
+; Total combinational functions               ; 2987  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2178  ;
-;     -- 3 input functions                    ; 730   ;
-;     -- <=2 input functions                  ; 100   ;
+;     -- 4 input functions                    ; 2235  ;
+;     -- 3 input functions                    ; 624   ;
+;     -- <=2 input functions                  ; 128   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2925  ;
-;     -- arithmetic mode                      ; 83    ;
+;     -- normal mode                          ; 2933  ;
+;     -- arithmetic mode                      ; 54    ;
 ;                                             ;       ;
-; Total registers                             ; 1450  ;
-;     -- Dedicated logic registers            ; 1450  ;
+; Total registers                             ; 1418  ;
+;     -- Dedicated logic registers            ; 1418  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 565   ;
+; I/O pins                                    ; 538   ;
 ; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1482  ;
-; Total fan-out                               ; 17452 ;
-; Average fan-out                             ; 3.45  ;
+; Maximum fan-out                             ; 1450  ;
+; Total fan-out                               ; 17268 ;
+; Average fan-out                             ; 3.47  ;
 +---------------------------------------------+-------+
 
 
@@ -241,17 +241,17 @@ applicable agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu                                              ; 3008 (14)         ; 1450 (0)     ; 8192        ; 0            ; 0       ; 0         ; 565  ; 0            ; |cpu                                                                                                          ; work         ;
-;    |AluControl:AluControl|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
+; |cpu                                              ; 2987 (16)         ; 1418 (0)     ; 8192        ; 0            ; 0       ; 0         ; 538  ; 0            ; |cpu                                                                                                          ; work         ;
+;    |AluControl:AluControl|                        ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
 ;    |Banco_reg:BancoDeRegistradores|               ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
 ;    |Instr_Reg:inst_reg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
 ;    |Memoria:Memory|                               ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
+;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ;              ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
 ;       |lpm_ram_dq:MEM_plus_Three|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
-;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
+;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ; work         ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
 ;       |lpm_ram_dq:MEM_plus_Two|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
@@ -262,24 +262,23 @@ applicable agreement for further details.
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |RegDesloc:Deslocamento|                       ; 580 (580)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
+;    |RegDesloc:Deslocamento|                       ; 587 (587)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
 ;    |Registrador:A|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:A                                                                                            ; work         ;
 ;    |Registrador:B|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:B                                                                                            ; work         ;
-;    |Registrador:EPC|                              ; 31 (31)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:EPC                                                                                          ; work         ;
 ;    |Registrador:LowMult|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:LowMult                                                                                      ; work         ;
-;    |Registrador:MDRreg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDRreg                                                                                       ;              ;
-;    |Registrador:PCreg|                            ; 14 (14)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
+;    |Registrador:MDRreg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDRreg                                                                                       ; work         ;
+;    |Registrador:PCreg|                            ; 17 (17)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
 ;    |Registrador:ULASaida|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:ULASaida                                                                                     ; work         ;
-;    |Ula32:ULA|                                    ; 219 (219)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
-;    |controlador:ctrl|                             ; 286 (286)         ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |Ula32:ULA|                                    ; 216 (216)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
+;    |controlador:ctrl|                             ; 284 (284)         ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
 ;    |mul:Multiplicador|                            ; 172 (172)         ; 131 (131)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mul:Multiplicador                                                                                        ; work         ;
 ;    |mux2entradas32bits:RegisterWriteSelection|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
 ;    |mux2entradas32bits_real:EntradaULA1Selection| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
 ;    |mux2entradas32bits_real:IouDMux|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
 ;    |mux2entradas32bits_real:dadoASerDeslocado|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:dadoASerDeslocado                                                                ; work         ;
-;    |mux4entradas32bits:DadoASerEscritoSelection|  ; 90 (90)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:DadoASerEscritoSelection                                                              ; work         ;
 ;    |mux4entradas32bits:EntradaULA2Selection|      ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
 ;    |mux4entradas5bits:NumShiftSelection|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas5bits:NumShiftSelection                                                                      ; work         ;
+;    |mux8entradas32bits:DadoASerEscritoSelection|  ; 90 (90)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux8entradas32bits:DadoASerEscritoSelection                                                              ; work         ;
 ;    |mux8entradas32bits:FontePCSelection|          ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux8entradas32bits:FontePCSelection                                                                      ; work         ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -315,12 +314,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1450  ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Total registers                              ; 1418  ;
+; Number of registers using Synchronous Clear  ; 11    ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 1312  ;
+; Number of registers using Asynchronous Clear ; 1280  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1306  ;
+; Number of registers using Clock Enable       ; 1274  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -330,24 +329,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[30]                       ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[18]                       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[21]                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[27]                           ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[11]                   ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[22]                   ;
-; 192:1              ; 3 bits    ; 384 LEs       ; 132 LEs              ; 252 LEs                ; Yes        ; |cpu|controlador:ctrl|state[6]                         ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas5bits:NumShiftSelection|Mux3          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux8      ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux35                                   ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux15                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[31]                       ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[25]                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[18]                           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[22]                           ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[8]                    ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[21]                   ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas5bits:NumShiftSelection|Mux2          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux21     ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux59                                   ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux5                                    ;
 ; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |cpu|AluControl:AluControl|Mux2                        ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux15 ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux21 ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux24 ;
-; 128:1              ; 3 bits    ; 255 LEs       ; 102 LEs              ; 153 LEs                ; No         ; |cpu|controlador:ctrl|Selector13                       ;
-; 129:1              ; 2 bits    ; 172 LEs       ; 54 LEs               ; 118 LEs                ; No         ; |cpu|controlador:ctrl|Selector21                       ;
-; 191:1              ; 2 bits    ; 254 LEs       ; 94 LEs               ; 160 LEs                ; No         ; |cpu|controlador:ctrl|Selector20                       ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux8entradas32bits:DadoASerEscritoSelection|Mux2  ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux8entradas32bits:DadoASerEscritoSelection|Mux22 ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux8entradas32bits:DadoASerEscritoSelection|Mux26 ;
+; 128:1              ; 3 bits    ; 255 LEs       ; 102 LEs              ; 153 LEs                ; No         ; |cpu|controlador:ctrl|Selector23                       ;
+; 129:1              ; 3 bits    ; 258 LEs       ; 90 LEs               ; 168 LEs                ; No         ; |cpu|controlador:ctrl|Selector16                       ;
+; 191:1              ; 2 bits    ; 254 LEs       ; 94 LEs               ; 160 LEs                ; No         ; |cpu|controlador:ctrl|Selector21                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -487,7 +485,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; multiplicando_atual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
 ; multiplicador_atual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
 ; resultado           ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (64 bits) it drives.  The 32 most-significant bit(s) in the port expression will be connected to GND. ;
-; counter             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
 +---------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -530,21 +527,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------------+
 
 
-+-------------------------------------------------------------------------+
-; Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection" ;
-+------------------+-------+----------+-----------------------------------+
-; Port             ; Type  ; Severity ; Details                           ;
-+------------------+-------+----------+-----------------------------------+
-; entrada3[4..3]   ; Input ; Info     ; Stuck at VCC                      ;
-; entrada3[31..10] ; Input ; Info     ; Stuck at GND                      ;
-; entrada3[6..5]   ; Input ; Info     ; Stuck at GND                      ;
-; entrada3[9]      ; Input ; Info     ; Stuck at VCC                      ;
-; entrada3[8]      ; Input ; Info     ; Stuck at GND                      ;
-; entrada3[7]      ; Input ; Info     ; Stuck at VCC                      ;
-; entrada3[2]      ; Input ; Info     ; Stuck at GND                      ;
-; entrada3[1]      ; Input ; Info     ; Stuck at VCC                      ;
-; entrada3[0]      ; Input ; Info     ; Stuck at GND                      ;
-+------------------+-------+----------+-----------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux8entradas32bits:DadoASerEscritoSelection"                                                                                                                   ;
++------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                             ;
++------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; controlador      ; Input ; Warning  ; Input port expression (2 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "controlador[2..2]" will be connected to GND. ;
+; entrada3[4..3]   ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada3[31..10] ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada3[6..5]   ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada3[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada3[8]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada3[7]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada3[2]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada3[1]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada3[0]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada6[4..3]   ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada6[31..10] ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada6[6..5]   ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada6[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada6[8]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada6[7]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada6[2]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada6[1]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada6[0]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada7[4..3]   ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada7[31..10] ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada7[6..5]   ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada7[9]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada7[8]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada7[7]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada7[2]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
+; entrada7[1]      ; Input ; Info     ; Stuck at VCC                                                                                                                                        ;
+; entrada7[0]      ; Input ; Info     ; Stuck at GND                                                                                                                                        ;
++------------------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------+
@@ -606,7 +622,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu May 03 16:12:42 2018
+    Info: Processing started: Thu May 03 18:26:00 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hardware -c hardware
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file cpu.sv
@@ -684,12 +700,107 @@ Info: Found 1 design units, including 1 entities, in source file db/altsyncram_e
     Info: Found entity 1: altsyncram_e1a1
 Info: Elaborating entity "altsyncram_e1a1" for hierarchy "Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated"
 Info: Elaborating entity "controlador" for hierarchy "controlador:ctrl"
+Warning (10230): Verilog HDL assignment warning at controlador.sv(125): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(156): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(187): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(225): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(256): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(288): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(319): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(351): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(383): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(415): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(446): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(477): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(508): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(539): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(573): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(605): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(637): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(668): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(699): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(731): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(763): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(795): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(827): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(859): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(891): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(922): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(954): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(987): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1032): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1078): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1107): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1140): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1169): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1202): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1231): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1264): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1296): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1327): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1359): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1390): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1421): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1452): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1483): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1514): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1546): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1577): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1608): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1639): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1671): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1702): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1735): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1767): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1799): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1830): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1863): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1895): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1926): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1957): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(1988): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2019): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2050): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2081): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2112): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2143): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2174): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2205): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2236): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2267): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2298): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2329): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2361): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2393): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2424): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2456): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2488): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2520): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2551): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2582): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2613): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2644): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2676): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2705): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2749): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2780): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2811): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2842): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2873): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2904): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2935): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2966): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(2997): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(3028): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(3059): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(3090): truncated value with size 3 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at controlador.sv(3122): truncated value with size 3 to match size of target (2)
 Info: Elaborating entity "mux2entradas32bits" for hierarchy "mux2entradas32bits:RegisterWriteSelection"
 Info: Elaborating entity "mux2entradas32bits_real" for hierarchy "mux2entradas32bits_real:IouDMux"
 Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits_real.sv(5): variable "entrada1" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Warning (10235): Verilog HDL Always Construct warning at mux2entradas32bits_real.sv(8): variable "entrada0" is read inside the Always Construct but isn't in the Always Construct's Event Control
 Info: Elaborating entity "mux4entradas32bits" for hierarchy "mux4entradas32bits:EntradaULA2Selection"
-Info: Elaborating entity "mux8entradas32bits" for hierarchy "mux8entradas32bits:FontePCSelection"
+Info: Elaborating entity "mux8entradas32bits" for hierarchy "mux8entradas32bits:DadoASerEscritoSelection"
 Info: Elaborating entity "mux4entradas5bits" for hierarchy "mux4entradas5bits:NumShiftSelection"
 Info: Elaborating entity "extensor16to32bits" for hierarchy "extensor16to32bits:extenssor"
 Info: Elaborating entity "shiftLeft2bits26" for hierarchy "shiftLeft2bits26:shifterJ"
@@ -832,7 +943,7 @@ Warning: Net is missing source, defaulting to GND
     Warning (12110): Net "resultado_mult[34]" is missing source, defaulting to GND
     Warning (12110): Net "resultado_mult[33]" is missing source, defaulting to GND
     Warning (12110): Net "resultado_mult[32]" is missing source, defaulting to GND
-Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning: 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ExceptionAddress[1]" is stuck at VCC
     Warning (13410): Pin "ExceptionAddress[2]" is stuck at VCC
@@ -963,16 +1074,16 @@ Info: 32 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "mul:Multiplicador|resultado_atual[33]" lost all its fanouts during netlist optimizations.
     Info: Register "mul:Multiplicador|resultado_atual[32]" lost all its fanouts during netlist optimizations.
 Info: Generated suppressed messages file C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg
-Info: Implemented 4858 device resources after synthesis - the final resource count might be different
+Info: Implemented 4808 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 563 output pins
-    Info: Implemented 4261 logic cells
+    Info: Implemented 536 output pins
+    Info: Implemented 4238 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 236 warnings
-    Info: Peak virtual memory: 277 megabytes
-    Info: Processing ended: Thu May 03 16:13:04 2018
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:30
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 331 warnings
+    Info: Peak virtual memory: 278 megabytes
+    Info: Processing ended: Thu May 03 18:26:24 2018
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:39
 
 
 +------------------------------------------+

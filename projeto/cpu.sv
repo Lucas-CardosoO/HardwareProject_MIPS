@@ -1,5 +1,5 @@
 module cpu(input clock, reset,
-  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, AluOut, PC, EPCOut,
+  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, AluOut, PC,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite,
   output logic[6:0] Estado,
@@ -13,7 +13,8 @@ module cpu(input clock, reset,
   output logic [1:0] MemParaReg,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
-  output logic [31:0] SaidaA, mult_high, mult_low
+  output logic [31:0] SaidaA, mult_high, mult_low,
+  output logic [4:0] contador_mult
   );
   
   
@@ -21,8 +22,7 @@ module cpu(input clock, reset,
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;
 	logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste;
 	
-    logic[31:0] extensor32bits, Address, MDR; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
-	logic [4:0] CounterTest;
+    logic[31:0] extensor32bits, Address, MDR, EPCOut; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	
@@ -168,7 +168,8 @@ module cpu(input clock, reset,
 	.LoadMult(LoadMult),
 	.LoadEPC(LoadEPC),
 	.ExceptionSelector(ExceptionSelector),
-	.Overflow(OverflowULA)
+	.Overflow(OverflowULA),
+	.contador_mult(contador_mult)
 );
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
@@ -193,11 +194,15 @@ module cpu(input clock, reset,
 	.entrada3(extensorEShift),
 	.saidaMux(EntradaULA2));
 	
-	mux4entradas32bits DadoASerEscritoSelection(.controlador(MemParaReg),
+	mux8entradas32bits DadoASerEscritoSelection(.controlador(MemParaReg),
 	.entrada0(AluOut),
 	.entrada1(flavio),
 	.entrada2(extensorEShift),
 	.entrada3(32'd666),
+	.entrada4(mult_high),
+	.entrada5(mult_low),
+	.entrada6(32'd666),
+	.entrada7(32'd666),
 	.saidaMux(WriteDataReg));
 	
 	mux8entradas32bits FontePCSelection(.controlador(FontePC),  
@@ -266,7 +271,7 @@ module cpu(input clock, reset,
 					  .multiplicando_atual(multiplicando_atualTeste),
 					  .multiplicador_atual(multiplicador_atualTeste),
 					  .resultado(resultado_mult),
-					  .counter(CounterTest));
+					  .counter(contador_mult));
 	
 
 endmodule: cpu

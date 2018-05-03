@@ -126,7 +126,6 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # hierarchies {
 mux4entradas32bits:EntradaULA2Selection
-mux4entradas32bits:DadoASerEscritoSelection
 }
 # macro_sequence
 
@@ -267,6 +266,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
+mux8entradas32bits:DadoASerEscritoSelection
 mux8entradas32bits:FontePCSelection
 }
 # macro_sequence
@@ -1218,18 +1218,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-controlador
+mul
 # storage
-db|hardware.(10).cnf
-db|hardware.(10).cnf
+db|hardware.(21).cnf
+db|hardware.(21).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-controlador.sv
-6726402486538f3fe6cd5286546d9ca8
+mul.sv
+16d1b186919a6926b872999c778f2c6
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1248,7 +1248,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-controlador:ctrl
+mul:Multiplicador
 }
 # macro_sequence
 
@@ -1348,7 +1348,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-c999c41a7961827c27c063fa59f3c420
+154c7a4c166cf6e89a862fff4bc4c34
 }
 # hierarchies {
 Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
@@ -1360,18 +1360,18 @@ Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyn
 
 # end
 # entity
-mul
+controlador
 # storage
-db|hardware.(21).cnf
-db|hardware.(21).cnf
+db|hardware.(10).cnf
+db|hardware.(10).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-mul.sv
-16d1b186919a6926b872999c778f2c6
+controlador.sv
+9bc6e1cecdbf7cbbaca66cf269c0f318
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1390,7 +1390,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-mul:Multiplicador
+controlador:ctrl
 }
 # macro_sequence
 
@@ -1407,7 +1407,7 @@ ON
 # case_sensitive
 # source_file
 cpu.sv
-979a5551e16dc424d29429720aca3af
+c6d3284d9834eab299debdbd2721d1
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
