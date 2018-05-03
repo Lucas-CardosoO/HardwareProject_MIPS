@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hardware
-Wed May 02 17:00:32 2018
+Thu May 03 16:13:04 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -14,26 +14,29 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 12. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
- 15. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
- 16. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
- 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
- 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
- 19. Port Connectivity Checks: "mul:Multiplicador"
- 20. Port Connectivity Checks: "mux4entradas5bits:NumShiftSelection"
- 21. Port Connectivity Checks: "mux2entradas32bits_real:ExceptionMUX"
- 22. Port Connectivity Checks: "mux8entradas32bits:FontePCSelection"
- 23. Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection"
- 24. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
- 25. Port Connectivity Checks: "controlador:ctrl"
- 26. Port Connectivity Checks: "Ula32:ULA"
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 13. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 14. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 15. Source assignments for Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
+ 16. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM
+ 17. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_One
+ 18. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Two
+ 19. Parameter Settings for User Entity Instance: Memoria:Memory|LPM_RAM_DQ:MEM_plus_Three
+ 20. Port Connectivity Checks: "mul:Multiplicador"
+ 21. Port Connectivity Checks: "mux4entradas5bits:NumShiftSelection"
+ 22. Port Connectivity Checks: "mux2entradas32bits_real:ExceptionMUX"
+ 23. Port Connectivity Checks: "mux8entradas32bits:FontePCSelection"
+ 24. Port Connectivity Checks: "mux4entradas32bits:DadoASerEscritoSelection"
+ 25. Port Connectivity Checks: "mux4entradas32bits:EntradaULA2Selection"
+ 26. Port Connectivity Checks: "controlador:ctrl"
+ 27. Port Connectivity Checks: "Ula32:ULA"
+ 28. Port Connectivity Checks: "Registrador:LowMult"
+ 29. Port Connectivity Checks: "Registrador:HighMult"
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,16 +62,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 02 17:00:32 2018        ;
+; Analysis & Synthesis Status        ; Successful - Thu May 03 16:13:04 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 3,901                                        ;
-;     Total combinational functions  ; 2,839                                        ;
-;     Dedicated logic registers      ; 1,287                                        ;
-; Total registers                    ; 1287                                         ;
-; Total pins                         ; 437                                          ;
+; Total logic elements               ; 4,134                                        ;
+;     Total combinational functions  ; 3,008                                        ;
+;     Dedicated logic registers      ; 1,450                                        ;
+; Total registers                    ; 1450                                         ;
+; Total pins                         ; 565                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192                                        ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -177,29 +180,29 @@ applicable agreement for further details.
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                        ; File Name with Absolute Path                                                  ;
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
-; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/instrucoes.mif             ;
-; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/cpu.sv                     ;
-; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Banco_reg.vhd              ;
-; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Instr_Reg.vhd              ;
-; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Memoria.vhd                ;
-; RegDesloc.vhd                    ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/RegDesloc.vhd              ;
-; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/Registrador.vhd            ;
-; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/ula32.vhd                  ;
-; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/controlador.sv             ;
-; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits.sv      ;
-; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux4entradas32bits.sv      ;
-; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits_real.sv ;
-; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/AluControl.sv              ;
-; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/extensor16to32bits.sv      ;
-; shiftLeft2bits26.sv              ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/shiftLeft2bits26.sv        ;
-; mux4entradas5bits.sv             ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux4entradas5bits.sv       ;
-; mul.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mul.sv                     ;
-; getByteOrHw.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/getByteOrHw.sv             ;
-; mux8entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/mux8entradas32bits.sv      ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/users/sgfl/desktop/quartus/libraries/megafunctions/lpm_ram_dq.tdf          ;
-; altram.tdf                       ; yes             ; Megafunction                     ; c:/users/sgfl/desktop/quartus/libraries/megafunctions/altram.tdf              ;
-; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/users/sgfl/desktop/quartus/libraries/megafunctions/altsyncram.tdf          ;
-; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/db/altsyncram_e1a1.tdf     ;
+; instrucoes.mif                   ; yes             ; User Memory Initialization File  ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/instrucoes.mif             ;
+; cpu.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/cpu.sv                     ;
+; Banco_reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/Banco_reg.vhd              ;
+; Instr_Reg.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/Instr_Reg.vhd              ;
+; Memoria.vhd                      ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/Memoria.vhd                ;
+; RegDesloc.vhd                    ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/RegDesloc.vhd              ;
+; Registrador.vhd                  ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/Registrador.vhd            ;
+; ula32.vhd                        ; yes             ; User VHDL File                   ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/ula32.vhd                  ;
+; controlador.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/controlador.sv             ;
+; mux2entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits.sv      ;
+; mux4entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mux4entradas32bits.sv      ;
+; mux2entradas32bits_real.sv       ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mux2entradas32bits_real.sv ;
+; AluControl.sv                    ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/AluControl.sv              ;
+; extensor16to32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/extensor16to32bits.sv      ;
+; shiftLeft2bits26.sv              ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/shiftLeft2bits26.sv        ;
+; mux4entradas5bits.sv             ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mux4entradas5bits.sv       ;
+; mul.sv                           ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mul.sv                     ;
+; getByteOrHw.sv                   ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/getByteOrHw.sv             ;
+; mux8entradas32bits.sv            ; yes             ; User SystemVerilog HDL File      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/mux8entradas32bits.sv      ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                     ; c:/users/lab7/desktop/4's/quartus/libraries/megafunctions/lpm_ram_dq.tdf      ;
+; altram.tdf                       ; yes             ; Megafunction                     ; c:/users/lab7/desktop/4's/quartus/libraries/megafunctions/altram.tdf          ;
+; altsyncram.tdf                   ; yes             ; Megafunction                     ; c:/users/lab7/desktop/4's/quartus/libraries/megafunctions/altsyncram.tdf      ;
+; db/altsyncram_e1a1.tdf           ; yes             ; Auto-Generated Megafunction      ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/db/altsyncram_e1a1.tdf     ;
 +----------------------------------+-----------------+----------------------------------+-------------------------------------------------------------------------------+
 
 
@@ -208,28 +211,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 3,901 ;
+; Estimated Total logic elements              ; 4,134 ;
 ;                                             ;       ;
-; Total combinational functions               ; 2839  ;
+; Total combinational functions               ; 3008  ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 2188  ;
-;     -- 3 input functions                    ; 529   ;
-;     -- <=2 input functions                  ; 122   ;
+;     -- 4 input functions                    ; 2178  ;
+;     -- 3 input functions                    ; 730   ;
+;     -- <=2 input functions                  ; 100   ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 2790  ;
-;     -- arithmetic mode                      ; 49    ;
+;     -- normal mode                          ; 2925  ;
+;     -- arithmetic mode                      ; 83    ;
 ;                                             ;       ;
-; Total registers                             ; 1287  ;
-;     -- Dedicated logic registers            ; 1287  ;
+; Total registers                             ; 1450  ;
+;     -- Dedicated logic registers            ; 1450  ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 437   ;
+; I/O pins                                    ; 565   ;
 ; Total memory bits                           ; 8192  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 1319  ;
-; Total fan-out                               ; 16481 ;
-; Average fan-out                             ; 3.59  ;
+; Maximum fan-out                             ; 1482  ;
+; Total fan-out                               ; 17452 ;
+; Average fan-out                             ; 3.45  ;
 +---------------------------------------------+-------+
 
 
@@ -238,18 +241,18 @@ applicable agreement for further details.
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                        ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                           ; Library Name ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
-; |cpu                                              ; 2839 (13)         ; 1287 (0)     ; 8192        ; 0            ; 0       ; 0         ; 437  ; 0            ; |cpu                                                                                                          ; work         ;
-;    |AluControl:AluControl|                        ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
-;    |Banco_reg:BancoDeRegistradores|               ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ;              ;
+; |cpu                                              ; 3008 (14)         ; 1450 (0)     ; 8192        ; 0            ; 0       ; 0         ; 565  ; 0            ; |cpu                                                                                                          ; work         ;
+;    |AluControl:AluControl|                        ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|AluControl:AluControl                                                                                    ; work         ;
+;    |Banco_reg:BancoDeRegistradores|               ; 1392 (1392)       ; 1024 (1024)  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Banco_reg:BancoDeRegistradores                                                                           ; work         ;
 ;    |Instr_Reg:inst_reg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Instr_Reg:inst_reg                                                                                       ; work         ;
-;    |Memoria:Memory|                               ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ;              ;
+;    |Memoria:Memory|                               ; 23 (23)           ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory                                                                                           ; work         ;
 ;       |lpm_ram_dq:MEM_plus_One|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One                                                                   ; work         ;
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram                                                       ; work         ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ; work         ;
+;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block                                  ;              ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_One|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated   ;              ;
 ;       |lpm_ram_dq:MEM_plus_Three|                 ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three                                                                 ;              ;
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram                                                     ;              ;
-;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ;              ;
+;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block                                ; work         ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Three|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated ; work         ;
 ;       |lpm_ram_dq:MEM_plus_Two|                   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two                                                                   ;              ;
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM_plus_Two|altram:sram                                                       ;              ;
@@ -259,21 +262,23 @@ applicable agreement for further details.
 ;          |altram:sram|                            ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram                                                                ; work         ;
 ;             |altsyncram:ram_block|                ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block                                           ; work         ;
 ;                |altsyncram_e1a1:auto_generated|   ; 0 (0)             ; 0 (0)        ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated            ; work         ;
-;    |RegDesloc:Deslocamento|                       ; 586 (586)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
+;    |RegDesloc:Deslocamento|                       ; 580 (580)         ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|RegDesloc:Deslocamento                                                                                   ; work         ;
 ;    |Registrador:A|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:A                                                                                            ; work         ;
 ;    |Registrador:B|                                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:B                                                                                            ; work         ;
 ;    |Registrador:EPC|                              ; 31 (31)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:EPC                                                                                          ; work         ;
+;    |Registrador:LowMult|                          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:LowMult                                                                                      ; work         ;
 ;    |Registrador:MDRreg|                           ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:MDRreg                                                                                       ;              ;
-;    |Registrador:PCreg|                            ; 15 (15)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
+;    |Registrador:PCreg|                            ; 14 (14)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:PCreg                                                                                        ;              ;
 ;    |Registrador:ULASaida|                         ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Registrador:ULASaida                                                                                     ; work         ;
-;    |Ula32:ULA|                                    ; 225 (225)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
-;    |controlador:ctrl|                             ; 276 (276)         ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |Ula32:ULA|                                    ; 219 (219)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|Ula32:ULA                                                                                                ; work         ;
+;    |controlador:ctrl|                             ; 286 (286)         ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|controlador:ctrl                                                                                         ; work         ;
+;    |mul:Multiplicador|                            ; 172 (172)         ; 131 (131)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mul:Multiplicador                                                                                        ; work         ;
 ;    |mux2entradas32bits:RegisterWriteSelection|    ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits:RegisterWriteSelection                                                                ; work         ;
 ;    |mux2entradas32bits_real:EntradaULA1Selection| ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:EntradaULA1Selection                                                             ; work         ;
 ;    |mux2entradas32bits_real:IouDMux|              ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:IouDMux                                                                          ; work         ;
 ;    |mux2entradas32bits_real:dadoASerDeslocado|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux2entradas32bits_real:dadoASerDeslocado                                                                ; work         ;
 ;    |mux4entradas32bits:DadoASerEscritoSelection|  ; 90 (90)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:DadoASerEscritoSelection                                                              ; work         ;
-;    |mux4entradas32bits:EntradaULA2Selection|      ; 64 (64)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
+;    |mux4entradas32bits:EntradaULA2Selection|      ; 66 (66)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas32bits:EntradaULA2Selection                                                                  ; work         ;
 ;    |mux4entradas5bits:NumShiftSelection|          ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux4entradas5bits:NumShiftSelection                                                                      ; work         ;
 ;    |mux8entradas32bits:FontePCSelection|          ; 55 (55)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |cpu|mux8entradas32bits:FontePCSelection                                                                      ; work         ;
 +---------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------+--------------+
@@ -292,17 +297,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------------+
 
 
++------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                 ;
++-------------------------------------------+----------------------------------------+
+; Register name                             ; Reason for Removal                     ;
++-------------------------------------------+----------------------------------------+
+; mul:Multiplicador|multiplicando_atual[0]  ; Stuck at GND due to stuck port data_in ;
+; mul:Multiplicador|multiplicador_atual[31] ; Stuck at GND due to stuck port data_in ;
+; Registrador:HighMult|Saida[0..31]         ; Stuck at GND due to stuck port data_in ;
+; mul:Multiplicador|resultado_atual[32..63] ; Lost fanout                            ;
+; Total Number of Removed Registers = 66    ;                                        ;
++-------------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1287  ;
-; Number of registers using Synchronous Clear  ; 9     ;
+; Total registers                              ; 1450  ;
+; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 5     ;
-; Number of registers using Asynchronous Clear ; 1280  ;
+; Number of registers using Asynchronous Clear ; 1312  ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1274  ;
+; Number of registers using Clock Enable       ; 1306  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -313,23 +331,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[30]                       ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[25]                       ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[31]                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[8]                            ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[4]                    ;
-; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[24]                   ;
-; 192:1              ; 2 bits    ; 256 LEs       ; 88 LEs               ; 168 LEs                ; Yes        ; |cpu|controlador:ctrl|state[0]                         ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |cpu|Registrador:PCreg|Saida[18]                       ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:B|Saida[21]                           ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |cpu|Registrador:A|Saida[27]                           ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 78 LEs               ; 39 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[11]                   ;
+; 14:1               ; 13 bits   ; 117 LEs       ; 91 LEs               ; 26 LEs                 ; Yes        ; |cpu|RegDesloc:Deslocamento|temp[22]                   ;
+; 192:1              ; 3 bits    ; 384 LEs       ; 132 LEs              ; 252 LEs                ; Yes        ; |cpu|controlador:ctrl|state[6]                         ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas5bits:NumShiftSelection|Mux3          ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux15     ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux57                                   ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux16                                   ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |cpu|AluControl:AluControl|Mux0                        ;
-; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux14 ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |cpu|mux4entradas32bits:EntradaULA2Selection|Mux8      ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 64 LEs               ; 96 LEs                 ; No         ; |cpu|Ula32:ULA|Mux35                                   ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 96 LEs               ; 64 LEs                 ; No         ; |cpu|Ula32:ULA|Mux15                                   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; No         ; |cpu|AluControl:AluControl|Mux2                        ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux15 ;
 ; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux21 ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux30 ;
-; 128:1              ; 3 bits    ; 255 LEs       ; 102 LEs              ; 153 LEs                ; No         ; |cpu|controlador:ctrl|Selector23                       ;
-; 129:1              ; 2 bits    ; 172 LEs       ; 54 LEs               ; 118 LEs                ; No         ; |cpu|controlador:ctrl|Selector20                       ;
-; 191:1              ; 2 bits    ; 254 LEs       ; 96 LEs               ; 158 LEs                ; No         ; |cpu|controlador:ctrl|Selector19                       ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |cpu|mux4entradas32bits:DadoASerEscritoSelection|Mux24 ;
+; 128:1              ; 3 bits    ; 255 LEs       ; 102 LEs              ; 153 LEs                ; No         ; |cpu|controlador:ctrl|Selector13                       ;
+; 129:1              ; 2 bits    ; 172 LEs       ; 54 LEs               ; 118 LEs                ; No         ; |cpu|controlador:ctrl|Selector21                       ;
+; 191:1              ; 2 bits    ; 254 LEs       ; 94 LEs               ; 160 LEs                ; No         ; |cpu|controlador:ctrl|Selector20                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------+
 
 
@@ -461,23 +479,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mul:Multiplicador"                                                                                  ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; multiplicador[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; multiplicador[31..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; multiplicador[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; multiplicador[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; multiplicando[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; multiplicando[31..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; resultado            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; resultado_atual      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; multiplicando_atual  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; multiplicador_atual  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; counter              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mul:Multiplicador"                                                                                                                                                                      ;
++---------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port                ; Type   ; Severity ; Details                                                                                                                                                                  ;
++---------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; multiplicando_atual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
+; multiplicador_atual ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
+; resultado           ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (64 bits) it drives.  The 32 most-significant bit(s) in the port expression will be connected to GND. ;
+; counter             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                      ;
++---------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------------+
@@ -571,13 +582,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++-------------------------------------------------+
+; Port Connectivity Checks: "Registrador:LowMult" ;
++------+-------+----------+-----------------------+
+; Port ; Type  ; Severity ; Details               ;
++------+-------+----------+-----------------------+
+; load ; Input ; Info     ; Stuck at VCC          ;
++------+-------+----------+-----------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "Registrador:HighMult" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; load ; Input ; Info     ; Stuck at VCC           ;
++------+-------+----------+------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 02 17:00:12 2018
+    Info: Processing started: Thu May 03 16:12:42 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hardware -c hardware
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Found 1 design units, including 1 entities, in source file cpu.sv
@@ -625,7 +654,7 @@ Info: Found 1 design units, including 1 entities, in source file getbyteorhw.sv
     Info: Found entity 1: getByteOrHw
 Info: Found 1 design units, including 1 entities, in source file mux8entradas32bits.sv
     Info: Found entity 1: mux8entradas32bits
-Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(77): created implicit net for "LoadEPC"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.sv(76): created implicit net for "LoadEPC"
 Info: Elaborating entity "cpu" for the top level hierarchy
 Info: Elaborating entity "Registrador" for hierarchy "Registrador:PCreg"
 Info: Elaborating entity "AluControl" for hierarchy "AluControl:AluControl"
@@ -669,8 +698,141 @@ Info: Elaborating entity "RegDesloc" for hierarchy "RegDesloc:Deslocamento"
 Warning (10492): VHDL Process Statement warning at RegDesloc.vhd(1102): signal "temp" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info: Elaborating entity "getByteOrHw" for hierarchy "getByteOrHw:CortadorDePalavras"
 Info: Elaborating entity "mul" for hierarchy "mul:Multiplicador"
-Warning (10230): Verilog HDL assignment warning at mul.sv(30): truncated value with size 32 to match size of target (5)
-Warning: 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (10230): Verilog HDL assignment warning at mul.sv(28): truncated value with size 64 to match size of target (32)
+Warning (10230): Verilog HDL assignment warning at mul.sv(31): truncated value with size 32 to match size of target (5)
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[63]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[62]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[61]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[60]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[59]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[58]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[57]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[56]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[55]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[54]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[53]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[52]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[51]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[50]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[49]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[48]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[47]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[46]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[45]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[44]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[43]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[42]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[41]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[40]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[39]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[38]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[37]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[36]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[35]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[34]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[33]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[32]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[63]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[62]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[61]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[60]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[59]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[58]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[57]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[56]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[55]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[54]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[53]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[52]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[51]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[50]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[49]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[48]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[47]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[46]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[45]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[44]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[43]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[42]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[41]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[40]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[39]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[38]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[37]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[36]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[35]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[34]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[33]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[32]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[63]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[62]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[61]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[60]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[59]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[58]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[57]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[56]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[55]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[54]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[53]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[52]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[51]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[50]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[49]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[48]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[47]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[46]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[45]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[44]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[43]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[42]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[41]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[40]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[39]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[38]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[37]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[36]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[35]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[34]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[33]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[32]" is missing source, defaulting to GND
+Warning: Net is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[63]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[62]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[61]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[60]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[59]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[58]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[57]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[56]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[55]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[54]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[53]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[52]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[51]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[50]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[49]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[48]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[47]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[46]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[45]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[44]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[43]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[42]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[41]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[40]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[39]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[38]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[37]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[36]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[35]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[34]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[33]" is missing source, defaulting to GND
+    Warning (12110): Net "resultado_mult[32]" is missing source, defaulting to GND
+Warning: 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ExceptionAddress[1]" is stuck at VCC
     Warning (13410): Pin "ExceptionAddress[2]" is stuck at VCC
@@ -703,22 +865,119 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "ExceptionAddress[29]" is stuck at GND
     Warning (13410): Pin "ExceptionAddress[30]" is stuck at GND
     Warning (13410): Pin "ExceptionAddress[31]" is stuck at GND
-Info: Generated suppressed messages file C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg
-Info: Implemented 4434 device resources after synthesis - the final resource count might be different
+    Warning (13410): Pin "resultado_mult[32]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[33]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[34]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[35]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[36]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[37]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[38]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[39]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[40]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[41]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[42]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[43]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[44]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[45]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[46]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[47]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[48]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[49]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[50]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[51]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[52]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[53]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[54]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[55]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[56]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[57]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[58]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[59]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[60]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[61]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[62]" is stuck at GND
+    Warning (13410): Pin "resultado_mult[63]" is stuck at GND
+    Warning (13410): Pin "mult_high[0]" is stuck at GND
+    Warning (13410): Pin "mult_high[1]" is stuck at GND
+    Warning (13410): Pin "mult_high[2]" is stuck at GND
+    Warning (13410): Pin "mult_high[3]" is stuck at GND
+    Warning (13410): Pin "mult_high[4]" is stuck at GND
+    Warning (13410): Pin "mult_high[5]" is stuck at GND
+    Warning (13410): Pin "mult_high[6]" is stuck at GND
+    Warning (13410): Pin "mult_high[7]" is stuck at GND
+    Warning (13410): Pin "mult_high[8]" is stuck at GND
+    Warning (13410): Pin "mult_high[9]" is stuck at GND
+    Warning (13410): Pin "mult_high[10]" is stuck at GND
+    Warning (13410): Pin "mult_high[11]" is stuck at GND
+    Warning (13410): Pin "mult_high[12]" is stuck at GND
+    Warning (13410): Pin "mult_high[13]" is stuck at GND
+    Warning (13410): Pin "mult_high[14]" is stuck at GND
+    Warning (13410): Pin "mult_high[15]" is stuck at GND
+    Warning (13410): Pin "mult_high[16]" is stuck at GND
+    Warning (13410): Pin "mult_high[17]" is stuck at GND
+    Warning (13410): Pin "mult_high[18]" is stuck at GND
+    Warning (13410): Pin "mult_high[19]" is stuck at GND
+    Warning (13410): Pin "mult_high[20]" is stuck at GND
+    Warning (13410): Pin "mult_high[21]" is stuck at GND
+    Warning (13410): Pin "mult_high[22]" is stuck at GND
+    Warning (13410): Pin "mult_high[23]" is stuck at GND
+    Warning (13410): Pin "mult_high[24]" is stuck at GND
+    Warning (13410): Pin "mult_high[25]" is stuck at GND
+    Warning (13410): Pin "mult_high[26]" is stuck at GND
+    Warning (13410): Pin "mult_high[27]" is stuck at GND
+    Warning (13410): Pin "mult_high[28]" is stuck at GND
+    Warning (13410): Pin "mult_high[29]" is stuck at GND
+    Warning (13410): Pin "mult_high[30]" is stuck at GND
+    Warning (13410): Pin "mult_high[31]" is stuck at GND
+Info: 32 registers lost all their fanouts during netlist optimizations. The first 32 are displayed below.
+    Info: Register "mul:Multiplicador|resultado_atual[63]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[62]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[61]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[60]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[59]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[58]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[57]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[56]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[55]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[54]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[53]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[52]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[51]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[50]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[49]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[48]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[47]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[46]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[45]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[44]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[43]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[42]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[41]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[40]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[39]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[38]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[37]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[36]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[35]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[34]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[33]" lost all its fanouts during netlist optimizations.
+    Info: Register "mul:Multiplicador|resultado_atual[32]" lost all its fanouts during netlist optimizations.
+Info: Generated suppressed messages file C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg
+Info: Implemented 4858 device resources after synthesis - the final resource count might be different
     Info: Implemented 2 input pins
-    Info: Implemented 435 output pins
-    Info: Implemented 3965 logic cells
+    Info: Implemented 563 output pins
+    Info: Implemented 4261 logic cells
     Info: Implemented 32 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 39 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 236 warnings
     Info: Peak virtual memory: 277 megabytes
-    Info: Processing ended: Wed May 02 17:00:32 2018
-    Info: Elapsed time: 00:00:20
+    Info: Processing ended: Thu May 03 16:13:04 2018
+    Info: Elapsed time: 00:00:22
     Info: Total CPU time (on all processors): 00:00:30
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg.
+The suppressed messages can be found in C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.map.smsg.
 
 

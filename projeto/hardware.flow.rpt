@@ -1,5 +1,5 @@
 Flow report for hardware
-Wed May 02 17:01:04 2018
+Thu May 03 16:13:39 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Wed May 02 17:01:04 2018        ;
+; Flow Status                        ; Successful - Thu May 03 16:13:39 2018        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; hardware                                     ;
 ; Top-level Entity Name              ; cpu                                          ;
@@ -46,11 +46,11 @@ applicable agreement for further details.
 ; Device                             ; EP2C70F896C7                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 2,861 / 68,416 ( 4 % )                       ;
-;     Total combinational functions  ; 2,839 / 68,416 ( 4 % )                       ;
-;     Dedicated logic registers      ; 1,287 / 68,416 ( 2 % )                       ;
-; Total registers                    ; 1287                                         ;
-; Total pins                         ; 437 / 622 ( 70 % )                           ;
+; Total logic elements               ; 3,078 / 68,416 ( 4 % )                       ;
+;     Total combinational functions  ; 3,008 / 68,416 ( 4 % )                       ;
+;     Dedicated logic registers      ; 1,450 / 68,416 ( 2 % )                       ;
+; Total registers                    ; 1450                                         ;
+; Total pins                         ; 565 / 622 ( 91 % )                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 8,192 / 1,152,000 ( < 1 % )                  ;
 ; Embedded Multiplier 9-bit elements ; 0 / 300 ( 0 % )                              ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/02/2018 17:00:13 ;
+; Start date & time ; 05/03/2018 16:12:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; hardware            ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                    ; Value                                                           ; Default Value ; Entity Name ; Section Id     ;
 +------------------------------------+-----------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 57606936739239.152529121207344                                  ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 17727280387088.152537476209168                                  ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP             ; 85                                                              ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP             ; 0                                                               ; --            ; --          ; --             ;
 ; MISC_FILE                          ; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.dpf ; --            ; --          ; --             ;
@@ -90,11 +90,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:21     ; 1.0                     ; 277 MB              ; 00:00:31                           ;
-; Fitter                  ; 00:00:21     ; 1.9                     ; 381 MB              ; 00:00:26                           ;
-; Assembler               ; 00:00:05     ; 1.0                     ; 343 MB              ; 00:00:04                           ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 194 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:49     ; --                      ; --                  ; 00:01:02                           ;
+; Analysis & Synthesis    ; 00:00:23     ; 1.0                     ; 277 MB              ; 00:00:30                           ;
+; Fitter                  ; 00:00:22     ; 1.9                     ; 382 MB              ; 00:00:29                           ;
+; Assembler               ; 00:00:06     ; 1.0                     ; 343 MB              ; 00:00:05                           ;
+; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 195 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:53     ; --                      ; --                  ; 00:01:05                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -103,10 +103,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; g2c24            ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; g2c24            ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; g2c24            ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; g2c24            ; Windows Vista ; 6.1        ; x86_64         ;
+; Analysis & Synthesis    ; g4c24            ; Windows Vista ; 6.1        ; x86_64         ;
+; Fitter                  ; g4c24            ; Windows Vista ; 6.1        ; x86_64         ;
+; Assembler               ; g4c24            ; Windows Vista ; 6.1        ; x86_64         ;
+; Classic Timing Analyzer ; g4c24            ; Windows Vista ; 6.1        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

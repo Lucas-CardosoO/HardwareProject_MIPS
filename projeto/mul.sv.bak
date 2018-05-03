@@ -1,9 +1,12 @@
-module mul(input logic Clock, load, input logic [31:0] multiplicador, multiplicando, output logic [63:0] resultado, resultado_atual, output logic [31:0] multiplicando_atual, multiplicador_atual, output logic [4:0] counter);
+module mul(input logic Clock, load, input logic [31:0] multiplicador, multiplicando, output logic [31:0] multiplicando_atual, multiplicador_atual, resultado, output logic [4:0] counter);
 
+/*
 assign multiplicador_atual = 31'b0;
 assign multiplicando_atual = 31'b0;
 assign resultado = 64'b0;
 assign resultado_atual = 64'b0;
+*/
+logic [63:0] resultado, resultado_atual;
 
 always_ff@(posedge Clock) begin
 
@@ -25,7 +28,7 @@ always_ff@(posedge Clock) begin
 		resultado <= resultado_atual;
 		counter = 5'b0;
 	end 
-		counter = counter + 1;
+	counter = counter + 1;
 end
 
 endmodule: mul

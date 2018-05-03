@@ -1,5 +1,5 @@
 module cpu(input clock, reset,
-  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, MDR, AluOut, PC, EPCOut,
+  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, AluOut, PC, EPCOut,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite,
   output logic[6:0] Estado,
@@ -11,7 +11,9 @@ module cpu(input clock, reset,
   output logic[31:0] extensorEShift,
   output logic[31:0] ExceptionAddress,
   output logic [1:0] MemParaReg,
-  output logic LoadMult, ExceptionSelector
+  output logic LoadMult, ExceptionSelector,
+  output logic [63:0] resultado_mult,
+  output logic [31:0] SaidaA, mult_high, mult_low
   );
   
   
@@ -19,10 +21,7 @@ module cpu(input clock, reset,
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;
 	logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste;
 	
-	
-	
-	
-    logic[31:0] extensor32bits, Address; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
+    logic[31:0] extensor32bits, Address, MDR; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [4:0] CounterTest;
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
@@ -32,7 +31,7 @@ module cpu(input clock, reset,
 	logic [4:0] NumShiftEntrada;
 	logic [31:0] EntradaRegDeslocamento;
 	logic[4:0] NumShift;
-    logic [31:0] SaidaA;
+    //logic [31:0] SaidaA;
 	
 	logic OverflowULA;
 	logic NegativoULA;
@@ -78,7 +77,17 @@ module cpu(input clock, reset,
 	.Entrada(PC-4),
 	.Saida(EPCOut)); // instrução rte : EPC -> PC: tro
 	
-
+	Registrador HighMult(.Clk(clock),
+	.Reset(reset),
+	.Load(1'b1),
+	.Entrada(resultado_mult[63:32]),
+	.Saida(mult_high));
+	
+	Registrador LowMult(.Clk(clock),
+	.Reset(reset),
+	.Load(1'b1),
+	.Entrada(resultado_mult[31:0]),
+	.Saida(mult_low));
 	
 	Registrador ULASaida(.Clk(clock),
 	.Reset(reset),
@@ -252,12 +261,11 @@ module cpu(input clock, reset,
 				
 	mul Multiplicador(.Clock(clock),
 					  .load(LoadMult),
-					  .multiplicador(32'd11),
-					  .multiplicando(32'd3),
-					  .resultado(resultadoMultTeste),
-					  .resultado_atual(resultado_atualMultTest),
+					  .multiplicador(SaidaA),
+					  .multiplicando(WriteDataMem),
 					  .multiplicando_atual(multiplicando_atualTeste),
 					  .multiplicador_atual(multiplicador_atualTeste),
+					  .resultado(resultado_mult),
 					  .counter(CounterTest));
 	
 

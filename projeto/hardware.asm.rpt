@@ -1,5 +1,5 @@
 Assembler report for hardware
-Wed May 02 17:01:01 2018
+Thu May 03 16:13:36 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.sof
-  6. Assembler Device Options: C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.pof
+  5. Assembler Device Options: C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.sof
+  6. Assembler Device Options: C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed May 02 17:01:01 2018 ;
+; Assembler Status      ; Successful - Thu May 03 16:13:36 2018 ;
 ; Revision Name         ; hardware                              ;
 ; Top-level Entity Name ; cpu                                   ;
 ; Family                ; Cyclone II                            ;
@@ -83,30 +83,30 @@ applicable agreement for further details.
 +-----------------------------------------------------------------+
 ; File Name                                                       ;
 +-----------------------------------------------------------------+
-; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.sof ;
-; C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.pof ;
+; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.sof ;
+; C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.pof ;
 +-----------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.sof ;
+; Assembler Device Options: C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.sof ;
 +----------------+--------------------------------------------------------------------------+
 ; Option         ; Setting                                                                  ;
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C7                                                             ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                               ;
-; Checksum       ; 0x008B5AAF                                                               ;
+; Checksum       ; 0x008DF498                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/hardware.pof ;
+; Assembler Device Options: C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/hardware.pof ;
 +--------------------+----------------------------------------------------------------------+
 ; Option             ; Setting                                                              ;
 +--------------------+----------------------------------------------------------------------+
 ; Device             ; EPCS16                                                               ;
 ; JTAG usercode      ; 0x00000000                                                           ;
-; Checksum           ; 0x18458C40                                                           ;
+; Checksum           ; 0x183BA9D0                                                           ;
 ; Compression Ratio  ; 3                                                                    ;
 +--------------------+----------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed May 02 17:00:57 2018
+    Info: Processing started: Thu May 03 16:13:31 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off hardware -c hardware
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 343 megabytes
-    Info: Processing ended: Wed May 02 17:01:01 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Thu May 03 16:13:36 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

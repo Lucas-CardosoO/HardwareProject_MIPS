@@ -88,7 +88,9 @@ enum logic [6:0] {
   SXORIExec = 7'd66,
   SXORIFinish = 7'd67,
   ANDIExec = 7'd68,
-  ANDIFinish = 7'd69
+  ANDIFinish = 7'd69,
+  MULT = 7'd70
+  
   
   
    /* continua */} nextState;
@@ -260,7 +262,6 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
-									
 									nextState <= SLLLoadB;
 								end
 								
@@ -417,7 +418,36 @@ always_comb begin
 									
 									nextState <= SRALoadB;
 								end
-								
+								6'h18: //MUL
+									begin
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0; // *
+									IREsc = 1'b0;
+									ULAOp = 3'b011;
+									RegWrite = 1'b0;
+									RegDst = 1'b1;
+									ULAFonteA = 1'b0;
+									ULAFonteB = 2'b00;
+									MemParaReg = 2'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b1;
+									RegBCtrl = 1'b1;
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									nextState <= MULT;
+									end
 						
 							default: begin 
 								FontePC = 3'b000;
@@ -851,6 +881,36 @@ always_comb begin
 						nextState = BuscaMem;  
 					end
 			endcase
+		end
+		
+		MULT: begin
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b1;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b11;
+			MemParaReg = 2'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b1;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+					
+			nextState = BuscaMem; 
 		end
 		
 		ADDIExec: begin
