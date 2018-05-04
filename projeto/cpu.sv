@@ -219,7 +219,7 @@ module cpu(input clock, reset,
 	.entrada3(ExceptionAddress),
 	.entrada4(EPCOut),
 	.entrada5(flavio),
-	.entrada6(32'd0),
+	.entrada6(EPCOut),
 	.entrada7(32'd0),
 	.saidaMux(EntradaPC));
 	

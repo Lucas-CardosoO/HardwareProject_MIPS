@@ -45,7 +45,7 @@ module cpu(input clock, reset,
 	// logic [31:0] SaidaA;
 	logic PCEsc;
 	logic ULAFonteA;
-	logic RegDst;
+	logic [1:0] RegDst;
 	logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl;
 	logic[1:0] ULAFonteB;
 	logic PCEscCond;

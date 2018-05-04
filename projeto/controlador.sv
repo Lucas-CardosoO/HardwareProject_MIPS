@@ -627,6 +627,39 @@ always_comb begin
 						endcase
 					end
 					
+				6'h10: // rte
+					begin 
+						FontePC = 3'b101;
+						PCEsc = 1'b1;
+						CtrMem = 1'b0;
+						IREsc = 1'b0;
+						ULAOp = 3'b111;
+						RegWrite = 1'b0;
+						RegDst = 2'b0;
+						ULAFonteA = 1'b0;
+						ULAFonteB = 2'b00;
+						MemParaReg = 3'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b1;
+						ULASaidaCtrl = 1'b1;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
+						ExceptionSelector = 1'b0;
+						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
+						
+						nextState <= BuscaMem;
+					
+					end
+					
 				6'h3: // jal
 					begin
 						FontePC = 3'b000;
