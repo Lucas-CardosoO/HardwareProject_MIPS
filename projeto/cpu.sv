@@ -14,7 +14,8 @@ module cpu(input clock, reset,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
   output logic [31:0] SaidaA, mult_high, mult_low,
-  output logic [4:0] contador_mult
+  output logic [4:0] contador_mult,
+  output logic MenorULA, MaiorULA
   );
   
   
@@ -36,8 +37,7 @@ module cpu(input clock, reset,
 	logic OverflowULA;
 	logic NegativoULA;
 	logic IgualULA;
-	logic MaiorULA;
-	logic MenorULA;
+		
 	logic[31:0] pcJump;
 	logic PCEscCondBNE;
 	logic IouD;
@@ -120,8 +120,8 @@ module cpu(input clock, reset,
 	.Negativo(NegativoULA),
 	.z(ZeroULA),
 	.Igual(IgualULA),
-	.Maior(MaiorULA),
-	.Menor(MenorULA));
+	.Maior(MenorULA), // CUIDADO A FRENTE! 
+	.Menor(MaiorULA));
 
 	Instr_Reg inst_reg(.Clk(clock), 
 	.Reset(reset), 
@@ -198,7 +198,7 @@ module cpu(input clock, reset,
 	.entrada0(AluOut),
 	.entrada1(flavio),
 	.entrada2(extensorEShift),
-	.entrada3(32'd666),
+	.entrada3({31'b0, MenorULA}),
 	.entrada4(mult_high),
 	.entrada5(mult_low),
 	.entrada6(32'd666),

@@ -13,7 +13,7 @@ always_comb begin
 		3'b011:begin
 			saidaMux <= entrada3;
 		end 
-		3'b0100:begin
+		3'b100:begin
 			saidaMux <= entrada4;
 		end
 		3'b101:begin

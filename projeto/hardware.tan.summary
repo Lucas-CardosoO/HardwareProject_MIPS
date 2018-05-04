@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.438 ns
+Actual Time    : 1.483 ns
 From           : reset
-To             : controlador:ctrl|state[5]
+To             : controlador:ctrl|state[2]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 42.175 ns
-From           : Instr_Reg:inst_reg|Instr15_0[2]
-To             : ExceptionSelector
+Actual Time    : 40.652 ns
+From           : Instr_Reg:inst_reg|Instr31_26[1]
+To             : WriteDataReg[0]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.490 ns
+Actual Time    : -0.928 ns
 From           : reset
-To             : controlador:ctrl|state[0]
+To             : controlador:ctrl|state[6]
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 28.35 MHz ( period = 35.270 ns )
-From           : Instr_Reg:inst_reg|Instr15_0[2]
-To             : Registrador:PCreg|Saida[14]
+Actual Time    : 29.82 MHz ( period = 33.530 ns )
+From           : Instr_Reg:inst_reg|Instr31_26[1]
+To             : controlador:ctrl|state[5]
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0

@@ -1,7 +1,7 @@
 module controlador(input logic Clock, Reset, Overflow, input logic [4:0]contador_mult, input logic[5:0] OpCode, InstrArit,
 output logic PCEsc, CtrMem, IREsc, RegWrite, RegDst, ULAFonteA,
-output logic[1:0] ULAFonteB, MemParaReg,
-output logic[2:0] FontePC,
+output logic[1:0] ULAFonteB,
+output logic[2:0] FontePC, MemParaReg,
 output logic[1:0] RegACtrl,
 output logic[1:0] RegBCtrl, ULASaidaCtrl, MDRCtrl,
 output logic[2:0] ULAOp,
@@ -92,7 +92,10 @@ enum logic [6:0] {
   MULT = 7'd70,
   MULTLoop = 7'd71,
   Mhlo = 7'd72,
-  Mfhi = 7'd73
+  Mfhi = 7'd73,
+  SLT = 7'd74,
+  SLTI = 7'd75
+  
   
   
   
@@ -401,6 +404,37 @@ always_comb begin
 									
 									nextState <= SLLVLoadRegDesloc;
 								end
+							6'h2a:
+								begin
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0;
+									IREsc = 1'b0;
+									ULAOp = 3'b000;
+									RegWrite = 1'b0;
+									RegDst = 1'b0;
+									ULAFonteA = 1'b1;
+									ULAFonteB = 2'b00;
+									MemParaReg = 3'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
+									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									
+									nextState <= SLT;
+								end
 								
 							6'h3: //sra
 								begin 
@@ -524,6 +558,7 @@ always_comb begin
 									
 									nextState <= BuscaMem;
 									end
+								
 						
 							default: begin 
 								FontePC = 3'b000;
@@ -557,6 +592,36 @@ always_comb begin
 							end
 						endcase
 					end
+					
+				6'ha: begin 
+									FontePC = 3'b000;
+									PCEsc = 1'b0;
+									CtrMem = 1'b0;
+									IREsc = 1'b0;
+									ULAOp = 3'b000;
+									RegWrite = 1'b0;
+									RegDst = 1'b0;
+									ULAFonteA = 1'b1;
+									ULAFonteB = 2'b00;
+									MemParaReg = 3'b00;
+									IouD = 1'b0;
+									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
+									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
+									ULASaidaCtrl = 1'b0;
+									MDRCtrl = 1'b0;
+									PCEscCond = 1'b0;
+									PCEscCondBNE = 1'b0;
+									resetRegA = 1'b0;
+									ShiftControl = 3'b000;
+									NumShiftCtrl = 2'b00;
+									CtrlMuxDeslocamento = 1'b0;
+									WordouHWouByte = 2'b00;
+									LoadMult = 1'b0;
+									ExceptionSelector = 1'b0;
+									LoadEPC = 1'b0;
+									
+									nextState <= SLTI;
+								end
 					
 				6'b001000:  //ADDI
 					begin
@@ -973,6 +1038,36 @@ always_comb begin
 			endcase
 		end
 		
+		SLTI: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 3'b011;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			
+			nextState = BuscaMem;
+		end
+		
 		MULT: begin
 			FontePC = 3'b000;
 			PCEsc = 1'b0;
@@ -1001,6 +1096,36 @@ always_comb begin
 			LoadEPC = 1'b0;
 			
 			nextState <= MULTLoop;			
+		end
+		
+		SLT: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b1;
+			RegDst = 1'b1;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b0;
+			MemParaReg = 3'b011;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			
+			nextState = BuscaMem;
 		end
 		
 		MULTLoop: begin 
