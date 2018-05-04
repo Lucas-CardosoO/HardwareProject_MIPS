@@ -88,9 +88,6 @@ VERILOG_CONSTANT_LOOP_LIMIT
 VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
-# hierarchies {
-mux2entradas32bits:RegisterWriteSelection
-}
 # macro_sequence
 
 # end
@@ -125,6 +122,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
+mux4entradas32bits:RegisterWriteSelection
 mux4entradas32bits:EntradaULA2Selection
 mux4entradas32bits:EscritaMemSelection
 }
@@ -1266,7 +1264,7 @@ ON
 # case_sensitive
 # source_file
 cpu.sv
-9b84bd44478f2e17856e8d29309c1e
+b7f7c9ef376c410d87e2f2c44188a6
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1385,7 +1383,7 @@ address_a0
 }
 # memory_file {
 instrucoes.mif
-24aed9dc2df441788fbef09e9488db6
+a11588a86cd21cc7cd93392c97fd097
 }
 # hierarchies {
 Memoria:Memory|lpm_ram_dq:MEM|altram:sram|altsyncram:ram_block|altsyncram_e1a1:auto_generated
@@ -1408,7 +1406,7 @@ ON
 # case_sensitive
 # source_file
 controlador.sv
-998563cc8b67e73e3d70701665d1d4e
+dc33a8fbd65d54f8a251a2c869c6162
 9
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

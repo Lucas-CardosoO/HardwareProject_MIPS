@@ -9,7 +9,6 @@ module cpu(input clock, reset,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
   output logic[31:0] extensorEShift,
-  output logic[31:0] ExceptionAddress,
   output logic [2:0] MemParaReg,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
@@ -19,6 +18,7 @@ module cpu(input clock, reset,
   );
   
   
+   logic[31:0] ExceptionAddress;
 	// multiplicador:
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;	
     logic[31:0] extensor32bits ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
@@ -170,9 +170,11 @@ module cpu(input clock, reset,
 	.EscritaSelection(EscritaSelection)
 );
 	
-	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
+	mux4entradas32bits RegisterWriteSelection(.controlador(RegDst),  // MUX AUMENTADO DE 2X1 P 4X1
 	.entrada0(Instr20_16),
 	.entrada1(Instr15_0[15:11]),
+	.entrada2(32'd31),
+	.entrada3(32'd666),
 	.saidaMux(WriteRegister));
 	
 	mux2entradas32bits_real IouDMux(.controlador(IouD),
@@ -272,7 +274,7 @@ module cpu(input clock, reset,
 	mul Multiplicador(.Clock(clock),
 					  .load(LoadMult),
 					  .multiplicador(SaidaA),
-					  .multiplicando(WriteDataMem),
+					  .multiplicando(WriteData),
 					  .resultado(resultado_mult),
 					  .counter(contador_mult));
 	

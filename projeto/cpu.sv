@@ -45,7 +45,7 @@ module cpu(input clock, reset,
 	// logic [31:0] SaidaA;
 	logic PCEsc;
 	logic ULAFonteA;
-	logic RegDst;
+	logic [1:0] RegDst;
 	logic RegACtrl, RegBCtrl, ULASaidaCtrl, MDRCtrl;
 	logic[1:0] ULAFonteB;
 	logic PCEscCond;
@@ -170,9 +170,11 @@ module cpu(input clock, reset,
 	.EscritaSelection(EscritaSelection)
 );
 	
-	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
+	mux4entradas32bits RegisterWriteSelection(.controlador(RegDst),  // MUX AUMENTADO DE 2X1 P 4X1
 	.entrada0(Instr20_16),
 	.entrada1(Instr15_0[15:11]),
+	.entrada2(32'd31),
+	.entrada3(32'd666),
 	.saidaMux(WriteRegister));
 	
 	mux2entradas32bits_real IouDMux(.controlador(IouD),
@@ -272,7 +274,7 @@ module cpu(input clock, reset,
 	mul Multiplicador(.Clock(clock),
 					  .load(LoadMult),
 					  .multiplicador(SaidaA),
-					  .multiplicando(WriteDataMem),
+					  .multiplicando(WriteData),
 					  .resultado(resultado_mult),
 					  .counter(contador_mult));
 	
