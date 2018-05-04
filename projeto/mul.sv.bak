@@ -1,4 +1,4 @@
-module mul(input logic Clock, load, input logic [31:0] multiplicador, multiplicando, output logic [31:0] multiplicando_atual, multiplicador_atual, resultado, output logic [4:0] counter);
+module mul(input logic Clock, load, input logic [31:0] multiplicador, multiplicando, output logic[63:0] resultado, output logic [4:0] counter);
 
 /*
 assign multiplicador_atual = 31'b0;
@@ -6,7 +6,7 @@ assign multiplicando_atual = 31'b0;
 assign resultado = 64'b0;
 assign resultado_atual = 64'b0;
 */
-logic [63:0] resultado, resultado_atual;
+logic [63:0] resultado_atual;
 
 always_ff@(posedge Clock) begin
 

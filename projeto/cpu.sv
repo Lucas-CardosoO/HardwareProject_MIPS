@@ -20,9 +20,7 @@ module cpu(input clock, reset,
   
   
 	// multiplicador:
-	logic [63:0] resultadoMultTeste, resultado_atualMultTest;
-	logic [31:0] multiplicando_atualTeste, multiplicador_atualTeste;
-	
+	logic [63:0] resultadoMultTeste, resultado_atualMultTest;	
     logic[31:0] extensor32bits, Address, MDR, EPCOut; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
@@ -211,7 +209,7 @@ module cpu(input clock, reset,
 	.entrada2(pcJump),
 	.entrada3(ExceptionAddress),
 	.entrada4(EPCOut),
-	.entrada5(32'd0),
+	.entrada5(flavio),
 	.entrada6(32'd0),
 	.entrada7(32'd0),
 	.saidaMux(EntradaPC));
@@ -268,8 +266,6 @@ module cpu(input clock, reset,
 					  .load(LoadMult),
 					  .multiplicador(SaidaA),
 					  .multiplicando(WriteDataMem),
-					  .multiplicando_atual(multiplicando_atualTeste),
-					  .multiplicador_atual(multiplicador_atualTeste),
 					  .resultado(resultado_mult),
 					  .counter(contador_mult));
 	
