@@ -15,7 +15,8 @@ output logic CtrlMuxDeslocamento,
 output logic [1:0] NumShiftCtrl,
 output logic [1:0] WordouHWouByte,
 output logic LoadMult,
-output logic ExceptionSelector, LoadEPC
+output logic ExceptionSelector, LoadEPC,
+output logic [1:0] EscritaSelection
 );
 
 enum logic [6:0] {
@@ -91,10 +92,23 @@ enum logic [6:0] {
   ANDIFinish = 7'd69,
   MULT = 7'd70,
   MULTLoop = 7'd71,
-  Mhlo = 7'd72,
-  Mfhi = 7'd73,
   SLT = 7'd74,
   SLTI = 7'd75,
+  SBCalcAddress = 7'd76,
+  SBLeituraWord = 7'd77,
+  SBEspera1 = 7'd78,
+  SBEspera2 = 7'd79,
+  SBEscritaMem = 7'd80,
+  SBEstabilizarMem1 = 7'd81,
+  SBEstabilizarMem2 = 7'd82,
+  SHCalcAddress = 7'd83,
+  SHLeituraWord = 7'd84,
+  SHEspera1 = 7'd85,
+  SHEspera2 = 7'd86,
+  SHEscritaMem = 7'd87,
+  SHEstabilizarMem1 = 7'd88,
+  SHEstabilizarMem2 = 7'd89,    
+  
   
   TratamentoExcecaoEspera1 = 7'd95,
   TratamentoExcecaoEspera2 = 7'd96,
@@ -102,6 +116,8 @@ enum logic [6:0] {
   TratamentoExcecaoFinish = 7'd98
   
    /* continua */} nextState;
+   
+   
   
 
 
@@ -129,7 +145,7 @@ always_comb begin
 			ULAFonteA = 1'b0;
 			ULAFonteB = 2'b01;
 			MemParaReg = 3'b00;
-			IouD = 1'b0; ;; //
+			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
 			ULASaidaCtrl = 1'b1;
@@ -144,6 +160,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 	
 			nextState <= EsperaBusca;
@@ -175,6 +192,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= EscIR;
@@ -206,6 +224,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= Decode;
@@ -244,6 +263,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= BreakState;
@@ -275,6 +295,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SLLLoadB;
@@ -307,6 +328,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SRLLoadB;
@@ -338,6 +360,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SRAVLoadRegDesloc;
@@ -370,6 +393,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= RRegLoadABJr;
@@ -402,6 +426,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SLLVLoadRegDesloc;
@@ -433,6 +458,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SLT;
@@ -465,6 +491,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= SRALoadB;
@@ -496,6 +523,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									
 									nextState <= MULT;
@@ -527,6 +555,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									nextState <= BuscaMem;
 									end
@@ -557,6 +586,7 @@ always_comb begin
 									LoadMult = 1'b0;
 									ExceptionSelector = 1'b0;
 									LoadEPC = 1'b0;
+									EscritaSelection = 2'b00;
 									
 									nextState <= BuscaMem;
 									end
@@ -588,6 +618,7 @@ always_comb begin
 								LoadMult = 1'b0;
 								ExceptionSelector = 1'b0;
 								LoadEPC = 1'b0;
+								EscritaSelection = 2'b00;
 								
 								
 								nextState <= RRegABLoad;
@@ -595,35 +626,104 @@ always_comb begin
 						endcase
 					end
 					
-				6'ha: begin 
-									FontePC = 3'b000;
-									PCEsc = 1'b0;
-									CtrMem = 1'b0;
-									IREsc = 1'b0;
-									ULAOp = 3'b000;
-									RegWrite = 1'b0;
-									RegDst = 1'b0;
-									ULAFonteA = 1'b1;
-									ULAFonteB = 2'b00;
-									MemParaReg = 3'b00;
-									IouD = 1'b0;
-									RegACtrl = 1'b1; //carrega registrador A do banco de registradores
-									RegBCtrl = 1'b1; //carrega registrador B do banco de registradores
-									ULASaidaCtrl = 1'b0;
-									MDRCtrl = 1'b0;
-									PCEscCond = 1'b0;
-									PCEscCondBNE = 1'b0;
-									resetRegA = 1'b0;
-									ShiftControl = 3'b000;
-									NumShiftCtrl = 2'b00;
-									CtrlMuxDeslocamento = 1'b0;
-									WordouHWouByte = 2'b00;
-									LoadMult = 1'b0;
-									ExceptionSelector = 1'b0;
-									LoadEPC = 1'b0;
-									
-									nextState <= SLTI;
-								end
+				6'h28: // sb
+					begin 
+						FontePC = 3'b000;
+						PCEsc = 1'b0;
+						CtrMem = 1'b0;
+						IREsc = 1'b0;
+						ULAOp = 3'b000;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b1;
+						ULAFonteB = 2'b00;
+						MemParaReg = 3'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b1;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
+						ExceptionSelector = 1'b0;
+						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
+						
+						nextState <= SBCalcAddress;
+					
+				end
+				
+				6'h29: // sh
+					begin 
+						FontePC = 3'b000;
+						PCEsc = 1'b0;
+						CtrMem = 1'b0;
+						PCEsc = 1'b0;
+						IREsc = 1'b0;
+						ULAOp = 3'b000;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b1;
+						ULAFonteB = 2'b00;
+						MemParaReg = 3'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b1;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
+						ExceptionSelector = 1'b0;
+						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
+						
+						nextState <= SHCalcAddress;
+					
+				end
+				
+				
+				6'ha: begin // slti
+						FontePC = 3'b000;
+						PCEsc = 1'b0;
+						IREsc = 1'b0;
+						CtrMem = 1'b0;
+						ULAOp = 3'b000;
+						RegWrite = 1'b0;
+						RegDst = 1'b0;
+						ULAFonteA = 1'b1;
+						ULAFonteB = 2'b00;
+						MemParaReg = 3'b00;
+						IouD = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b1;
+						ULASaidaCtrl = 1'b0;
+						MDRCtrl = 1'b0;
+						PCEscCond = 1'b0;
+						PCEscCondBNE = 1'b0;
+						resetRegA = 1'b0;
+						ShiftControl = 3'b000;
+						NumShiftCtrl = 2'b00;
+						CtrlMuxDeslocamento = 1'b0;
+						WordouHWouByte = 2'b00;
+						LoadMult = 1'b0;
+						ExceptionSelector = 1'b0;
+						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
+						
+						nextState <= SLTI;
+				end
 					
 				6'b001000:  //ADDI
 					begin
@@ -652,6 +752,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 									
 						nextState <= ADDIExec;
@@ -684,6 +785,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 									
 						nextState <= ADDIUExec;
@@ -716,6 +818,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState <= BuscaMem ;
@@ -747,6 +850,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState <= LWRegABLoad ;
@@ -778,6 +882,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState <= SWRegABLoad;
@@ -810,6 +915,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState = BEQDesloc;
@@ -842,6 +948,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState = BNEDesloc;
@@ -874,6 +981,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState = LUISoma;                                                                                                        
@@ -906,6 +1014,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState <= LBURegABLoad ;
@@ -938,6 +1047,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 						
 						nextState <= LHURegABLoad ;
@@ -970,6 +1080,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 									
 						nextState <= SXORIExec;
@@ -1001,6 +1112,7 @@ always_comb begin
 						LoadMult = 1'b0;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b0;
+						EscritaSelection = 2'b00;
 						
 									
 						nextState <= ANDIExec;
@@ -1033,11 +1145,384 @@ always_comb begin
 						LoadMult = 1'b1;
 						ExceptionSelector = 1'b0;
 						LoadEPC = 1'b1;
+						EscritaSelection = 2'b00;
 						
 												
 						nextState = TratamentoExcecaoEspera1;  
 					end
 			endcase
+		end
+		
+		SHCalcAddress: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 3'b011;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+			
+			nextState = SHLeituraWord;
+		end
+		
+		SHLeituraWord: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 3'b011;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+			
+			nextState <= SHEspera1;
+		end
+		
+		SHEspera1: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= SHEscritaMem;
+		end
+		
+		SHEscritaMem: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b1;
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b10;
+			
+			nextState <= SHEstabilizarMem1;
+		end
+		
+		SHEstabilizarMem1: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= SHEstabilizarMem2;
+		end
+		
+		SHEstabilizarMem2: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= BuscaMem;
+		end
+		
+		SBCalcAddress: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 3'b011;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b1;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+			
+			nextState = SBLeituraWord;
+		end
+		
+		SBLeituraWord: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; 
+			IREsc = 1'b0;
+			ULAOp = 3'b000;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b10;
+			MemParaReg = 3'b011;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;	
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b001; 
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b1; 
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+			
+			nextState <= SBEspera1;
+		end
+		
+		SBEspera1: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= SBEscritaMem;
+		end
+
+		SBEscritaMem: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b1;
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b1;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b01;
+			
+			nextState <= SBEstabilizarMem1;
+		end
+		
+		SBEstabilizarMem1: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= SBEstabilizarMem2;
+		end
+		
+		SBEstabilizarMem2: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b00;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
+		
+			nextState <= BuscaMem;
 		end
 		
 		TratamentoExcecaoEspera1: begin 
@@ -1066,6 +1551,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= TratamentoExcecaoEspera2;
 		end
@@ -1096,6 +1582,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= TratamentoExcecaoMDRLoad;
 		end
@@ -1126,6 +1613,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= TratamentoExcecaoFinish;
 		end
@@ -1156,6 +1644,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= BuscaMem;
 		end
@@ -1189,6 +1678,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState = BuscaMem;
 		end
@@ -1219,6 +1709,7 @@ always_comb begin
 			LoadMult = 1'b1;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= MULTLoop;			
 		end
@@ -1249,6 +1740,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState = BuscaMem;
 		end
@@ -1279,6 +1771,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			if(contador_mult == 5'b11111) begin
 				nextState = BuscaMem;
@@ -1312,6 +1805,7 @@ always_comb begin
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
 			LoadMult = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			if(Overflow) begin
@@ -1360,6 +1854,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1391,6 +1886,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = ADDIUFinish; 
@@ -1422,6 +1918,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1453,6 +1950,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = SXORIFinish; 
@@ -1484,6 +1982,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1515,6 +2014,7 @@ always_comb begin
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
 			FontePC = 3'b000;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = ANDIFinish; 
@@ -1546,6 +2046,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1578,6 +2079,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SLLVCalcDesloc; 
@@ -1610,6 +2112,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SLLVRegEsc; 
@@ -1641,6 +2144,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1672,6 +2176,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRAVCalcDesloc; 
@@ -1703,6 +2208,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 								
 			nextState = SRAVRegEsc; 
@@ -1734,6 +2240,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1765,6 +2272,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRLLoadRegDesloc; 
@@ -1796,6 +2304,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRLCalcDesloc; 
@@ -1828,6 +2337,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRLRegEsc; 
@@ -1859,6 +2369,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -1890,6 +2401,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRALoadRegDesloc; 
@@ -1921,6 +2433,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRACalcDesloc; 
@@ -1953,6 +2466,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SRARegEsc; 
@@ -1984,6 +2498,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -2017,6 +2532,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SLLLoadRegDesloc; 
@@ -2049,6 +2565,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SLLCalcDesloc; 
@@ -2081,6 +2598,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = SLLRegEsc; 
@@ -2112,6 +2630,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -2145,6 +2664,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = LUICarregaReg;    
@@ -2177,6 +2697,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 					
 			nextState = BuscaMem; 
@@ -2208,6 +2729,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LBUCalcOffset ;
@@ -2239,6 +2761,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LBUReadMem;
@@ -2270,6 +2793,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LBUEspera1 ;
@@ -2301,6 +2825,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LBUEspera2;
@@ -2332,6 +2857,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LBUMDRLoad ;
@@ -2363,6 +2889,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LBUFinish ;
@@ -2394,6 +2921,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= BuscaMem;
@@ -2425,6 +2953,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LHUCalcOffset ;
@@ -2456,6 +2985,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LHUReadMem;
@@ -2487,6 +3017,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LHUEspera1 ;
@@ -2518,6 +3049,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LHUEspera2;
@@ -2549,6 +3081,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LHUMDRLoad ;
@@ -2580,6 +3113,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LHUFinish ;
@@ -2611,6 +3145,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= BuscaMem;
@@ -2643,6 +3178,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LWCalcOffset ;
@@ -2675,6 +3211,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = LWReadMem ;
@@ -2706,7 +3243,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
-			
+			EscritaSelection = 2'b00;
 			
 			nextState <= LWEspera1 ;
 			
@@ -2738,6 +3275,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LWEspera2;
@@ -2770,6 +3308,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LWMDRLoad ;
@@ -2802,6 +3341,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= LWFinish ;
@@ -2833,6 +3373,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= BuscaMem;
@@ -2864,6 +3405,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = SWCalcOffset ;
@@ -2895,6 +3437,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = SWEscritaMem ;
@@ -2926,6 +3469,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = BuscaMem;
@@ -2958,6 +3502,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = RULAOp;
@@ -2987,6 +3532,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			if(Overflow &&(InstrArit == 6'h20 || InstrArit == 6'h22)) begin
@@ -3031,6 +3577,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = BuscaMem;
@@ -3061,6 +3608,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			WordouHWouByte = 2'b00;
@@ -3093,6 +3641,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = BEQBegin;
@@ -3124,6 +3673,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 				
 			nextState = BEQLoadAB;
@@ -3155,6 +3705,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 	
 			nextState <= BEQSolution;
@@ -3186,6 +3737,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 	
 			nextState <= BuscaMem;
@@ -3217,6 +3769,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState = BNEBegin;
@@ -3248,6 +3801,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 						
 			nextState = BNELoadAB;
@@ -3279,6 +3833,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 	
 			nextState <= BNESolution;
@@ -3310,6 +3865,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 				
 			nextState <= BuscaMem;
@@ -3320,7 +3876,7 @@ always_comb begin
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; //
 			IREsc = 1'b0;
-			ULAOp = 3'b011;
+			ULAOp = 3'b111;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
@@ -3341,6 +3897,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			nextState <= RLoadPCJr;
 	
@@ -3351,7 +3908,7 @@ always_comb begin
 			PCEsc = 1'b1;
 			CtrMem = 1'b0; //
 			IREsc = 1'b0;
-			ULAOp = 3'b011;
+			ULAOp = 3'b111;
 			RegWrite = 1'b0;
 			RegDst = 1'b0;
 			ULAFonteA = 1'b1;
@@ -3372,6 +3929,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 	
 			nextState <= BuscaMem;
@@ -3404,6 +3962,7 @@ always_comb begin
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
+			EscritaSelection = 2'b00;
 			
 			
 			nextState <= BuscaMem;

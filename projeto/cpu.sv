@@ -1,7 +1,7 @@
 module cpu(input clock, reset,
   output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, AluOut, PC,
   output logic [4:0] WriteRegister,
-  output logic wr, RegWrite, IRWrite,
+  output logic wr, RegWrite, IRWrite, IouD,
   output logic[6:0] Estado,
   output logic [31:0]EntradaULA1, EntradaULA2,
   output logic [5:0] Instr31_26,
@@ -9,19 +9,19 @@ module cpu(input clock, reset,
   output logic[4:0] Instr20_16,
   output logic[15:0] Instr15_0,
   output logic[31:0] extensorEShift,
-  output logic[31:0] ExceptionAddress,
   output logic [2:0] MemParaReg,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
   output logic [31:0] SaidaA, MDR, EPCOut,
-  output logic [4:0] contador_mult,
-  output logic MenorULA, MaiorULA
+  output logic [1:0] EscritaSelection,
+  output logic [31:0] EscritaMem, Address
   );
   
   
+   logic[31:0] ExceptionAddress;
 	// multiplicador:
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;	
-    logic[31:0] extensor32bits, Address ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
+    logic[31:0] extensor32bits ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	
@@ -38,7 +38,6 @@ module cpu(input clock, reset,
 		
 	logic[31:0] pcJump;
 	logic PCEscCondBNE;
-	logic IouD;
 	logic [2:0]ULAOp;
 	logic [2:0] FontePC; 
 	logic [31:0]EntradaPC;
@@ -133,7 +132,7 @@ module cpu(input clock, reset,
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
 	.Wr(wr),
-	.DataIn(WriteDataMem),
+	.DataIn(EscritaMem),
 	.DataOut(MemData));
 	
 	controlador ctrl(.Clock(clock),
@@ -167,7 +166,8 @@ module cpu(input clock, reset,
 	.LoadEPC(LoadEPC),
 	.ExceptionSelector(ExceptionSelector),
 	.Overflow(OverflowULA),
-	.contador_mult(contador_mult)
+	.contador_mult(contador_mult),
+	.EscritaSelection(EscritaSelection)
 );
 	
 	mux2entradas32bits RegisterWriteSelection(.controlador(RegDst), 
@@ -202,6 +202,13 @@ module cpu(input clock, reset,
 	.entrada6(32'd666),
 	.entrada7(32'd666),
 	.saidaMux(WriteDataReg));
+	
+	mux4entradas32bits EscritaMemSelection(.controlador(EscritaSelection),
+	.entrada0(WriteDataMem),
+	.entrada1({WriteDataMem[7:0], MemData[23:0]}),
+	.entrada2({WriteDataMem[15:0], MemData[15:0]}),
+	.entrada3(32'd666),
+	.saidaMux(EscritaMem));
 	
 	mux8entradas32bits FontePCSelection(.controlador(FontePC),  
 	.entrada0(Alu),

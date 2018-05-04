@@ -1,2 +1,2 @@
-Warning (10268): Verilog HDL information at controlador.sv(119): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at controlador.sv(135): always construct contains both blocking and non-blocking assignments
 Warning (10268): Verilog HDL information at mul.sv(13): always construct contains both blocking and non-blocking assignments
