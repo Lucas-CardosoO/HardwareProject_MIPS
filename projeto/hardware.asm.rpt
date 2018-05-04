@@ -1,5 +1,5 @@
 Assembler report for hardware
-Fri May 04 11:57:19 2018
+Fri May 04 14:05:33 2018
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri May 04 11:57:19 2018 ;
+; Assembler Status      ; Successful - Fri May 04 14:05:33 2018 ;
 ; Revision Name         ; hardware                              ;
 ; Top-level Entity Name ; cpu                                   ;
 ; Family                ; Cyclone II                            ;
@@ -95,7 +95,7 @@ applicable agreement for further details.
 +----------------+--------------------------------------------------------------------------+
 ; Device         ; EP2C70F896C7                                                             ;
 ; JTAG usercode  ; 0xFFFFFFFF                                                               ;
-; Checksum       ; 0x0090C837                                                               ;
+; Checksum       ; 0x00907376                                                               ;
 +----------------+--------------------------------------------------------------------------+
 
 
@@ -106,7 +106,7 @@ applicable agreement for further details.
 +--------------------+----------------------------------------------------------------------+
 ; Device             ; EPCS16                                                               ;
 ; JTAG usercode      ; 0x00000000                                                           ;
-; Checksum           ; 0x18344FFB                                                           ;
+; Checksum           ; 0x1831E895                                                           ;
 ; Compression Ratio  ; 3                                                                    ;
 +--------------------+----------------------------------------------------------------------+
 
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri May 04 11:57:15 2018
+    Info: Processing started: Fri May 04 14:05:28 2018
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off hardware -c hardware
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 344 megabytes
-    Info: Processing ended: Fri May 04 11:57:19 2018
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:04
+    Info: Processing ended: Fri May 04 14:05:33 2018
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

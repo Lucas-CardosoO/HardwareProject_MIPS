@@ -33110,8 +33110,8 @@ VECTOR("C:/Users/lab7/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 {
 	ZOOM{
-		ZBEGIN = 25700;
-		ZEND = 76050;
+		ZBEGIN = 2050;
+		ZEND = 52400;
 		NUMERATOR = 20;
 		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
@@ -33997,7 +33997,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1";
+		SIGNAL = "EPCOut";
 		INDEX = 109;
 		FORMAT = T;
 		SCALE = 1;
@@ -34005,7 +34005,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[31]";
+		SIGNAL = "EPCOut[31]";
 		INDEX = 110;
 		FORMAT = E;
 		SCALE = 1;
@@ -34013,7 +34013,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[30]";
+		SIGNAL = "EPCOut[30]";
 		INDEX = 111;
 		FORMAT = E;
 		SCALE = 1;
@@ -34021,7 +34021,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[29]";
+		SIGNAL = "EPCOut[29]";
 		INDEX = 112;
 		FORMAT = E;
 		SCALE = 1;
@@ -34029,7 +34029,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[28]";
+		SIGNAL = "EPCOut[28]";
 		INDEX = 113;
 		FORMAT = E;
 		SCALE = 1;
@@ -34037,7 +34037,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[27]";
+		SIGNAL = "EPCOut[27]";
 		INDEX = 114;
 		FORMAT = E;
 		SCALE = 1;
@@ -34045,7 +34045,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[26]";
+		SIGNAL = "EPCOut[26]";
 		INDEX = 115;
 		FORMAT = E;
 		SCALE = 1;
@@ -34053,7 +34053,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[25]";
+		SIGNAL = "EPCOut[25]";
 		INDEX = 116;
 		FORMAT = E;
 		SCALE = 1;
@@ -34061,7 +34061,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[24]";
+		SIGNAL = "EPCOut[24]";
 		INDEX = 117;
 		FORMAT = E;
 		SCALE = 1;
@@ -34069,7 +34069,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[23]";
+		SIGNAL = "EPCOut[23]";
 		INDEX = 118;
 		FORMAT = E;
 		SCALE = 1;
@@ -34077,7 +34077,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[22]";
+		SIGNAL = "EPCOut[22]";
 		INDEX = 119;
 		FORMAT = E;
 		SCALE = 1;
@@ -34085,7 +34085,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[21]";
+		SIGNAL = "EPCOut[21]";
 		INDEX = 120;
 		FORMAT = E;
 		SCALE = 1;
@@ -34093,7 +34093,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[20]";
+		SIGNAL = "EPCOut[20]";
 		INDEX = 121;
 		FORMAT = E;
 		SCALE = 1;
@@ -34101,7 +34101,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[19]";
+		SIGNAL = "EPCOut[19]";
 		INDEX = 122;
 		FORMAT = E;
 		SCALE = 1;
@@ -34109,7 +34109,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[18]";
+		SIGNAL = "EPCOut[18]";
 		INDEX = 123;
 		FORMAT = E;
 		SCALE = 1;
@@ -34117,7 +34117,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[17]";
+		SIGNAL = "EPCOut[17]";
 		INDEX = 124;
 		FORMAT = E;
 		SCALE = 1;
@@ -34125,7 +34125,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[16]";
+		SIGNAL = "EPCOut[16]";
 		INDEX = 125;
 		FORMAT = E;
 		SCALE = 1;
@@ -34133,7 +34133,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[15]";
+		SIGNAL = "EPCOut[15]";
 		INDEX = 126;
 		FORMAT = E;
 		SCALE = 1;
@@ -34141,7 +34141,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[14]";
+		SIGNAL = "EPCOut[14]";
 		INDEX = 127;
 		FORMAT = E;
 		SCALE = 1;
@@ -34149,7 +34149,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[13]";
+		SIGNAL = "EPCOut[13]";
 		INDEX = 128;
 		FORMAT = E;
 		SCALE = 1;
@@ -34157,7 +34157,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[12]";
+		SIGNAL = "EPCOut[12]";
 		INDEX = 129;
 		FORMAT = E;
 		SCALE = 1;
@@ -34165,7 +34165,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[11]";
+		SIGNAL = "EPCOut[11]";
 		INDEX = 130;
 		FORMAT = E;
 		SCALE = 1;
@@ -34173,7 +34173,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[10]";
+		SIGNAL = "EPCOut[10]";
 		INDEX = 131;
 		FORMAT = E;
 		SCALE = 1;
@@ -34181,7 +34181,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[9]";
+		SIGNAL = "EPCOut[9]";
 		INDEX = 132;
 		FORMAT = E;
 		SCALE = 1;
@@ -34189,7 +34189,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[8]";
+		SIGNAL = "EPCOut[8]";
 		INDEX = 133;
 		FORMAT = E;
 		SCALE = 1;
@@ -34197,7 +34197,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[7]";
+		SIGNAL = "EPCOut[7]";
 		INDEX = 134;
 		FORMAT = E;
 		SCALE = 1;
@@ -34205,7 +34205,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[6]";
+		SIGNAL = "EPCOut[6]";
 		INDEX = 135;
 		FORMAT = E;
 		SCALE = 1;
@@ -34213,7 +34213,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[5]";
+		SIGNAL = "EPCOut[5]";
 		INDEX = 136;
 		FORMAT = E;
 		SCALE = 1;
@@ -34221,7 +34221,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[4]";
+		SIGNAL = "EPCOut[4]";
 		INDEX = 137;
 		FORMAT = E;
 		SCALE = 1;
@@ -34229,7 +34229,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[3]";
+		SIGNAL = "EPCOut[3]";
 		INDEX = 138;
 		FORMAT = E;
 		SCALE = 1;
@@ -34237,7 +34237,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[2]";
+		SIGNAL = "EPCOut[2]";
 		INDEX = 139;
 		FORMAT = E;
 		SCALE = 1;
@@ -34245,7 +34245,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[1]";
+		SIGNAL = "EPCOut[1]";
 		INDEX = 140;
 		FORMAT = E;
 		SCALE = 1;
@@ -34253,7 +34253,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA1[0]";
+		SIGNAL = "EPCOut[0]";
 		INDEX = 141;
 		FORMAT = E;
 		SCALE = 1;
@@ -34261,7 +34261,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2";
+		SIGNAL = "EntradaULA1";
 		INDEX = 142;
 		FORMAT = T;
 		SCALE = 1;
@@ -34269,7 +34269,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[31]";
+		SIGNAL = "EntradaULA1[31]";
 		INDEX = 143;
 		FORMAT = E;
 		SCALE = 1;
@@ -34277,7 +34277,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[30]";
+		SIGNAL = "EntradaULA1[30]";
 		INDEX = 144;
 		FORMAT = E;
 		SCALE = 1;
@@ -34285,7 +34285,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[29]";
+		SIGNAL = "EntradaULA1[29]";
 		INDEX = 145;
 		FORMAT = E;
 		SCALE = 1;
@@ -34293,7 +34293,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[28]";
+		SIGNAL = "EntradaULA1[28]";
 		INDEX = 146;
 		FORMAT = E;
 		SCALE = 1;
@@ -34301,7 +34301,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[27]";
+		SIGNAL = "EntradaULA1[27]";
 		INDEX = 147;
 		FORMAT = E;
 		SCALE = 1;
@@ -34309,7 +34309,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[26]";
+		SIGNAL = "EntradaULA1[26]";
 		INDEX = 148;
 		FORMAT = E;
 		SCALE = 1;
@@ -34317,7 +34317,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[25]";
+		SIGNAL = "EntradaULA1[25]";
 		INDEX = 149;
 		FORMAT = E;
 		SCALE = 1;
@@ -34325,7 +34325,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[24]";
+		SIGNAL = "EntradaULA1[24]";
 		INDEX = 150;
 		FORMAT = E;
 		SCALE = 1;
@@ -34333,7 +34333,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[23]";
+		SIGNAL = "EntradaULA1[23]";
 		INDEX = 151;
 		FORMAT = E;
 		SCALE = 1;
@@ -34341,7 +34341,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[22]";
+		SIGNAL = "EntradaULA1[22]";
 		INDEX = 152;
 		FORMAT = E;
 		SCALE = 1;
@@ -34349,7 +34349,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[21]";
+		SIGNAL = "EntradaULA1[21]";
 		INDEX = 153;
 		FORMAT = E;
 		SCALE = 1;
@@ -34357,7 +34357,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[20]";
+		SIGNAL = "EntradaULA1[20]";
 		INDEX = 154;
 		FORMAT = E;
 		SCALE = 1;
@@ -34365,7 +34365,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[19]";
+		SIGNAL = "EntradaULA1[19]";
 		INDEX = 155;
 		FORMAT = E;
 		SCALE = 1;
@@ -34373,7 +34373,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[18]";
+		SIGNAL = "EntradaULA1[18]";
 		INDEX = 156;
 		FORMAT = E;
 		SCALE = 1;
@@ -34381,7 +34381,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[17]";
+		SIGNAL = "EntradaULA1[17]";
 		INDEX = 157;
 		FORMAT = E;
 		SCALE = 1;
@@ -34389,7 +34389,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[16]";
+		SIGNAL = "EntradaULA1[16]";
 		INDEX = 158;
 		FORMAT = E;
 		SCALE = 1;
@@ -34397,7 +34397,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[15]";
+		SIGNAL = "EntradaULA1[15]";
 		INDEX = 159;
 		FORMAT = E;
 		SCALE = 1;
@@ -34405,7 +34405,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[14]";
+		SIGNAL = "EntradaULA1[14]";
 		INDEX = 160;
 		FORMAT = E;
 		SCALE = 1;
@@ -34413,7 +34413,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[13]";
+		SIGNAL = "EntradaULA1[13]";
 		INDEX = 161;
 		FORMAT = E;
 		SCALE = 1;
@@ -34421,7 +34421,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[12]";
+		SIGNAL = "EntradaULA1[12]";
 		INDEX = 162;
 		FORMAT = E;
 		SCALE = 1;
@@ -34429,7 +34429,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[11]";
+		SIGNAL = "EntradaULA1[11]";
 		INDEX = 163;
 		FORMAT = E;
 		SCALE = 1;
@@ -34437,7 +34437,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[10]";
+		SIGNAL = "EntradaULA1[10]";
 		INDEX = 164;
 		FORMAT = E;
 		SCALE = 1;
@@ -34445,7 +34445,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[9]";
+		SIGNAL = "EntradaULA1[9]";
 		INDEX = 165;
 		FORMAT = E;
 		SCALE = 1;
@@ -34453,7 +34453,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[8]";
+		SIGNAL = "EntradaULA1[8]";
 		INDEX = 166;
 		FORMAT = E;
 		SCALE = 1;
@@ -34461,7 +34461,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[7]";
+		SIGNAL = "EntradaULA1[7]";
 		INDEX = 167;
 		FORMAT = E;
 		SCALE = 1;
@@ -34469,7 +34469,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[6]";
+		SIGNAL = "EntradaULA1[6]";
 		INDEX = 168;
 		FORMAT = E;
 		SCALE = 1;
@@ -34477,7 +34477,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[5]";
+		SIGNAL = "EntradaULA1[5]";
 		INDEX = 169;
 		FORMAT = E;
 		SCALE = 1;
@@ -34485,7 +34485,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[4]";
+		SIGNAL = "EntradaULA1[4]";
 		INDEX = 170;
 		FORMAT = E;
 		SCALE = 1;
@@ -34493,7 +34493,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[3]";
+		SIGNAL = "EntradaULA1[3]";
 		INDEX = 171;
 		FORMAT = E;
 		SCALE = 1;
@@ -34501,7 +34501,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[2]";
+		SIGNAL = "EntradaULA1[2]";
 		INDEX = 172;
 		FORMAT = E;
 		SCALE = 1;
@@ -34509,7 +34509,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[1]";
+		SIGNAL = "EntradaULA1[1]";
 		INDEX = 173;
 		FORMAT = E;
 		SCALE = 1;
@@ -34517,7 +34517,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "EntradaULA2[0]";
+		SIGNAL = "EntradaULA1[0]";
 		INDEX = 174;
 		FORMAT = E;
 		SCALE = 1;
@@ -34525,7 +34525,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress";
+		SIGNAL = "EntradaULA2";
 		INDEX = 175;
 		FORMAT = T;
 		SCALE = 1;
@@ -34533,7 +34533,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[31]";
+		SIGNAL = "EntradaULA2[31]";
 		INDEX = 176;
 		FORMAT = E;
 		SCALE = 1;
@@ -34541,7 +34541,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[30]";
+		SIGNAL = "EntradaULA2[30]";
 		INDEX = 177;
 		FORMAT = E;
 		SCALE = 1;
@@ -34549,7 +34549,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[29]";
+		SIGNAL = "EntradaULA2[29]";
 		INDEX = 178;
 		FORMAT = E;
 		SCALE = 1;
@@ -34557,7 +34557,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[28]";
+		SIGNAL = "EntradaULA2[28]";
 		INDEX = 179;
 		FORMAT = E;
 		SCALE = 1;
@@ -34565,7 +34565,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[27]";
+		SIGNAL = "EntradaULA2[27]";
 		INDEX = 180;
 		FORMAT = E;
 		SCALE = 1;
@@ -34573,7 +34573,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[26]";
+		SIGNAL = "EntradaULA2[26]";
 		INDEX = 181;
 		FORMAT = E;
 		SCALE = 1;
@@ -34581,7 +34581,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[25]";
+		SIGNAL = "EntradaULA2[25]";
 		INDEX = 182;
 		FORMAT = E;
 		SCALE = 1;
@@ -34589,7 +34589,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[24]";
+		SIGNAL = "EntradaULA2[24]";
 		INDEX = 183;
 		FORMAT = E;
 		SCALE = 1;
@@ -34597,7 +34597,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[23]";
+		SIGNAL = "EntradaULA2[23]";
 		INDEX = 184;
 		FORMAT = E;
 		SCALE = 1;
@@ -34605,7 +34605,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[22]";
+		SIGNAL = "EntradaULA2[22]";
 		INDEX = 185;
 		FORMAT = E;
 		SCALE = 1;
@@ -34613,7 +34613,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[21]";
+		SIGNAL = "EntradaULA2[21]";
 		INDEX = 186;
 		FORMAT = E;
 		SCALE = 1;
@@ -34621,7 +34621,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[20]";
+		SIGNAL = "EntradaULA2[20]";
 		INDEX = 187;
 		FORMAT = E;
 		SCALE = 1;
@@ -34629,7 +34629,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[19]";
+		SIGNAL = "EntradaULA2[19]";
 		INDEX = 188;
 		FORMAT = E;
 		SCALE = 1;
@@ -34637,7 +34637,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[18]";
+		SIGNAL = "EntradaULA2[18]";
 		INDEX = 189;
 		FORMAT = E;
 		SCALE = 1;
@@ -34645,7 +34645,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[17]";
+		SIGNAL = "EntradaULA2[17]";
 		INDEX = 190;
 		FORMAT = E;
 		SCALE = 1;
@@ -34653,7 +34653,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[16]";
+		SIGNAL = "EntradaULA2[16]";
 		INDEX = 191;
 		FORMAT = E;
 		SCALE = 1;
@@ -34661,7 +34661,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[15]";
+		SIGNAL = "EntradaULA2[15]";
 		INDEX = 192;
 		FORMAT = E;
 		SCALE = 1;
@@ -34669,7 +34669,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[14]";
+		SIGNAL = "EntradaULA2[14]";
 		INDEX = 193;
 		FORMAT = E;
 		SCALE = 1;
@@ -34677,7 +34677,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[13]";
+		SIGNAL = "EntradaULA2[13]";
 		INDEX = 194;
 		FORMAT = E;
 		SCALE = 1;
@@ -34685,7 +34685,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[12]";
+		SIGNAL = "EntradaULA2[12]";
 		INDEX = 195;
 		FORMAT = E;
 		SCALE = 1;
@@ -34693,7 +34693,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[11]";
+		SIGNAL = "EntradaULA2[11]";
 		INDEX = 196;
 		FORMAT = E;
 		SCALE = 1;
@@ -34701,7 +34701,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[10]";
+		SIGNAL = "EntradaULA2[10]";
 		INDEX = 197;
 		FORMAT = E;
 		SCALE = 1;
@@ -34709,7 +34709,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[9]";
+		SIGNAL = "EntradaULA2[9]";
 		INDEX = 198;
 		FORMAT = E;
 		SCALE = 1;
@@ -34717,7 +34717,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[8]";
+		SIGNAL = "EntradaULA2[8]";
 		INDEX = 199;
 		FORMAT = E;
 		SCALE = 1;
@@ -34725,7 +34725,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[7]";
+		SIGNAL = "EntradaULA2[7]";
 		INDEX = 200;
 		FORMAT = E;
 		SCALE = 1;
@@ -34733,7 +34733,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[6]";
+		SIGNAL = "EntradaULA2[6]";
 		INDEX = 201;
 		FORMAT = E;
 		SCALE = 1;
@@ -34741,7 +34741,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[5]";
+		SIGNAL = "EntradaULA2[5]";
 		INDEX = 202;
 		FORMAT = E;
 		SCALE = 1;
@@ -34749,7 +34749,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[4]";
+		SIGNAL = "EntradaULA2[4]";
 		INDEX = 203;
 		FORMAT = E;
 		SCALE = 1;
@@ -34757,7 +34757,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[3]";
+		SIGNAL = "EntradaULA2[3]";
 		INDEX = 204;
 		FORMAT = E;
 		SCALE = 1;
@@ -34765,7 +34765,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[2]";
+		SIGNAL = "EntradaULA2[2]";
 		INDEX = 205;
 		FORMAT = E;
 		SCALE = 1;
@@ -34773,7 +34773,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[1]";
+		SIGNAL = "EntradaULA2[1]";
 		INDEX = 206;
 		FORMAT = E;
 		SCALE = 1;
@@ -34781,7 +34781,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionAddress[0]";
+		SIGNAL = "EntradaULA2[0]";
 		INDEX = 207;
 		FORMAT = E;
 		SCALE = 1;
@@ -34789,15 +34789,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ExceptionSelector";
+		SIGNAL = "ExceptionAddress";
 		INDEX = 208;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "IRWrite";
+		SIGNAL = "ExceptionAddress[31]";
 		INDEX = 209;
 		FORMAT = E;
 		SCALE = 1;
@@ -34805,15 +34805,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0";
+		SIGNAL = "ExceptionAddress[30]";
 		INDEX = 210;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[15]";
+		SIGNAL = "ExceptionAddress[29]";
 		INDEX = 211;
 		FORMAT = E;
 		SCALE = 1;
@@ -34821,7 +34821,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[14]";
+		SIGNAL = "ExceptionAddress[28]";
 		INDEX = 212;
 		FORMAT = E;
 		SCALE = 1;
@@ -34829,7 +34829,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[13]";
+		SIGNAL = "ExceptionAddress[27]";
 		INDEX = 213;
 		FORMAT = E;
 		SCALE = 1;
@@ -34837,7 +34837,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[12]";
+		SIGNAL = "ExceptionAddress[26]";
 		INDEX = 214;
 		FORMAT = E;
 		SCALE = 1;
@@ -34845,7 +34845,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[11]";
+		SIGNAL = "ExceptionAddress[25]";
 		INDEX = 215;
 		FORMAT = E;
 		SCALE = 1;
@@ -34853,7 +34853,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[10]";
+		SIGNAL = "ExceptionAddress[24]";
 		INDEX = 216;
 		FORMAT = E;
 		SCALE = 1;
@@ -34861,7 +34861,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[9]";
+		SIGNAL = "ExceptionAddress[23]";
 		INDEX = 217;
 		FORMAT = E;
 		SCALE = 1;
@@ -34869,7 +34869,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[8]";
+		SIGNAL = "ExceptionAddress[22]";
 		INDEX = 218;
 		FORMAT = E;
 		SCALE = 1;
@@ -34877,7 +34877,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[7]";
+		SIGNAL = "ExceptionAddress[21]";
 		INDEX = 219;
 		FORMAT = E;
 		SCALE = 1;
@@ -34885,7 +34885,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[6]";
+		SIGNAL = "ExceptionAddress[20]";
 		INDEX = 220;
 		FORMAT = E;
 		SCALE = 1;
@@ -34893,7 +34893,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[5]";
+		SIGNAL = "ExceptionAddress[19]";
 		INDEX = 221;
 		FORMAT = E;
 		SCALE = 1;
@@ -34901,7 +34901,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[4]";
+		SIGNAL = "ExceptionAddress[18]";
 		INDEX = 222;
 		FORMAT = E;
 		SCALE = 1;
@@ -34909,7 +34909,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[3]";
+		SIGNAL = "ExceptionAddress[17]";
 		INDEX = 223;
 		FORMAT = E;
 		SCALE = 1;
@@ -34917,7 +34917,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[2]";
+		SIGNAL = "ExceptionAddress[16]";
 		INDEX = 224;
 		FORMAT = E;
 		SCALE = 1;
@@ -34925,7 +34925,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[1]";
+		SIGNAL = "ExceptionAddress[15]";
 		INDEX = 225;
 		FORMAT = E;
 		SCALE = 1;
@@ -34933,7 +34933,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr15_0[0]";
+		SIGNAL = "ExceptionAddress[14]";
 		INDEX = 226;
 		FORMAT = E;
 		SCALE = 1;
@@ -34941,15 +34941,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16";
+		SIGNAL = "ExceptionAddress[13]";
 		INDEX = 227;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16[4]";
+		SIGNAL = "ExceptionAddress[12]";
 		INDEX = 228;
 		FORMAT = E;
 		SCALE = 1;
@@ -34957,7 +34957,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16[3]";
+		SIGNAL = "ExceptionAddress[11]";
 		INDEX = 229;
 		FORMAT = E;
 		SCALE = 1;
@@ -34965,7 +34965,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16[2]";
+		SIGNAL = "ExceptionAddress[10]";
 		INDEX = 230;
 		FORMAT = E;
 		SCALE = 1;
@@ -34973,7 +34973,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16[1]";
+		SIGNAL = "ExceptionAddress[9]";
 		INDEX = 231;
 		FORMAT = E;
 		SCALE = 1;
@@ -34981,7 +34981,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr20_16[0]";
+		SIGNAL = "ExceptionAddress[8]";
 		INDEX = 232;
 		FORMAT = E;
 		SCALE = 1;
@@ -34989,15 +34989,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21";
+		SIGNAL = "ExceptionAddress[7]";
 		INDEX = 233;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21[4]";
+		SIGNAL = "ExceptionAddress[6]";
 		INDEX = 234;
 		FORMAT = E;
 		SCALE = 1;
@@ -35005,7 +35005,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21[3]";
+		SIGNAL = "ExceptionAddress[5]";
 		INDEX = 235;
 		FORMAT = E;
 		SCALE = 1;
@@ -35013,7 +35013,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21[2]";
+		SIGNAL = "ExceptionAddress[4]";
 		INDEX = 236;
 		FORMAT = E;
 		SCALE = 1;
@@ -35021,7 +35021,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21[1]";
+		SIGNAL = "ExceptionAddress[3]";
 		INDEX = 237;
 		FORMAT = E;
 		SCALE = 1;
@@ -35029,7 +35029,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr25_21[0]";
+		SIGNAL = "ExceptionAddress[2]";
 		INDEX = 238;
 		FORMAT = E;
 		SCALE = 1;
@@ -35037,15 +35037,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26";
+		SIGNAL = "ExceptionAddress[1]";
 		INDEX = 239;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[5]";
+		SIGNAL = "ExceptionAddress[0]";
 		INDEX = 240;
 		FORMAT = E;
 		SCALE = 1;
@@ -35053,7 +35053,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[4]";
+		SIGNAL = "ExceptionSelector";
 		INDEX = 241;
 		FORMAT = E;
 		SCALE = 1;
@@ -35061,7 +35061,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[3]";
+		SIGNAL = "IRWrite";
 		INDEX = 242;
 		FORMAT = E;
 		SCALE = 1;
@@ -35069,15 +35069,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[2]";
+		SIGNAL = "Instr15_0";
 		INDEX = 243;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[1]";
+		SIGNAL = "Instr15_0[15]";
 		INDEX = 244;
 		FORMAT = E;
 		SCALE = 1;
@@ -35085,7 +35085,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "Instr31_26[0]";
+		SIGNAL = "Instr15_0[14]";
 		INDEX = 245;
 		FORMAT = E;
 		SCALE = 1;
@@ -35093,7 +35093,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "LoadMult";
+		SIGNAL = "Instr15_0[13]";
 		INDEX = 246;
 		FORMAT = E;
 		SCALE = 1;
@@ -35101,7 +35101,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MaiorULA";
+		SIGNAL = "Instr15_0[12]";
 		INDEX = 247;
 		FORMAT = E;
 		SCALE = 1;
@@ -35109,15 +35109,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData";
+		SIGNAL = "Instr15_0[11]";
 		INDEX = 248;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[31]";
+		SIGNAL = "Instr15_0[10]";
 		INDEX = 249;
 		FORMAT = E;
 		SCALE = 1;
@@ -35125,7 +35125,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[30]";
+		SIGNAL = "Instr15_0[9]";
 		INDEX = 250;
 		FORMAT = E;
 		SCALE = 1;
@@ -35133,7 +35133,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[29]";
+		SIGNAL = "Instr15_0[8]";
 		INDEX = 251;
 		FORMAT = E;
 		SCALE = 1;
@@ -35141,7 +35141,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[28]";
+		SIGNAL = "Instr15_0[7]";
 		INDEX = 252;
 		FORMAT = E;
 		SCALE = 1;
@@ -35149,7 +35149,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[27]";
+		SIGNAL = "Instr15_0[6]";
 		INDEX = 253;
 		FORMAT = E;
 		SCALE = 1;
@@ -35157,7 +35157,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[26]";
+		SIGNAL = "Instr15_0[5]";
 		INDEX = 254;
 		FORMAT = E;
 		SCALE = 1;
@@ -35165,7 +35165,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[25]";
+		SIGNAL = "Instr15_0[4]";
 		INDEX = 255;
 		FORMAT = E;
 		SCALE = 1;
@@ -35173,7 +35173,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[24]";
+		SIGNAL = "Instr15_0[3]";
 		INDEX = 256;
 		FORMAT = E;
 		SCALE = 1;
@@ -35181,7 +35181,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[23]";
+		SIGNAL = "Instr15_0[2]";
 		INDEX = 257;
 		FORMAT = E;
 		SCALE = 1;
@@ -35189,7 +35189,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[22]";
+		SIGNAL = "Instr15_0[1]";
 		INDEX = 258;
 		FORMAT = E;
 		SCALE = 1;
@@ -35197,7 +35197,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[21]";
+		SIGNAL = "Instr15_0[0]";
 		INDEX = 259;
 		FORMAT = E;
 		SCALE = 1;
@@ -35205,15 +35205,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[20]";
+		SIGNAL = "Instr20_16";
 		INDEX = 260;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[19]";
+		SIGNAL = "Instr20_16[4]";
 		INDEX = 261;
 		FORMAT = E;
 		SCALE = 1;
@@ -35221,7 +35221,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[18]";
+		SIGNAL = "Instr20_16[3]";
 		INDEX = 262;
 		FORMAT = E;
 		SCALE = 1;
@@ -35229,7 +35229,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[17]";
+		SIGNAL = "Instr20_16[2]";
 		INDEX = 263;
 		FORMAT = E;
 		SCALE = 1;
@@ -35237,7 +35237,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[16]";
+		SIGNAL = "Instr20_16[1]";
 		INDEX = 264;
 		FORMAT = E;
 		SCALE = 1;
@@ -35245,7 +35245,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[15]";
+		SIGNAL = "Instr20_16[0]";
 		INDEX = 265;
 		FORMAT = E;
 		SCALE = 1;
@@ -35253,15 +35253,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[14]";
+		SIGNAL = "Instr25_21";
 		INDEX = 266;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[13]";
+		SIGNAL = "Instr25_21[4]";
 		INDEX = 267;
 		FORMAT = E;
 		SCALE = 1;
@@ -35269,7 +35269,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[12]";
+		SIGNAL = "Instr25_21[3]";
 		INDEX = 268;
 		FORMAT = E;
 		SCALE = 1;
@@ -35277,7 +35277,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[11]";
+		SIGNAL = "Instr25_21[2]";
 		INDEX = 269;
 		FORMAT = E;
 		SCALE = 1;
@@ -35285,7 +35285,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[10]";
+		SIGNAL = "Instr25_21[1]";
 		INDEX = 270;
 		FORMAT = E;
 		SCALE = 1;
@@ -35293,7 +35293,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[9]";
+		SIGNAL = "Instr25_21[0]";
 		INDEX = 271;
 		FORMAT = E;
 		SCALE = 1;
@@ -35301,15 +35301,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[8]";
+		SIGNAL = "Instr31_26";
 		INDEX = 272;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[7]";
+		SIGNAL = "Instr31_26[5]";
 		INDEX = 273;
 		FORMAT = E;
 		SCALE = 1;
@@ -35317,7 +35317,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[6]";
+		SIGNAL = "Instr31_26[4]";
 		INDEX = 274;
 		FORMAT = E;
 		SCALE = 1;
@@ -35325,7 +35325,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[5]";
+		SIGNAL = "Instr31_26[3]";
 		INDEX = 275;
 		FORMAT = E;
 		SCALE = 1;
@@ -35333,7 +35333,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[4]";
+		SIGNAL = "Instr31_26[2]";
 		INDEX = 276;
 		FORMAT = E;
 		SCALE = 1;
@@ -35341,7 +35341,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[3]";
+		SIGNAL = "Instr31_26[1]";
 		INDEX = 277;
 		FORMAT = E;
 		SCALE = 1;
@@ -35349,7 +35349,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[2]";
+		SIGNAL = "Instr31_26[0]";
 		INDEX = 278;
 		FORMAT = E;
 		SCALE = 1;
@@ -35357,7 +35357,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[1]";
+		SIGNAL = "LoadMult";
 		INDEX = 279;
 		FORMAT = E;
 		SCALE = 1;
@@ -35365,23 +35365,23 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemData[0]";
+		SIGNAL = "MDR";
 		INDEX = 280;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "MemParaReg";
-		INDEX = 281;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemParaReg[2]";
+		SIGNAL = "MDR[31]";
+		INDEX = 281;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "MDR[30]";
 		INDEX = 282;
 		FORMAT = E;
 		SCALE = 1;
@@ -35389,7 +35389,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemParaReg[1]";
+		SIGNAL = "MDR[29]";
 		INDEX = 283;
 		FORMAT = E;
 		SCALE = 1;
@@ -35397,7 +35397,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MemParaReg[0]";
+		SIGNAL = "MDR[28]";
 		INDEX = 284;
 		FORMAT = E;
 		SCALE = 1;
@@ -35405,7 +35405,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "MenorULA";
+		SIGNAL = "MDR[27]";
 		INDEX = 285;
 		FORMAT = E;
 		SCALE = 1;
@@ -35413,7 +35413,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "RegWrite";
+		SIGNAL = "MDR[26]";
 		INDEX = 286;
 		FORMAT = E;
 		SCALE = 1;
@@ -35421,15 +35421,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA";
+		SIGNAL = "MDR[25]";
 		INDEX = 287;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[31]";
+		SIGNAL = "MDR[24]";
 		INDEX = 288;
 		FORMAT = E;
 		SCALE = 1;
@@ -35437,7 +35437,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[30]";
+		SIGNAL = "MDR[23]";
 		INDEX = 289;
 		FORMAT = E;
 		SCALE = 1;
@@ -35445,7 +35445,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[29]";
+		SIGNAL = "MDR[22]";
 		INDEX = 290;
 		FORMAT = E;
 		SCALE = 1;
@@ -35453,7 +35453,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[28]";
+		SIGNAL = "MDR[21]";
 		INDEX = 291;
 		FORMAT = E;
 		SCALE = 1;
@@ -35461,7 +35461,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[27]";
+		SIGNAL = "MDR[20]";
 		INDEX = 292;
 		FORMAT = E;
 		SCALE = 1;
@@ -35469,7 +35469,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[26]";
+		SIGNAL = "MDR[19]";
 		INDEX = 293;
 		FORMAT = E;
 		SCALE = 1;
@@ -35477,7 +35477,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[25]";
+		SIGNAL = "MDR[18]";
 		INDEX = 294;
 		FORMAT = E;
 		SCALE = 1;
@@ -35485,7 +35485,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[24]";
+		SIGNAL = "MDR[17]";
 		INDEX = 295;
 		FORMAT = E;
 		SCALE = 1;
@@ -35493,7 +35493,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[23]";
+		SIGNAL = "MDR[16]";
 		INDEX = 296;
 		FORMAT = E;
 		SCALE = 1;
@@ -35501,7 +35501,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[22]";
+		SIGNAL = "MDR[15]";
 		INDEX = 297;
 		FORMAT = E;
 		SCALE = 1;
@@ -35509,7 +35509,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[21]";
+		SIGNAL = "MDR[14]";
 		INDEX = 298;
 		FORMAT = E;
 		SCALE = 1;
@@ -35517,7 +35517,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[20]";
+		SIGNAL = "MDR[13]";
 		INDEX = 299;
 		FORMAT = E;
 		SCALE = 1;
@@ -35525,7 +35525,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[19]";
+		SIGNAL = "MDR[12]";
 		INDEX = 300;
 		FORMAT = E;
 		SCALE = 1;
@@ -35533,7 +35533,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[18]";
+		SIGNAL = "MDR[11]";
 		INDEX = 301;
 		FORMAT = E;
 		SCALE = 1;
@@ -35541,7 +35541,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[17]";
+		SIGNAL = "MDR[10]";
 		INDEX = 302;
 		FORMAT = E;
 		SCALE = 1;
@@ -35549,7 +35549,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[16]";
+		SIGNAL = "MDR[9]";
 		INDEX = 303;
 		FORMAT = E;
 		SCALE = 1;
@@ -35557,7 +35557,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[15]";
+		SIGNAL = "MDR[8]";
 		INDEX = 304;
 		FORMAT = E;
 		SCALE = 1;
@@ -35565,7 +35565,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[14]";
+		SIGNAL = "MDR[7]";
 		INDEX = 305;
 		FORMAT = E;
 		SCALE = 1;
@@ -35573,7 +35573,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[13]";
+		SIGNAL = "MDR[6]";
 		INDEX = 306;
 		FORMAT = E;
 		SCALE = 1;
@@ -35581,7 +35581,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[12]";
+		SIGNAL = "MDR[5]";
 		INDEX = 307;
 		FORMAT = E;
 		SCALE = 1;
@@ -35589,7 +35589,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[11]";
+		SIGNAL = "MDR[4]";
 		INDEX = 308;
 		FORMAT = E;
 		SCALE = 1;
@@ -35597,7 +35597,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[10]";
+		SIGNAL = "MDR[3]";
 		INDEX = 309;
 		FORMAT = E;
 		SCALE = 1;
@@ -35605,7 +35605,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[9]";
+		SIGNAL = "MDR[2]";
 		INDEX = 310;
 		FORMAT = E;
 		SCALE = 1;
@@ -35613,7 +35613,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[8]";
+		SIGNAL = "MDR[1]";
 		INDEX = 311;
 		FORMAT = E;
 		SCALE = 1;
@@ -35621,7 +35621,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[7]";
+		SIGNAL = "MDR[0]";
 		INDEX = 312;
 		FORMAT = E;
 		SCALE = 1;
@@ -35629,7 +35629,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[6]";
+		SIGNAL = "MaiorULA";
 		INDEX = 313;
 		FORMAT = E;
 		SCALE = 1;
@@ -35637,15 +35637,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[5]";
+		SIGNAL = "MemData";
 		INDEX = 314;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[4]";
+		SIGNAL = "MemData[31]";
 		INDEX = 315;
 		FORMAT = E;
 		SCALE = 1;
@@ -35653,7 +35653,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[3]";
+		SIGNAL = "MemData[30]";
 		INDEX = 316;
 		FORMAT = E;
 		SCALE = 1;
@@ -35661,7 +35661,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[2]";
+		SIGNAL = "MemData[29]";
 		INDEX = 317;
 		FORMAT = E;
 		SCALE = 1;
@@ -35669,7 +35669,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[1]";
+		SIGNAL = "MemData[28]";
 		INDEX = 318;
 		FORMAT = E;
 		SCALE = 1;
@@ -35677,7 +35677,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "SaidaA[0]";
+		SIGNAL = "MemData[27]";
 		INDEX = 319;
 		FORMAT = E;
 		SCALE = 1;
@@ -35685,15 +35685,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem";
+		SIGNAL = "MemData[26]";
 		INDEX = 320;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[31]";
+		SIGNAL = "MemData[25]";
 		INDEX = 321;
 		FORMAT = E;
 		SCALE = 1;
@@ -35701,7 +35701,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[30]";
+		SIGNAL = "MemData[24]";
 		INDEX = 322;
 		FORMAT = E;
 		SCALE = 1;
@@ -35709,7 +35709,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[29]";
+		SIGNAL = "MemData[23]";
 		INDEX = 323;
 		FORMAT = E;
 		SCALE = 1;
@@ -35717,7 +35717,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[28]";
+		SIGNAL = "MemData[22]";
 		INDEX = 324;
 		FORMAT = E;
 		SCALE = 1;
@@ -35725,7 +35725,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[27]";
+		SIGNAL = "MemData[21]";
 		INDEX = 325;
 		FORMAT = E;
 		SCALE = 1;
@@ -35733,7 +35733,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[26]";
+		SIGNAL = "MemData[20]";
 		INDEX = 326;
 		FORMAT = E;
 		SCALE = 1;
@@ -35741,7 +35741,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[25]";
+		SIGNAL = "MemData[19]";
 		INDEX = 327;
 		FORMAT = E;
 		SCALE = 1;
@@ -35749,7 +35749,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[24]";
+		SIGNAL = "MemData[18]";
 		INDEX = 328;
 		FORMAT = E;
 		SCALE = 1;
@@ -35757,7 +35757,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[23]";
+		SIGNAL = "MemData[17]";
 		INDEX = 329;
 		FORMAT = E;
 		SCALE = 1;
@@ -35765,7 +35765,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[22]";
+		SIGNAL = "MemData[16]";
 		INDEX = 330;
 		FORMAT = E;
 		SCALE = 1;
@@ -35773,7 +35773,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[21]";
+		SIGNAL = "MemData[15]";
 		INDEX = 331;
 		FORMAT = E;
 		SCALE = 1;
@@ -35781,7 +35781,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[20]";
+		SIGNAL = "MemData[14]";
 		INDEX = 332;
 		FORMAT = E;
 		SCALE = 1;
@@ -35789,7 +35789,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[19]";
+		SIGNAL = "MemData[13]";
 		INDEX = 333;
 		FORMAT = E;
 		SCALE = 1;
@@ -35797,7 +35797,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[18]";
+		SIGNAL = "MemData[12]";
 		INDEX = 334;
 		FORMAT = E;
 		SCALE = 1;
@@ -35805,7 +35805,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[17]";
+		SIGNAL = "MemData[11]";
 		INDEX = 335;
 		FORMAT = E;
 		SCALE = 1;
@@ -35813,7 +35813,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[16]";
+		SIGNAL = "MemData[10]";
 		INDEX = 336;
 		FORMAT = E;
 		SCALE = 1;
@@ -35821,7 +35821,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[15]";
+		SIGNAL = "MemData[9]";
 		INDEX = 337;
 		FORMAT = E;
 		SCALE = 1;
@@ -35829,7 +35829,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[14]";
+		SIGNAL = "MemData[8]";
 		INDEX = 338;
 		FORMAT = E;
 		SCALE = 1;
@@ -35837,7 +35837,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[13]";
+		SIGNAL = "MemData[7]";
 		INDEX = 339;
 		FORMAT = E;
 		SCALE = 1;
@@ -35845,7 +35845,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[12]";
+		SIGNAL = "MemData[6]";
 		INDEX = 340;
 		FORMAT = E;
 		SCALE = 1;
@@ -35853,7 +35853,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[11]";
+		SIGNAL = "MemData[5]";
 		INDEX = 341;
 		FORMAT = E;
 		SCALE = 1;
@@ -35861,7 +35861,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[10]";
+		SIGNAL = "MemData[4]";
 		INDEX = 342;
 		FORMAT = E;
 		SCALE = 1;
@@ -35869,7 +35869,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[9]";
+		SIGNAL = "MemData[3]";
 		INDEX = 343;
 		FORMAT = E;
 		SCALE = 1;
@@ -35877,7 +35877,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[8]";
+		SIGNAL = "MemData[2]";
 		INDEX = 344;
 		FORMAT = E;
 		SCALE = 1;
@@ -35885,7 +35885,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[7]";
+		SIGNAL = "MemData[1]";
 		INDEX = 345;
 		FORMAT = E;
 		SCALE = 1;
@@ -35893,7 +35893,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[6]";
+		SIGNAL = "MemData[0]";
 		INDEX = 346;
 		FORMAT = E;
 		SCALE = 1;
@@ -35901,15 +35901,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[5]";
+		SIGNAL = "MemParaReg";
 		INDEX = 347;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[4]";
+		SIGNAL = "MemParaReg[2]";
 		INDEX = 348;
 		FORMAT = E;
 		SCALE = 1;
@@ -35917,7 +35917,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[3]";
+		SIGNAL = "MemParaReg[1]";
 		INDEX = 349;
 		FORMAT = E;
 		SCALE = 1;
@@ -35925,7 +35925,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[2]";
+		SIGNAL = "MemParaReg[0]";
 		INDEX = 350;
 		FORMAT = E;
 		SCALE = 1;
@@ -35933,7 +35933,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[1]";
+		SIGNAL = "MenorULA";
 		INDEX = 351;
 		FORMAT = E;
 		SCALE = 1;
@@ -35941,7 +35941,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataMem[0]";
+		SIGNAL = "RegWrite";
 		INDEX = 352;
 		FORMAT = E;
 		SCALE = 1;
@@ -35949,7 +35949,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg";
+		SIGNAL = "SaidaA";
 		INDEX = 353;
 		FORMAT = T;
 		SCALE = 1;
@@ -35957,7 +35957,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[31]";
+		SIGNAL = "SaidaA[31]";
 		INDEX = 354;
 		FORMAT = E;
 		SCALE = 1;
@@ -35965,7 +35965,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[30]";
+		SIGNAL = "SaidaA[30]";
 		INDEX = 355;
 		FORMAT = E;
 		SCALE = 1;
@@ -35973,7 +35973,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[29]";
+		SIGNAL = "SaidaA[29]";
 		INDEX = 356;
 		FORMAT = E;
 		SCALE = 1;
@@ -35981,7 +35981,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[28]";
+		SIGNAL = "SaidaA[28]";
 		INDEX = 357;
 		FORMAT = E;
 		SCALE = 1;
@@ -35989,7 +35989,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[27]";
+		SIGNAL = "SaidaA[27]";
 		INDEX = 358;
 		FORMAT = E;
 		SCALE = 1;
@@ -35997,7 +35997,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[26]";
+		SIGNAL = "SaidaA[26]";
 		INDEX = 359;
 		FORMAT = E;
 		SCALE = 1;
@@ -36005,7 +36005,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[25]";
+		SIGNAL = "SaidaA[25]";
 		INDEX = 360;
 		FORMAT = E;
 		SCALE = 1;
@@ -36013,7 +36013,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[24]";
+		SIGNAL = "SaidaA[24]";
 		INDEX = 361;
 		FORMAT = E;
 		SCALE = 1;
@@ -36021,7 +36021,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[23]";
+		SIGNAL = "SaidaA[23]";
 		INDEX = 362;
 		FORMAT = E;
 		SCALE = 1;
@@ -36029,7 +36029,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[22]";
+		SIGNAL = "SaidaA[22]";
 		INDEX = 363;
 		FORMAT = E;
 		SCALE = 1;
@@ -36037,7 +36037,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[21]";
+		SIGNAL = "SaidaA[21]";
 		INDEX = 364;
 		FORMAT = E;
 		SCALE = 1;
@@ -36045,7 +36045,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[20]";
+		SIGNAL = "SaidaA[20]";
 		INDEX = 365;
 		FORMAT = E;
 		SCALE = 1;
@@ -36053,7 +36053,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[19]";
+		SIGNAL = "SaidaA[19]";
 		INDEX = 366;
 		FORMAT = E;
 		SCALE = 1;
@@ -36061,7 +36061,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[18]";
+		SIGNAL = "SaidaA[18]";
 		INDEX = 367;
 		FORMAT = E;
 		SCALE = 1;
@@ -36069,7 +36069,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[17]";
+		SIGNAL = "SaidaA[17]";
 		INDEX = 368;
 		FORMAT = E;
 		SCALE = 1;
@@ -36077,7 +36077,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[16]";
+		SIGNAL = "SaidaA[16]";
 		INDEX = 369;
 		FORMAT = E;
 		SCALE = 1;
@@ -36085,7 +36085,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[15]";
+		SIGNAL = "SaidaA[15]";
 		INDEX = 370;
 		FORMAT = E;
 		SCALE = 1;
@@ -36093,7 +36093,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[14]";
+		SIGNAL = "SaidaA[14]";
 		INDEX = 371;
 		FORMAT = E;
 		SCALE = 1;
@@ -36101,7 +36101,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[13]";
+		SIGNAL = "SaidaA[13]";
 		INDEX = 372;
 		FORMAT = E;
 		SCALE = 1;
@@ -36109,7 +36109,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[12]";
+		SIGNAL = "SaidaA[12]";
 		INDEX = 373;
 		FORMAT = E;
 		SCALE = 1;
@@ -36117,7 +36117,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[11]";
+		SIGNAL = "SaidaA[11]";
 		INDEX = 374;
 		FORMAT = E;
 		SCALE = 1;
@@ -36125,7 +36125,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[10]";
+		SIGNAL = "SaidaA[10]";
 		INDEX = 375;
 		FORMAT = E;
 		SCALE = 1;
@@ -36133,7 +36133,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[9]";
+		SIGNAL = "SaidaA[9]";
 		INDEX = 376;
 		FORMAT = E;
 		SCALE = 1;
@@ -36141,7 +36141,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[8]";
+		SIGNAL = "SaidaA[8]";
 		INDEX = 377;
 		FORMAT = E;
 		SCALE = 1;
@@ -36149,7 +36149,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[7]";
+		SIGNAL = "SaidaA[7]";
 		INDEX = 378;
 		FORMAT = E;
 		SCALE = 1;
@@ -36157,7 +36157,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[6]";
+		SIGNAL = "SaidaA[6]";
 		INDEX = 379;
 		FORMAT = E;
 		SCALE = 1;
@@ -36165,7 +36165,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[5]";
+		SIGNAL = "SaidaA[5]";
 		INDEX = 380;
 		FORMAT = E;
 		SCALE = 1;
@@ -36173,7 +36173,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[4]";
+		SIGNAL = "SaidaA[4]";
 		INDEX = 381;
 		FORMAT = E;
 		SCALE = 1;
@@ -36181,7 +36181,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[3]";
+		SIGNAL = "SaidaA[3]";
 		INDEX = 382;
 		FORMAT = E;
 		SCALE = 1;
@@ -36189,7 +36189,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[2]";
+		SIGNAL = "SaidaA[2]";
 		INDEX = 383;
 		FORMAT = E;
 		SCALE = 1;
@@ -36197,7 +36197,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[1]";
+		SIGNAL = "SaidaA[1]";
 		INDEX = 384;
 		FORMAT = E;
 		SCALE = 1;
@@ -36205,7 +36205,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteDataReg[0]";
+		SIGNAL = "SaidaA[0]";
 		INDEX = 385;
 		FORMAT = E;
 		SCALE = 1;
@@ -36213,7 +36213,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister";
+		SIGNAL = "WriteDataMem";
 		INDEX = 386;
 		FORMAT = T;
 		SCALE = 1;
@@ -36221,7 +36221,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister[4]";
+		SIGNAL = "WriteDataMem[31]";
 		INDEX = 387;
 		FORMAT = E;
 		SCALE = 1;
@@ -36229,7 +36229,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister[3]";
+		SIGNAL = "WriteDataMem[30]";
 		INDEX = 388;
 		FORMAT = E;
 		SCALE = 1;
@@ -36237,7 +36237,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister[2]";
+		SIGNAL = "WriteDataMem[29]";
 		INDEX = 389;
 		FORMAT = E;
 		SCALE = 1;
@@ -36245,7 +36245,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister[1]";
+		SIGNAL = "WriteDataMem[28]";
 		INDEX = 390;
 		FORMAT = E;
 		SCALE = 1;
@@ -36253,7 +36253,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "WriteRegister[0]";
+		SIGNAL = "WriteDataMem[27]";
 		INDEX = 391;
 		FORMAT = E;
 		SCALE = 1;
@@ -36261,15 +36261,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult";
+		SIGNAL = "WriteDataMem[26]";
 		INDEX = 392;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult[4]";
+		SIGNAL = "WriteDataMem[25]";
 		INDEX = 393;
 		FORMAT = E;
 		SCALE = 1;
@@ -36277,7 +36277,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult[3]";
+		SIGNAL = "WriteDataMem[24]";
 		INDEX = 394;
 		FORMAT = E;
 		SCALE = 1;
@@ -36285,7 +36285,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult[2]";
+		SIGNAL = "WriteDataMem[23]";
 		INDEX = 395;
 		FORMAT = E;
 		SCALE = 1;
@@ -36293,7 +36293,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult[1]";
+		SIGNAL = "WriteDataMem[22]";
 		INDEX = 396;
 		FORMAT = E;
 		SCALE = 1;
@@ -36301,7 +36301,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "contador_mult[0]";
+		SIGNAL = "WriteDataMem[21]";
 		INDEX = 397;
 		FORMAT = E;
 		SCALE = 1;
@@ -36309,15 +36309,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift";
+		SIGNAL = "WriteDataMem[20]";
 		INDEX = 398;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[31]";
+		SIGNAL = "WriteDataMem[19]";
 		INDEX = 399;
 		FORMAT = E;
 		SCALE = 1;
@@ -36325,7 +36325,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[30]";
+		SIGNAL = "WriteDataMem[18]";
 		INDEX = 400;
 		FORMAT = E;
 		SCALE = 1;
@@ -36333,7 +36333,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[29]";
+		SIGNAL = "WriteDataMem[17]";
 		INDEX = 401;
 		FORMAT = E;
 		SCALE = 1;
@@ -36341,7 +36341,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[28]";
+		SIGNAL = "WriteDataMem[16]";
 		INDEX = 402;
 		FORMAT = E;
 		SCALE = 1;
@@ -36349,7 +36349,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[27]";
+		SIGNAL = "WriteDataMem[15]";
 		INDEX = 403;
 		FORMAT = E;
 		SCALE = 1;
@@ -36357,7 +36357,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[26]";
+		SIGNAL = "WriteDataMem[14]";
 		INDEX = 404;
 		FORMAT = E;
 		SCALE = 1;
@@ -36365,7 +36365,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[25]";
+		SIGNAL = "WriteDataMem[13]";
 		INDEX = 405;
 		FORMAT = E;
 		SCALE = 1;
@@ -36373,7 +36373,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[24]";
+		SIGNAL = "WriteDataMem[12]";
 		INDEX = 406;
 		FORMAT = E;
 		SCALE = 1;
@@ -36381,7 +36381,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[23]";
+		SIGNAL = "WriteDataMem[11]";
 		INDEX = 407;
 		FORMAT = E;
 		SCALE = 1;
@@ -36389,7 +36389,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[22]";
+		SIGNAL = "WriteDataMem[10]";
 		INDEX = 408;
 		FORMAT = E;
 		SCALE = 1;
@@ -36397,7 +36397,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[21]";
+		SIGNAL = "WriteDataMem[9]";
 		INDEX = 409;
 		FORMAT = E;
 		SCALE = 1;
@@ -36405,7 +36405,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[20]";
+		SIGNAL = "WriteDataMem[8]";
 		INDEX = 410;
 		FORMAT = E;
 		SCALE = 1;
@@ -36413,7 +36413,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[19]";
+		SIGNAL = "WriteDataMem[7]";
 		INDEX = 411;
 		FORMAT = E;
 		SCALE = 1;
@@ -36421,7 +36421,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[18]";
+		SIGNAL = "WriteDataMem[6]";
 		INDEX = 412;
 		FORMAT = E;
 		SCALE = 1;
@@ -36429,7 +36429,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[17]";
+		SIGNAL = "WriteDataMem[5]";
 		INDEX = 413;
 		FORMAT = E;
 		SCALE = 1;
@@ -36437,7 +36437,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[16]";
+		SIGNAL = "WriteDataMem[4]";
 		INDEX = 414;
 		FORMAT = E;
 		SCALE = 1;
@@ -36445,7 +36445,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[15]";
+		SIGNAL = "WriteDataMem[3]";
 		INDEX = 415;
 		FORMAT = E;
 		SCALE = 1;
@@ -36453,7 +36453,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[14]";
+		SIGNAL = "WriteDataMem[2]";
 		INDEX = 416;
 		FORMAT = E;
 		SCALE = 1;
@@ -36461,7 +36461,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[13]";
+		SIGNAL = "WriteDataMem[1]";
 		INDEX = 417;
 		FORMAT = E;
 		SCALE = 1;
@@ -36469,7 +36469,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[12]";
+		SIGNAL = "WriteDataMem[0]";
 		INDEX = 418;
 		FORMAT = E;
 		SCALE = 1;
@@ -36477,15 +36477,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[11]";
+		SIGNAL = "WriteDataReg";
 		INDEX = 419;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[10]";
+		SIGNAL = "WriteDataReg[31]";
 		INDEX = 420;
 		FORMAT = E;
 		SCALE = 1;
@@ -36493,7 +36493,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[9]";
+		SIGNAL = "WriteDataReg[30]";
 		INDEX = 421;
 		FORMAT = E;
 		SCALE = 1;
@@ -36501,7 +36501,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[8]";
+		SIGNAL = "WriteDataReg[29]";
 		INDEX = 422;
 		FORMAT = E;
 		SCALE = 1;
@@ -36509,7 +36509,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[7]";
+		SIGNAL = "WriteDataReg[28]";
 		INDEX = 423;
 		FORMAT = E;
 		SCALE = 1;
@@ -36517,7 +36517,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[6]";
+		SIGNAL = "WriteDataReg[27]";
 		INDEX = 424;
 		FORMAT = E;
 		SCALE = 1;
@@ -36525,7 +36525,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[5]";
+		SIGNAL = "WriteDataReg[26]";
 		INDEX = 425;
 		FORMAT = E;
 		SCALE = 1;
@@ -36533,7 +36533,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[4]";
+		SIGNAL = "WriteDataReg[25]";
 		INDEX = 426;
 		FORMAT = E;
 		SCALE = 1;
@@ -36541,7 +36541,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[3]";
+		SIGNAL = "WriteDataReg[24]";
 		INDEX = 427;
 		FORMAT = E;
 		SCALE = 1;
@@ -36549,7 +36549,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[2]";
+		SIGNAL = "WriteDataReg[23]";
 		INDEX = 428;
 		FORMAT = E;
 		SCALE = 1;
@@ -36557,7 +36557,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[1]";
+		SIGNAL = "WriteDataReg[22]";
 		INDEX = 429;
 		FORMAT = E;
 		SCALE = 1;
@@ -36565,7 +36565,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "extensorEShift[0]";
+		SIGNAL = "WriteDataReg[21]";
 		INDEX = 430;
 		FORMAT = E;
 		SCALE = 1;
@@ -36573,15 +36573,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high";
+		SIGNAL = "WriteDataReg[20]";
 		INDEX = 431;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[31]";
+		SIGNAL = "WriteDataReg[19]";
 		INDEX = 432;
 		FORMAT = E;
 		SCALE = 1;
@@ -36589,7 +36589,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[30]";
+		SIGNAL = "WriteDataReg[18]";
 		INDEX = 433;
 		FORMAT = E;
 		SCALE = 1;
@@ -36597,7 +36597,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[29]";
+		SIGNAL = "WriteDataReg[17]";
 		INDEX = 434;
 		FORMAT = E;
 		SCALE = 1;
@@ -36605,7 +36605,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[28]";
+		SIGNAL = "WriteDataReg[16]";
 		INDEX = 435;
 		FORMAT = E;
 		SCALE = 1;
@@ -36613,7 +36613,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[27]";
+		SIGNAL = "WriteDataReg[15]";
 		INDEX = 436;
 		FORMAT = E;
 		SCALE = 1;
@@ -36621,7 +36621,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[26]";
+		SIGNAL = "WriteDataReg[14]";
 		INDEX = 437;
 		FORMAT = E;
 		SCALE = 1;
@@ -36629,7 +36629,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[25]";
+		SIGNAL = "WriteDataReg[13]";
 		INDEX = 438;
 		FORMAT = E;
 		SCALE = 1;
@@ -36637,7 +36637,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[24]";
+		SIGNAL = "WriteDataReg[12]";
 		INDEX = 439;
 		FORMAT = E;
 		SCALE = 1;
@@ -36645,7 +36645,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[23]";
+		SIGNAL = "WriteDataReg[11]";
 		INDEX = 440;
 		FORMAT = E;
 		SCALE = 1;
@@ -36653,7 +36653,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[22]";
+		SIGNAL = "WriteDataReg[10]";
 		INDEX = 441;
 		FORMAT = E;
 		SCALE = 1;
@@ -36661,7 +36661,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[21]";
+		SIGNAL = "WriteDataReg[9]";
 		INDEX = 442;
 		FORMAT = E;
 		SCALE = 1;
@@ -36669,7 +36669,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[20]";
+		SIGNAL = "WriteDataReg[8]";
 		INDEX = 443;
 		FORMAT = E;
 		SCALE = 1;
@@ -36677,7 +36677,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[19]";
+		SIGNAL = "WriteDataReg[7]";
 		INDEX = 444;
 		FORMAT = E;
 		SCALE = 1;
@@ -36685,7 +36685,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[18]";
+		SIGNAL = "WriteDataReg[6]";
 		INDEX = 445;
 		FORMAT = E;
 		SCALE = 1;
@@ -36693,7 +36693,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[17]";
+		SIGNAL = "WriteDataReg[5]";
 		INDEX = 446;
 		FORMAT = E;
 		SCALE = 1;
@@ -36701,7 +36701,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[16]";
+		SIGNAL = "WriteDataReg[4]";
 		INDEX = 447;
 		FORMAT = E;
 		SCALE = 1;
@@ -36709,7 +36709,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[15]";
+		SIGNAL = "WriteDataReg[3]";
 		INDEX = 448;
 		FORMAT = E;
 		SCALE = 1;
@@ -36717,7 +36717,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[14]";
+		SIGNAL = "WriteDataReg[2]";
 		INDEX = 449;
 		FORMAT = E;
 		SCALE = 1;
@@ -36725,7 +36725,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[13]";
+		SIGNAL = "WriteDataReg[1]";
 		INDEX = 450;
 		FORMAT = E;
 		SCALE = 1;
@@ -36733,7 +36733,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[12]";
+		SIGNAL = "WriteDataReg[0]";
 		INDEX = 451;
 		FORMAT = E;
 		SCALE = 1;
@@ -36741,15 +36741,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[11]";
+		SIGNAL = "WriteRegister";
 		INDEX = 452;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[10]";
+		SIGNAL = "WriteRegister[4]";
 		INDEX = 453;
 		FORMAT = E;
 		SCALE = 1;
@@ -36757,7 +36757,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[9]";
+		SIGNAL = "WriteRegister[3]";
 		INDEX = 454;
 		FORMAT = E;
 		SCALE = 1;
@@ -36765,7 +36765,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[8]";
+		SIGNAL = "WriteRegister[2]";
 		INDEX = 455;
 		FORMAT = E;
 		SCALE = 1;
@@ -36773,7 +36773,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[7]";
+		SIGNAL = "WriteRegister[1]";
 		INDEX = 456;
 		FORMAT = E;
 		SCALE = 1;
@@ -36781,7 +36781,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[6]";
+		SIGNAL = "WriteRegister[0]";
 		INDEX = 457;
 		FORMAT = E;
 		SCALE = 1;
@@ -36789,15 +36789,15 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[5]";
+		SIGNAL = "contador_mult";
 		INDEX = 458;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[4]";
+		SIGNAL = "contador_mult[4]";
 		INDEX = 459;
 		FORMAT = E;
 		SCALE = 1;
@@ -36805,7 +36805,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[3]";
+		SIGNAL = "contador_mult[3]";
 		INDEX = 460;
 		FORMAT = E;
 		SCALE = 1;
@@ -36813,7 +36813,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[2]";
+		SIGNAL = "contador_mult[2]";
 		INDEX = 461;
 		FORMAT = E;
 		SCALE = 1;
@@ -36821,7 +36821,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[1]";
+		SIGNAL = "contador_mult[1]";
 		INDEX = 462;
 		FORMAT = E;
 		SCALE = 1;
@@ -36829,7 +36829,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_high[0]";
+		SIGNAL = "contador_mult[0]";
 		INDEX = 463;
 		FORMAT = E;
 		SCALE = 1;
@@ -36837,7 +36837,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low";
+		SIGNAL = "extensorEShift";
 		INDEX = 464;
 		FORMAT = T;
 		SCALE = 1;
@@ -36845,7 +36845,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[31]";
+		SIGNAL = "extensorEShift[31]";
 		INDEX = 465;
 		FORMAT = E;
 		SCALE = 1;
@@ -36853,7 +36853,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[30]";
+		SIGNAL = "extensorEShift[30]";
 		INDEX = 466;
 		FORMAT = E;
 		SCALE = 1;
@@ -36861,7 +36861,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[29]";
+		SIGNAL = "extensorEShift[29]";
 		INDEX = 467;
 		FORMAT = E;
 		SCALE = 1;
@@ -36869,7 +36869,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[28]";
+		SIGNAL = "extensorEShift[28]";
 		INDEX = 468;
 		FORMAT = E;
 		SCALE = 1;
@@ -36877,7 +36877,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[27]";
+		SIGNAL = "extensorEShift[27]";
 		INDEX = 469;
 		FORMAT = E;
 		SCALE = 1;
@@ -36885,7 +36885,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[26]";
+		SIGNAL = "extensorEShift[26]";
 		INDEX = 470;
 		FORMAT = E;
 		SCALE = 1;
@@ -36893,7 +36893,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[25]";
+		SIGNAL = "extensorEShift[25]";
 		INDEX = 471;
 		FORMAT = E;
 		SCALE = 1;
@@ -36901,7 +36901,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[24]";
+		SIGNAL = "extensorEShift[24]";
 		INDEX = 472;
 		FORMAT = E;
 		SCALE = 1;
@@ -36909,7 +36909,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[23]";
+		SIGNAL = "extensorEShift[23]";
 		INDEX = 473;
 		FORMAT = E;
 		SCALE = 1;
@@ -36917,7 +36917,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[22]";
+		SIGNAL = "extensorEShift[22]";
 		INDEX = 474;
 		FORMAT = E;
 		SCALE = 1;
@@ -36925,7 +36925,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[21]";
+		SIGNAL = "extensorEShift[21]";
 		INDEX = 475;
 		FORMAT = E;
 		SCALE = 1;
@@ -36933,7 +36933,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[20]";
+		SIGNAL = "extensorEShift[20]";
 		INDEX = 476;
 		FORMAT = E;
 		SCALE = 1;
@@ -36941,7 +36941,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[19]";
+		SIGNAL = "extensorEShift[19]";
 		INDEX = 477;
 		FORMAT = E;
 		SCALE = 1;
@@ -36949,7 +36949,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[18]";
+		SIGNAL = "extensorEShift[18]";
 		INDEX = 478;
 		FORMAT = E;
 		SCALE = 1;
@@ -36957,7 +36957,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[17]";
+		SIGNAL = "extensorEShift[17]";
 		INDEX = 479;
 		FORMAT = E;
 		SCALE = 1;
@@ -36965,7 +36965,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[16]";
+		SIGNAL = "extensorEShift[16]";
 		INDEX = 480;
 		FORMAT = E;
 		SCALE = 1;
@@ -36973,7 +36973,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[15]";
+		SIGNAL = "extensorEShift[15]";
 		INDEX = 481;
 		FORMAT = E;
 		SCALE = 1;
@@ -36981,7 +36981,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[14]";
+		SIGNAL = "extensorEShift[14]";
 		INDEX = 482;
 		FORMAT = E;
 		SCALE = 1;
@@ -36989,7 +36989,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[13]";
+		SIGNAL = "extensorEShift[13]";
 		INDEX = 483;
 		FORMAT = E;
 		SCALE = 1;
@@ -36997,7 +36997,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[12]";
+		SIGNAL = "extensorEShift[12]";
 		INDEX = 484;
 		FORMAT = E;
 		SCALE = 1;
@@ -37005,7 +37005,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[11]";
+		SIGNAL = "extensorEShift[11]";
 		INDEX = 485;
 		FORMAT = E;
 		SCALE = 1;
@@ -37013,7 +37013,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[10]";
+		SIGNAL = "extensorEShift[10]";
 		INDEX = 486;
 		FORMAT = E;
 		SCALE = 1;
@@ -37021,7 +37021,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[9]";
+		SIGNAL = "extensorEShift[9]";
 		INDEX = 487;
 		FORMAT = E;
 		SCALE = 1;
@@ -37029,7 +37029,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[8]";
+		SIGNAL = "extensorEShift[8]";
 		INDEX = 488;
 		FORMAT = E;
 		SCALE = 1;
@@ -37037,7 +37037,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[7]";
+		SIGNAL = "extensorEShift[7]";
 		INDEX = 489;
 		FORMAT = E;
 		SCALE = 1;
@@ -37045,7 +37045,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[6]";
+		SIGNAL = "extensorEShift[6]";
 		INDEX = 490;
 		FORMAT = E;
 		SCALE = 1;
@@ -37053,7 +37053,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[5]";
+		SIGNAL = "extensorEShift[5]";
 		INDEX = 491;
 		FORMAT = E;
 		SCALE = 1;
@@ -37061,7 +37061,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[4]";
+		SIGNAL = "extensorEShift[4]";
 		INDEX = 492;
 		FORMAT = E;
 		SCALE = 1;
@@ -37069,7 +37069,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[3]";
+		SIGNAL = "extensorEShift[3]";
 		INDEX = 493;
 		FORMAT = E;
 		SCALE = 1;
@@ -37077,7 +37077,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[2]";
+		SIGNAL = "extensorEShift[2]";
 		INDEX = 494;
 		FORMAT = E;
 		SCALE = 1;
@@ -37085,7 +37085,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[1]";
+		SIGNAL = "extensorEShift[1]";
 		INDEX = 495;
 		FORMAT = E;
 		SCALE = 1;
@@ -37093,7 +37093,7 @@ VECTOR("C:/Users/sgfl/Desktop/HardwareProject_MIPS/projeto/waveform1.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "mult_low[0]";
+		SIGNAL = "extensorEShift[0]";
 		INDEX = 496;
 		FORMAT = E;
 		SCALE = 1;

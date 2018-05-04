@@ -13,7 +13,7 @@ module cpu(input clock, reset,
   output logic [2:0] MemParaReg,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
-  output logic [31:0] SaidaA, mult_high, mult_low,
+  output logic [31:0] SaidaA, MDR, EPCOut,
   output logic [4:0] contador_mult,
   output logic MenorULA, MaiorULA
   );
@@ -21,7 +21,7 @@ module cpu(input clock, reset,
   
 	// multiplicador:
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;	
-    logic[31:0] extensor32bits, Address, MDR, EPCOut; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
+    logic[31:0] extensor32bits, Address ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	

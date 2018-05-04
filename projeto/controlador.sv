@@ -98,7 +98,8 @@ enum logic [6:0] {
   
   TratamentoExcecaoEspera1 = 7'd95,
   TratamentoExcecaoEspera2 = 7'd96,
-  TratamentoExcecaoFinish = 7'd97
+  TratamentoExcecaoMDRLoad = 7'd97,
+  TratamentoExcecaoFinish = 7'd98
   
    /* continua */} nextState;
   
@@ -1061,16 +1062,45 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
-			WordouHWouByte = 2'b00;
+			WordouHWouByte = 2'b10;
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
-			
 			
 			nextState <= TratamentoExcecaoEspera2;
 		end
 		
 		TratamentoExcecaoEspera2: begin 
+			FontePC = 3'b000;
+			PCEsc = 1'b0;
+			CtrMem = 1'b0; // *
+			IREsc = 1'b0;
+			ULAOp = 3'b11;
+			RegWrite = 1'b0;
+			RegDst = 1'b0;
+			ULAFonteA = 1'b0;
+			ULAFonteB = 2'b00;
+			MemParaReg = 3'b00;
+			IouD = 1'b0;
+			RegACtrl = 1'b0;
+			RegBCtrl = 1'b0;
+			ULASaidaCtrl = 1'b0;
+			MDRCtrl = 1'b0;
+			PCEscCond = 1'b0;
+			PCEscCondBNE = 1'b0;
+			resetRegA = 1'b0;
+			ShiftControl = 3'b000;
+			NumShiftCtrl = 2'b00;
+			CtrlMuxDeslocamento = 1'b0;
+			WordouHWouByte = 2'b10;
+			LoadMult = 1'b0;
+			ExceptionSelector = 1'b0;
+			LoadEPC = 1'b0;
+			
+			nextState <= TratamentoExcecaoMDRLoad;
+		end
+		
+		TratamentoExcecaoMDRLoad: begin
 			FontePC = 3'b000;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; // *
@@ -1092,7 +1122,7 @@ always_comb begin
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
-			WordouHWouByte = 2'b00;
+			WordouHWouByte = 2'b10;
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
@@ -1102,7 +1132,7 @@ always_comb begin
 		
 		TratamentoExcecaoFinish: begin 
 			FontePC = 3'b101;
-			PCEsc = 1'b0;
+			PCEsc = 1'b1;
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b11;
@@ -1129,6 +1159,8 @@ always_comb begin
 			
 			nextState <= BuscaMem;
 		end
+		
+		
 		
 		
 		SLTI: begin 
