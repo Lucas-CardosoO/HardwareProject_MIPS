@@ -1,28 +1,24 @@
 module cpu(input clock, reset,
-  output logic [31:0] Alu, MemData, WriteDataMem, WriteDataReg, AluOut, PC,
+  output logic [31:0] Alu, MemData, WriteDataReg, AluOut, PC,
   output logic [4:0] WriteRegister,
   output logic wr, RegWrite, IRWrite, IouD,
-  output logic[6:0] Estado,
+  output logic [6:0] Estado,
   output logic [31:0]EntradaULA1, EntradaULA2,
- 
-  output logic[31:0] extensorEShift,
-  output logic [2:0] MemParaReg,
-  output logic LoadMult, ExceptionSelector,
+  output logic [31:0] Reg_Desloc,
   output logic [63:0] resultado_mult,
-  output logic [31:0] SaidaA, MDR, EPCOut,
-  output logic [1:0] EscritaSelection,
-  output logic [31:0] EscritaMem, Address, EntradaRegDeslocamento
+  output logic [31:0] MDR, EPC,
+  output logic [31:0] WriteDataMem, Address, EntradaRegDeslocamento
   );
-  
+   logic [1:0] EscritaSelection;
    logic [5:0] Instr31_26;
    logic [4:0] Instr25_21;
    logic [4:0] Instr20_16;
    logic [15:0] Instr15_0;
-  
+  logic [2:0] MemParaReg,
    logic[31:0] ExceptionAddress;
 	// multiplicador:
 	logic [63:0] resultadoMultTeste, resultado_atualMultTest;	
-    logic[31:0] extensor32bits ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
+    logic[31:0] SaidaB, SaidaA, extensor32bits ; // COLOCAR DE VOLTA COMO OUTPUT -- TIRADO PRA DEBUGAR O MULTIPLICADOR
 	logic [31:0] flavio;
 	logic [1:0] WordouHWouByte;
 	
@@ -33,7 +29,7 @@ module cpu(input clock, reset,
 	logic[4:0] NumShift;
     //logic [31:0] SaidaA;
 	
-	logic OverflowULA;
+	logic LoadMult, ExceptionSelector,OverflowULA;
 	logic NegativoULA;
 	logic IgualULA;
 		
@@ -69,11 +65,11 @@ module cpu(input clock, reset,
 	.Saida(MDR));
 	
 	
-	Registrador EPC(.Clk(clock),
+	Registrador EPCReg(.Clk(clock),
 	.Reset(reset),
 	.Load(LoadEPC),
 	.Entrada(PC-4),
-	.Saida(EPCOut)); // instrução rte : EPC -> PC: tro
+	.Saida(EPC)); // instrução rte : EPC -> PC: tro
 	
 	Registrador HighMult(.Clk(clock),
 	.Reset(reset),
@@ -103,7 +99,7 @@ module cpu(input clock, reset,
 	.Reset(reset),
 	.Load(RegBCtrl),
 	.Entrada(ReadData2),
-	.Saida(WriteDataMem));
+	.Saida(SaidaB));
 	
 	
 	AluControl AluControl(.funct(Instr15_0[5:0]),
@@ -133,7 +129,7 @@ module cpu(input clock, reset,
 	Memoria Memory(.Address(Address),
 	.Clock(clock),
 	.Wr(wr),
-	.DataIn(EscritaMem),
+	.DataIn(WriteDataMem),
 	.DataOut(MemData));
 	
 	controlador ctrl(.Clock(clock),
@@ -189,16 +185,16 @@ module cpu(input clock, reset,
 	.saidaMux(EntradaULA1));	
 	
 	mux4entradas32bits EntradaULA2Selection(.controlador(ULAFonteB), 
-	.entrada0(WriteDataMem),
+	.entrada0(SaidaB),
 	.entrada1(32'd4),
 	.entrada2(extensor32bits),
-	.entrada3(extensorEShift),
+	.entrada3(Reg_Desloc),
 	.saidaMux(EntradaULA2));
 	
 	mux8entradas32bits DadoASerEscritoSelection(.controlador(MemParaReg),
 	.entrada0(AluOut),
 	.entrada1(flavio),
-	.entrada2(extensorEShift),
+	.entrada2(Reg_Desloc),
 	.entrada3({31'b0, MenorULA}),
 	.entrada4(mult_high),
 	.entrada5(mult_low),
@@ -207,20 +203,20 @@ module cpu(input clock, reset,
 	.saidaMux(WriteDataReg));
 	
 	mux4entradas32bits EscritaMemSelection(.controlador(EscritaSelection),
-	.entrada0(WriteDataMem),
-	.entrada1({WriteDataMem[7:0], MemData[23:0]}),
-	.entrada2({WriteDataMem[15:0], MemData[15:0]}),
+	.entrada0(SaidaB),
+	.entrada1({SaidaB[7:0], MemData[23:0]}),
+	.entrada2({SaidaB[15:0], MemData[15:0]}),
 	.entrada3(32'd666),
-	.saidaMux(EscritaMem));
+	.saidaMux(WriteDataMem));
 	
 	mux8entradas32bits FontePCSelection(.controlador(FontePC),  
 	.entrada0(Alu),
 	.entrada1(AluOut),
 	.entrada2(pcJump),
 	.entrada3(ExceptionAddress),
-	.entrada4(EPCOut),
+	.entrada4(EPC),
 	.entrada5(flavio),
-	.entrada6(EPCOut),
+	.entrada6(EPC),
 	.entrada7(32'd0),
 	.saidaMux(EntradaPC));
 	
@@ -231,11 +227,11 @@ module cpu(input clock, reset,
 
 	mux2entradas32bits_real dadoASerDeslocado(.controlador(CtrlMuxDeslocamento),
 	.entrada0(extensor32bits),
-	.entrada1(WriteDataMem),
+	.entrada1(SaidaB),
 	.saidaMux(EntradaRegDeslocamento));
 	
 	mux4entradas5bits NumShiftSelection(.controlador(NumShiftCtrl),
-	.entrada0(5'b00100), 
+	.entrada0(5'b0010), 
 	.entrada1(Instr15_0[10:6]),
 	.entrada2(SaidaA[4:0]),
 	.entrada3(5'd9),
@@ -243,8 +239,6 @@ module cpu(input clock, reset,
 
 	extensor16to32bits extenssor(.entrada(Instr15_0),
 	.saida(extensor32bits));
-	
-	//shiftLeft2bits shifter(.entrada(extensor32bits), .saida(extensorEShift), .contrl(NumShift));
 	
 	shiftLeft2bits26 shifterJ(.entrada({ Instr25_21, Instr20_16, Instr15_0 }), .entradaPC(PC), .saida(pcJump));
 
@@ -265,7 +259,7 @@ module cpu(input clock, reset,
 			.Shift(ShiftControl),
 			.N(NumShiftEntrada),
 			.Entrada(EntradaRegDeslocamento),
-			.Saida(extensorEShift));
+			.Saida(Reg_Desloc));
 	
 	getByteOrHw CortadorDePalavras(.WordouHWouByte(WordouHWouByte),
 				.MDR(MDR),
