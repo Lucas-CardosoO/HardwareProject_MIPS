@@ -7,7 +7,9 @@ module cpu(input clock, reset,
   output logic [31:0] Reg_Desloc,
   output logic [63:0] resultado_mult,
   output logic [31:0] MDR, EPC,
-  output logic [31:0] WriteDataMem, Address, EntradaRegDeslocamento
+  output logic [31:0] WriteDataMem, Address, EntradaRegDeslocamento,
+  output logic [4:0] contador_mult,
+  output logic [31:0] ReadData1, ReadData2
   );
    logic [1:0] EscritaSelection;
    logic [5:0] Instr31_26;
@@ -38,7 +40,7 @@ module cpu(input clock, reset,
 	logic [2:0]ULAOp;
 	logic [2:0] FontePC; 
 	logic [31:0]EntradaPC;
-	logic [31:0] ReadData1, ReadData2;
+	logic [31:0]  mult_low, mult_high;
 	// logic [31:0] SaidaA;
 	logic PCEsc;
 	logic ULAFonteA;
@@ -51,6 +53,8 @@ module cpu(input clock, reset,
 	//logic[4:0] NumShift;
 	logic[2:0] ShiftControl;
 	logic resetRegA;
+	
+	
 	
 	Registrador PCreg(.Clk(clock),
 	.Reset(reset),
@@ -204,8 +208,8 @@ module cpu(input clock, reset,
 	
 	mux4entradas32bits EscritaMemSelection(.controlador(EscritaSelection),
 	.entrada0(SaidaB),
-	.entrada1({SaidaB[7:0], MemData[23:0]}),
-	.entrada2({SaidaB[15:0], MemData[15:0]}),
+	.entrada1({MemData[31:8], SaidaB[7:0]}),
+	.entrada2({MemData[31:16], SaidaB[15:0]}),
 	.entrada3(32'd666),
 	.saidaMux(WriteDataMem));
 	
@@ -269,7 +273,7 @@ module cpu(input clock, reset,
 	mul Multiplicador(.Clock(clock),
 					  .load(LoadMult),
 					  .multiplicador(SaidaA),
-					  .multiplicando(WriteData),
+					  .multiplicando(SaidaB),
 					  .resultado(resultado_mult),
 					  .counter(contador_mult));
 	

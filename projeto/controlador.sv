@@ -2187,8 +2187,8 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b0;
-			RegDst = 2'b0;
+			RegWrite = 1'b1;
+			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
 			MemParaReg = 3'b00;
@@ -2200,9 +2200,8 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0;
-			ShiftControl = 3'b010; // deslocamento LOGICO a esquerda N vezes
-			NumShiftCtrl = 2'b10; // seleciona a entrada N do regdesloc
-			// *********** pode causar overflow !!! ainda não tratado!
+			ShiftControl = 3'b010;
+			NumShiftCtrl = 2'b10;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
 			LoadMult = 1'b0;
@@ -2220,7 +2219,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b1; // habilita a escrita no banco de regs.
+			RegWrite = 1'b0; // habilita a escrita no banco de regs.
 			RegDst = 2'b1; // registrador a ser escrito será intr[15:11]
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -2233,7 +2232,7 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0; // reset tem que ser 0
-			ShiftControl = 3'b010;
+			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
@@ -2284,8 +2283,8 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b0;
-			RegDst = 2'b0;
+			RegWrite = 1'b1;
+			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
 			MemParaReg = 3'b00;
@@ -2316,7 +2315,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b1; // habilita a escrita no banco de regs.
+			RegWrite = 1'b0; // habilita a escrita no banco de regs.
 			RegDst = 2'b1; // registrador a ser escrito será intr[15:11]
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -2329,7 +2328,7 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b0; // reset tem que ser 0
-			ShiftControl = 3'b010;
+			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b1;
 			WordouHWouByte = 2'b00;
@@ -2348,7 +2347,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b1;
+			RegWrite = 1'b0;
 			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -2413,11 +2412,11 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b0;
-			RegDst = 2'b0;
+			RegWrite = 1'b1;
+			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
-			MemParaReg = 3'b00;
+			MemParaReg = 3'b10;
 			IouD = 1'b0;
 			RegACtrl = 1'b0;
 			RegBCtrl = 1'b0;
@@ -2445,7 +2444,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b1;
+			RegWrite = 1'b0;
 			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -2458,7 +2457,7 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b1;
-			ShiftControl = 3'b010;
+			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
@@ -2467,7 +2466,6 @@ always_comb begin
 			LoadEPC = 1'b0;
 			EscritaSelection = 2'b00;
 			
-					
 			nextState = BuscaMem; 
 		end	
 		
@@ -2542,8 +2540,8 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b0;
-			RegDst = 2'b0;
+			RegWrite = 1'b1;
+			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
 			MemParaReg = 3'b00;
@@ -2574,7 +2572,7 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b1;
+			RegWrite = 1'b0;
 			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
@@ -2587,7 +2585,7 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b1;
-			ShiftControl = 3'b010;
+			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
@@ -2674,8 +2672,8 @@ always_comb begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
 			ULAOp = 3'b000;
-			RegWrite = 1'b0;
-			RegDst = 2'b0;
+			RegWrite = 1'b1;
+			RegDst = 2'b1;
 			ULAFonteA = 1'b1;
 			ULAFonteB = 2'b11;
 			MemParaReg = 3'b00;
@@ -2719,7 +2717,7 @@ always_comb begin
 			PCEscCond = 1'b0;
 			PCEscCondBNE = 1'b0;
 			resetRegA = 1'b1;
-			ShiftControl = 3'b010;
+			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
 			WordouHWouByte = 2'b00;
@@ -3013,7 +3011,7 @@ always_comb begin
 			ShiftControl = 3'b010;
 			NumShiftCtrl = 2'b00;
 			CtrlMuxDeslocamento = 1'b0;
-			WordouHWouByte = 2'b10;
+			WordouHWouByte = 2'b11;
 			LoadMult = 1'b0;
 			ExceptionSelector = 1'b0;
 			LoadEPC = 1'b0;
@@ -3607,7 +3605,7 @@ always_comb begin
 		RULAOp: begin
 			CtrMem = 1'b0; // *
 			IREsc = 1'b0;
-			ULAOp = 3'b010;
+			ULAOp = 3'b10;
 			RegWrite = 1'b0;
 			RegDst = 2'b1;
 			ULAFonteA = 1'b1;

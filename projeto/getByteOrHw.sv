@@ -6,13 +6,13 @@ always_comb begin
 		flavio = MDR;
 	end
 	else if (WordouHWouByte == 2'b01) begin
-		flavio =  {16'b0 , MDR[31:16]};
+		flavio =  {16'b0 , MDR[15:0]};
 	end
 	else if (WordouHWouByte == 2'b10)begin
 		flavio =  {24'b0 , MDR[31:24]};
 	end
 	else begin
-		flavio = MDR;
+		flavio = {24'b0 , MDR[7:0]};
 	end
 end
 
