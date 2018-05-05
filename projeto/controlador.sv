@@ -45,7 +45,7 @@ enum logic [6:0] {
   BNELoadAB = 7'd22,
   BNEDesloc = 7'd23,
   BNEBegin = 7'd24,
-  BNESolution = 7'd25,
+  //BNESolution = 7'd25,
   LUISoma = 7'd26,
   LUICarregaReg = 7'd27,
   RRegLoadABJr = 7'd28,
@@ -999,9 +999,9 @@ always_comb begin
 						ULAFonteB = 2'b11;
 						MemParaReg = 3'b00;
 						IouD = 1'b0;
-						RegACtrl = 1'b0;
-						RegBCtrl = 1'b0;
-						ULASaidaCtrl = 1'b0;
+						RegACtrl = 1'b1;
+						RegBCtrl = 1'b1;
+						ULASaidaCtrl = 1'b1;
 						MDRCtrl = 1'b0;	
 						PCEscCond = 1'b0;
 						PCEscCondBNE = 1'b0;
@@ -3872,7 +3872,7 @@ always_comb begin
 		end
 		
 		BNEBegin: begin
-			FontePC = 3'b00;
+			FontePC = 3'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0;
 			IREsc = 1'b0;
@@ -3888,7 +3888,7 @@ always_comb begin
 			ULASaidaCtrl = 1'b1;
 			MDRCtrl = 1'b0;	
 			PCEscCond = 1'b0;
-			PCEscCondBNE = 1'b0;
+			PCEscCondBNE = 1'b1;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
@@ -3904,23 +3904,23 @@ always_comb begin
 		end
 		
 		BNELoadAB: begin
-			FontePC = 3'b00;
+			FontePC = 3'b001;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; //
 			IREsc = 1'b0;
-			ULAOp = 3'b000;
+			ULAOp = 3'b001;
 			RegWrite = 1'b0;
 			RegDst = 2'b0;
-			ULAFonteA = 1'b0;
-			ULAFonteB = 2'b01;
+			ULAFonteA = 1'b1;
+			ULAFonteB = 2'b00;
 			MemParaReg = 3'b00;
-			IouD = 1'b0; ;; //
+			IouD = 1'b0;
 			RegACtrl = 1'b1;
 			RegBCtrl = 1'b1;
 			ULASaidaCtrl = 1'b0;
 			MDRCtrl = 1'b0;
 			PCEscCond = 1'b0;
-			PCEscCondBNE = 1'b0;
+			PCEscCondBNE = 1'b1;
 			resetRegA = 1'b0;
 			ShiftControl = 3'b000;
 			NumShiftCtrl = 2'b00;
@@ -3932,10 +3932,10 @@ always_comb begin
 			EscritaSelection = 2'b00;
 			
 	
-			nextState <= BNESolution;
+			nextState <= BuscaMem;
 		end
 		
-		BNESolution: begin
+	/*	BNESolution: begin
 			FontePC =3'b01;
 			PCEsc = 1'b0;
 			CtrMem = 1'b0; //
@@ -3966,7 +3966,7 @@ always_comb begin
 				
 			nextState <= BuscaMem;
 		end
-		
+		*/
 		RRegLoadABJr: begin
 			FontePC = 3'b0;
 			PCEsc = 1'b0;

@@ -4,19 +4,20 @@ module cpu(input clock, reset,
   output logic wr, RegWrite, IRWrite, IouD,
   output logic[6:0] Estado,
   output logic [31:0]EntradaULA1, EntradaULA2,
-  output logic [5:0] Instr31_26,
-  output logic[4:0] Instr25_21,
-  output logic[4:0] Instr20_16,
-  output logic[15:0] Instr15_0,
+ 
   output logic[31:0] extensorEShift,
   output logic [2:0] MemParaReg,
   output logic LoadMult, ExceptionSelector,
   output logic [63:0] resultado_mult,
   output logic [31:0] SaidaA, MDR, EPCOut,
   output logic [1:0] EscritaSelection,
-  output logic [31:0] EscritaMem, Address
+  output logic [31:0] EscritaMem, Address, EntradaRegDeslocamento
   );
   
+   logic [5:0] Instr31_26;
+   logic [4:0] Instr25_21;
+   logic [4:0] Instr20_16;
+   logic [15:0] Instr15_0;
   
    logic[31:0] ExceptionAddress;
 	// multiplicador:
@@ -28,7 +29,7 @@ module cpu(input clock, reset,
 	logic CtrlMuxDeslocamento;
 	logic [1:0] NumShiftCtrl;
 	logic [4:0] NumShiftEntrada;
-	logic [31:0] EntradaRegDeslocamento;
+
 	logic[4:0] NumShift;
     //logic [31:0] SaidaA;
 	
@@ -234,7 +235,7 @@ module cpu(input clock, reset,
 	.saidaMux(EntradaRegDeslocamento));
 	
 	mux4entradas5bits NumShiftSelection(.controlador(NumShiftCtrl),
-	.entrada0(5'b00100), 
+	.entrada0(5'b0010), 
 	.entrada1(Instr15_0[10:6]),
 	.entrada2(SaidaA[4:0]),
 	.entrada3(5'd9),
